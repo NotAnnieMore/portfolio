@@ -4,6 +4,7 @@ import { useParams } from 'react-router'
 import { PageIntro } from '../components/layout/PageIntro'
 import { AlsThesisCaseStudy } from '../components/projects/AlsThesisCaseStudy'
 import { JobApplicationTrackerCaseStudy } from '../components/projects/JobApplicationTrackerCaseStudy'
+import { PortfolioCaseStudy } from '../components/projects/PortfolioCaseStudy'
 import { getProjectBySlug } from '../data/projects'
 import type { Project } from '../types/content'
 import { usePageMeta } from '../utils/usePageMeta'
@@ -25,7 +26,20 @@ export function ProjectPage() {
     return <AlsThesisPage project={project} />
   }
 
+  if (project.id === 'professional-portfolio') {
+    return <PortfolioPage project={project} />
+  }
+
   return <ProjectPlaceholder project={project} />
+}
+
+function PortfolioPage({ project }: { project: Project }) {
+  const { t } = useTranslation()
+  const title = t(`${project.translationKey}.title`)
+  const description = t('pages.project.portfolio.metaDescription')
+  usePageMeta(`${title} — Ivo Camacho`, description)
+
+  return <PortfolioCaseStudy project={project} />
 }
 
 function AlsThesisPage({ project }: { project: Project }) {

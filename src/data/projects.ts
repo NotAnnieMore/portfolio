@@ -149,7 +149,25 @@ export const projects: readonly Project[] = [
         href: 'https://github.com/NotAnnieMore/portfolio',
       },
     ],
-    media: [],
+    media: [
+      {
+        src: '/images/projects/portfolio/home-desktop.webp',
+        altKey: 'content.projects.professionalPortfolio.desktopImageAlt',
+        captionKey:
+          'content.projects.professionalPortfolio.desktopImageCaption',
+        width: 1800,
+        height: 1375,
+        loading: 'eager',
+      },
+      {
+        src: '/images/projects/portfolio/projects-mobile.webp',
+        altKey: 'content.projects.professionalPortfolio.mobileImageAlt',
+        captionKey: 'content.projects.professionalPortfolio.mobileImageCaption',
+        width: 780,
+        height: 1688,
+        loading: 'lazy',
+      },
+    ],
   },
 ]
 

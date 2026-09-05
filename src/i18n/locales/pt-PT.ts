@@ -67,6 +67,14 @@ export const ptPT = {
         title: 'Portefólio Profissional',
         summary:
           'Um portefólio estático, bilingue e acessível, concebido para apresentar trabalho selecionado através de contexto, decisões e casos de estudo.',
+        desktopImageAlt:
+          'Página inicial do portefólio em inglês e modo claro num ecrã de computador',
+        desktopImageCaption:
+          'A página inicial em desktop usa tipografia, espaço e uma paleta contida para estabelecer hierarquia sem efeitos decorativos.',
+        mobileImageAlt:
+          'Página de projetos em português e modo escuro num ecrã móvel estreito',
+        mobileImageCaption:
+          'O layout mobile altera o espaçamento e a hierarquia da navegação, em vez de apenas comprimir a composição de desktop.',
       },
     },
     projectCategories: {
@@ -321,7 +329,7 @@ export const ptPT = {
             label: 'Papel',
             value: 'Desenho da investigação, implementação, análise e escrita',
           },
-          period: { label: 'Período', value: '2024 — atual' },
+          period: { label: 'Período', value: '2025 — atual' },
           dataset: {
             label: 'Dataset',
             value: 'PRO-ACT · 23 ensaios clínicos de ALS',
@@ -412,6 +420,105 @@ export const ptPT = {
             'Em duas tarefas de prognóstico, a tese mostra como separação de participantes, construção do target, estratégia de desequilíbrio, escolha do threshold, incerteza e explicabilidade podem alterar materialmente o significado de uma métrica principal.',
           bodyTwo:
             'O trabalho não propõe que as previsões determinem cuidados de forma isolada. O resultado é um pipeline de investigação reprodutível e uma leitura prudente de onde os modelos informam, onde falham e do que precisaria de validação adicional antes de qualquer uso clínico.',
+        },
+      },
+      portfolio: {
+        metaDescription:
+          'Caso de estudo do portefólio profissional bilingue, acessível e responsivo de Ivo Camacho, desenvolvido com React, TypeScript, Vite e i18next.',
+        eyebrow: 'Caso de estudo do portefólio · Este website',
+        introduction:
+          'Um website deliberadamente contido que transforma trabalho selecionado, experiência e evidência técnica numa narrativa profissional clara — sem imitar um dashboard ou um template genérico de programador.',
+        facts: {
+          role: {
+            label: 'Papel',
+            value: 'Arquitetura de informação, direção visual, conteúdo e frontend',
+          },
+          year: { label: 'Ano', value: '2026' },
+          format: { label: 'Formato', value: 'Website estático bilingue' },
+          stack: { label: 'Stack principal', value: 'React · TypeScript · Vite' },
+        },
+        purpose: {
+          title: 'Um portefólio deve explicar o trabalho, não repetir o GitHub',
+          body:
+            'O objetivo era permitir que um recrutador ou leitor técnico compreendesse, em poucos minutos, em que áreas trabalho, o que construí e como tomo decisões. Um repositório já mostra ficheiros e commits; este site acrescenta contexto, compromissos e resultados.',
+          bodyTwo:
+            'Daí resulta uma estrutura principal reduzida — Início, Projetos, Sobre e CV — e três projetos selecionados apresentados em profundidade. A prioridade do conteúdo segue o valor profissional, não a quantidade ou a data dos repositórios.',
+        },
+        principles: {
+          title: 'Um sistema editorial, não uma estética de template',
+          hierarchy: {
+            title: 'A tipografia cria a hierarquia',
+            body:
+              'Escala, comprimento das linhas e um ritmo vertical generoso fazem a maior parte do trabalho visual. As secções respiram em vez de competir dentro de cartões iguais.',
+          },
+          evidence: {
+            title: 'O trabalho real é o material visual',
+            body:
+              'Capturas do produto, figuras da investigação, tecnologias verificadas e decisões concretas substituem janelas de código decorativas ou afirmações sem suporte.',
+          },
+          restraint: {
+            title: 'Os neutros permanecem dominantes',
+            body:
+              'O verde organiza etiquetas e pequenos detalhes; o laranja fica reservado para ações importantes. Não existem gradientes, brilhos ou movimento decorativo.',
+          },
+          responsive: {
+            title: 'Mobile tem o seu próprio ritmo',
+            body:
+              'Navegação, espaçamento, tipografia, escala das imagens e ordem do conteúdo adaptam-se a ecrãs estreitos, em vez de tratar mobile como desktop comprimido.',
+          },
+        },
+        architecture: {
+          title: 'Um modelo de conteúdo, dois idiomas, publicação estática',
+          introduction:
+            'Os dados de projeto independentes do idioma estão separados das traduções editoriais. Componentes React partilhados consomem ambos, evitando páginas duplicadas para inglês e português.',
+          content: {
+            title: 'Evidência estruturada',
+            body: 'Projetos, experiência, formação, competências, links e media vivem em módulos de dados tipados.',
+          },
+          locale: {
+            title: 'Rotas por idioma',
+            body: 'i18next e React Router servem os mesmos componentes através de URLs estáveis /en e /pt.',
+          },
+          interface: {
+            title: 'Interface partilhada',
+            body: 'Componentes React aplicam layouts editoriais, tokens de cor semânticos e interações acessíveis.',
+          },
+          deployment: {
+            title: 'Build estático de produção',
+            body: 'O Vite cria os ficheiros publicáveis e as regras de fallback do Apache preservam acesso direto às rotas do cliente.',
+          },
+          note:
+            'O resultado não depende de um servidor aplicacional ou CMS. O repositório mantém-se como fonte de verdade para conteúdo e recursos.',
+        },
+        details: {
+          title: 'Pequenos comportamentos que completam o sistema',
+          language: {
+            title: 'O idioma acompanha o contexto',
+            body:
+              'A primeira visita usa o idioma do browser e um toggle explícito guarda a escolha do leitor. A troca conserva a página atual e o controlo mostra o idioma que está a ser lido.',
+          },
+          theme: {
+            title: 'Temas desenhados através de tokens',
+            body:
+              'Os modos claro e escuro partilham variáveis CSS semânticas, mas usam superfícies e contraste intencionais. A preferência guardada ou do sistema é aplicada antes do React para evitar uma mudança de tema visível.',
+          },
+          accessibility: {
+            title: 'A navegação permanece utilizável',
+            body:
+              'Landmarks semânticos, link para saltar conteúdo, foco visível, alternativas descritivas, respeito por movimento reduzido, header persistente e controlo de topo com gestão de foco cobrem necessidades comuns de teclado e leitura.',
+          },
+          delivery: {
+            title: 'Atualizações rotineiras mantêm-se simples',
+            body:
+              'O build de produção é uma diretoria estática. Os CVs usam caminhos públicos estáveis, permitindo substituir um PDF urgente de forma independente e manter depois a cópia versionada no repositório.',
+          },
+        },
+        outcome: {
+          title: 'Um portefólio que pode crescer sem perder o seu ponto de vista',
+          body:
+            'O sistema atual apresenta três tipos de trabalho com ritmos de case study distintos, mantendo navegação, idiomas, temas e estrutura de conteúdo consistentes em todo o site.',
+          bodyTwo:
+            'A sua principal restrição também é útil: novo conteúdo tem de justificar o lugar através de contexto e evidência verificados. Isso mantém as atualizações futuras focadas e evita transformar o portefólio num catálogo indiscriminado de repositórios.',
         },
       },
     },

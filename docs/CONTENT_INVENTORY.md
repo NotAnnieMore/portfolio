@@ -53,14 +53,20 @@ must continue to be based on verified project or CV evidence.
 - Observable information: JavaScript source with no public README or project description.
 - Recommendation: do not feature it unless there is meaningful technical context, a working result, and a reason it strengthens the professional narrative.
 
-## Approved product candidate
-
 ### Professional Portfolio
 
 - Repository: https://github.com/NotAnnieMore/portfolio
 - Intended website: https://ivocamacho.com
-- Portfolio potential: a concise meta-case-study covering content architecture, bilingual URLs, accessible theming, static deployment constraints, responsive design, performance, and the deliberate avoidance of generic portfolio patterns.
-- Recommendation: keep this case study shorter than the Job Application Tracker and thesis; its value is in explaining decisions and constraints, not describing the page the visitor is already viewing.
+- Portfolio treatment: concise meta-case-study covering content architecture,
+  bilingual URLs, accessible theming, static deployment, responsive design, and
+  the deliberate avoidance of generic portfolio patterns.
+- Architecture shown: typed language-neutral content, i18next translations,
+  locale-aware React routes, shared interface components, and a Vite static build
+  with Apache route fallback.
+- Media: two real, optimised WebP captures show the English light-mode desktop
+  home page and Portuguese dark-mode mobile projects page.
+- Maintenance note: stable public CV paths allow an urgent deployed PDF to be
+  replaced without rebuilding the JavaScript or CSS bundle.
 
 ## Low-priority repositories
 

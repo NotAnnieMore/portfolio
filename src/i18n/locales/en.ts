@@ -67,6 +67,14 @@ export const en = {
         title: 'Professional Portfolio',
         summary:
           'A bilingual and accessible static portfolio designed to present selected work through context, decisions, and case studies.',
+        desktopImageAlt:
+          'English portfolio home page in light mode on a desktop viewport',
+        desktopImageCaption:
+          'The desktop home page uses typography, spacing, and a restrained palette to establish hierarchy without decorative effects.',
+        mobileImageAlt:
+          'Portuguese projects page in dark mode on a narrow mobile viewport',
+        mobileImageCaption:
+          'The mobile layout changes its spacing and navigation hierarchy instead of simply compressing the desktop composition.',
       },
     },
     projectCategories: {
@@ -320,7 +328,7 @@ export const en = {
             label: 'Role',
             value: 'Research design, implementation, analysis, and writing',
           },
-          period: { label: 'Period', value: '2024 — present' },
+          period: { label: 'Period', value: '2025 — present' },
           dataset: {
             label: 'Dataset',
             value: 'PRO-ACT · 23 ALS clinical trials',
@@ -411,6 +419,105 @@ export const en = {
             'Across two prognosis tasks, the thesis shows how patient separation, target construction, imbalance strategy, threshold choice, uncertainty, and explainability can materially change what a headline score means.',
           bodyTwo:
             'The work does not propose that predictions should determine care in isolation. Its output is a reproducible research pipeline and a cautious account of where the models are informative, where they fail, and what would need further validation before clinical use.',
+        },
+      },
+      portfolio: {
+        metaDescription:
+          'Case study of Ivo Camacho’s bilingual, accessible, and responsive professional portfolio built with React, TypeScript, Vite, and i18next.',
+        eyebrow: 'Portfolio case study · This website',
+        introduction:
+          'A deliberately restrained website that turns selected work, experience, and technical evidence into a clear professional narrative — without imitating a dashboard or a generic developer template.',
+        facts: {
+          role: {
+            label: 'Role',
+            value: 'Information architecture, visual direction, content, and frontend',
+          },
+          year: { label: 'Year', value: '2026' },
+          format: { label: 'Format', value: 'Static bilingual website' },
+          stack: { label: 'Core stack', value: 'React · TypeScript · Vite' },
+        },
+        purpose: {
+          title: 'A portfolio should explain the work, not repeat GitHub',
+          body:
+            'The brief was to help a recruiter or technical reader understand, within a few minutes, what I work on, what I have built, and how I approach decisions. A repository already shows files and commits; this site adds context, trade-offs, and outcomes.',
+          bodyTwo:
+            'That led to a small top-level structure — Home, Projects, About, and CV — and three selected projects presented in depth. Content priority follows professional value rather than repository count or creation date.',
+        },
+        principles: {
+          title: 'An editorial system, not a template aesthetic',
+          hierarchy: {
+            title: 'Typography carries the hierarchy',
+            body:
+              'Scale, line length, and generous vertical rhythm do most of the visual work. Sections can breathe instead of competing inside identical cards.',
+          },
+          evidence: {
+            title: 'Real work is the visual material',
+            body:
+              'Product screenshots, research figures, verified technologies, and concrete decisions replace decorative code windows or unsupported claims.',
+          },
+          restraint: {
+            title: 'Neutrals remain dominant',
+            body:
+              'Green organises labels and small details; orange is reserved for important actions. There are no gradients, glows, or decorative motion.',
+          },
+          responsive: {
+            title: 'Mobile has its own rhythm',
+            body:
+              'Navigation, spacing, typography, image scale, and content order adapt at narrow widths rather than treating mobile as a squeezed desktop.',
+          },
+        },
+        architecture: {
+          title: 'One content model, two languages, static delivery',
+          introduction:
+            'Language-neutral project data is separated from editorial translations. Shared React components consume both, so English and Portuguese do not become duplicated page implementations.',
+          content: {
+            title: 'Structured evidence',
+            body: 'Projects, experience, education, skills, links, and media live in typed data modules.',
+          },
+          locale: {
+            title: 'Locale-aware routes',
+            body: 'i18next and React Router serve the same components through stable /en and /pt URLs.',
+          },
+          interface: {
+            title: 'Shared interface',
+            body: 'React components apply the editorial layouts, semantic colour tokens, and accessible interactions.',
+          },
+          deployment: {
+            title: 'Static production build',
+            body: 'Vite creates deployable files while Apache fallback rules preserve direct access to client routes.',
+          },
+          note:
+            'The result has no application server or content-management dependency. The repository remains the source of truth for content and assets.',
+        },
+        details: {
+          title: 'Small behaviours that make the system feel complete',
+          language: {
+            title: 'Language follows context',
+            body:
+              'A first visit uses the browser language, while an explicit toggle persists the reader’s choice. Switching language keeps the current page and the control displays the language being read.',
+          },
+          theme: {
+            title: 'Themes are designed through tokens',
+            body:
+              'Light and dark modes share semantic CSS variables but use intentionally different surfaces and contrast. Stored or system preference is applied before React loads to avoid a visible theme flash.',
+          },
+          accessibility: {
+            title: 'Navigation remains usable',
+            body:
+              'Semantic landmarks, a skip link, visible focus states, descriptive alternatives, reduced-motion support, a persistent header, and a focus-aware back-to-top control cover common keyboard and reading needs.',
+          },
+          delivery: {
+            title: 'Routine updates stay simple',
+            body:
+              'The production build is a static directory. CV files use stable public paths, so an urgent PDF replacement can be deployed independently while the versioned copy remains in the repository.',
+          },
+        },
+        outcome: {
+          title: 'A portfolio that can grow without losing its point of view',
+          body:
+            'The current system presents three different kinds of work with distinct case-study rhythms while keeping navigation, language, themes, and content structure consistent across the site.',
+          bodyTwo:
+            'Its main constraint is also useful: new content must earn its place through verified context and evidence. That keeps future updates focused and prevents the portfolio from becoming an unfiltered catalogue of repositories.',
         },
       },
     },

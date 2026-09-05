@@ -120,11 +120,29 @@ button {
 }
 
 .botanical-accent {
-  opacity: 0.72;
+  opacity: 0.68;
 }
 
 :root[data-theme='dark'] .botanical-accent {
   opacity: 0.5;
+}
+
+.surface-texture-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url('/images/textures/editorial-paper.webp');
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 32rem 32rem;
+  mix-blend-mode: multiply;
+  opacity: 0.08;
+}
+
+:root[data-theme='dark'] .surface-texture-layer {
+  mix-blend-mode: soft-light;
+  opacity: 0.14;
 }
 
 .focus-ring:focus-visible,

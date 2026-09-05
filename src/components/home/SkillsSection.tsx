@@ -19,18 +19,21 @@ export function SkillsSection() {
         <div className="mt-14 grid border-y border-line sm:mt-16 sm:grid-cols-2 lg:grid-cols-5 lg:divide-x lg:divide-line">
           {skillGroups.map((group) => (
             <div
-              className="border-b border-line py-8 last:border-b-0 sm:px-6 sm:py-9 lg:border-b-0 lg:px-6 lg:first:pl-0 lg:last:pr-0"
+              className="relative overflow-hidden border-b border-line px-5 py-8 last:border-b-0 sm:px-6 sm:py-9 lg:border-b-0 lg:px-6"
               key={group.id}
             >
-              <div className="flex items-center gap-3 lg:block">
-                <SkillGroupIcon groupId={group.id} />
-                <h3 className="text-lg font-semibold lg:mt-5 lg:text-base">
-                  {t(group.labelKey)}
-                </h3>
+              <span aria-hidden="true" className="surface-texture-layer" />
+              <div className="relative z-10">
+                <div className="flex items-center gap-3 lg:block">
+                  <SkillGroupIcon groupId={group.id} />
+                  <h3 className="text-lg font-semibold lg:mt-5 lg:text-base">
+                    {t(group.labelKey)}
+                  </h3>
+                </div>
+                <p className="mt-4 max-w-lg text-sm leading-7 text-muted">
+                  {group.skills.map((skill) => skill.name).join(' · ')}
+                </p>
               </div>
-              <p className="mt-4 max-w-lg text-sm leading-7 text-muted">
-                {group.skills.map((skill) => skill.name).join(' · ')}
-              </p>
             </div>
           ))}
         </div>

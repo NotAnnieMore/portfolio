@@ -14,7 +14,7 @@ export function ContactSection() {
       <img
         alt=""
         aria-hidden="true"
-        className="botanical-accent pointer-events-none absolute bottom-2 right-2 hidden w-[36rem] max-w-[40vw] select-none lg:block"
+        className="botanical-accent pointer-events-none absolute -bottom-10 -right-12 hidden w-[50rem] max-w-[52vw] select-none lg:block xl:w-[54rem]"
         decoding="async"
         height="600"
         loading="lazy"

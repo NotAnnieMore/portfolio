@@ -77,7 +77,6 @@ export function FeaturedWork() {
       <div className="mx-auto max-w-6xl px-6 lg:px-10">
         <SectionHeading
           description={t('pages.home.featured.description')}
-          emphasis
           index="01 / 05"
           title={t('pages.home.featured.title')}
         />

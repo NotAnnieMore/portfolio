@@ -1,0 +1,15 @@
+{
+  "name": "Ivo Camacho — Portfolio",
+  "short_name": "Ivo Camacho",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7F6F1",
+  "theme_color": "#F7F6F1",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

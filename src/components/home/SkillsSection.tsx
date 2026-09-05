@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 
 import { skillGroups } from '../../data/skills'
+import { SkillGroupIcon } from '../ui/SkillGroupIcon'
 import { SectionHeading } from './SectionHeading'
 
 export function SkillsSection() {
@@ -25,7 +26,10 @@ export function SkillsSection() {
               }`}
               key={group.id}
             >
-              <h3 className="text-lg font-semibold">{t(group.labelKey)}</h3>
+              <div className="flex items-center gap-3">
+                <SkillGroupIcon groupId={group.id} />
+                <h3 className="text-lg font-semibold">{t(group.labelKey)}</h3>
+              </div>
               <p className="mt-4 max-w-lg text-sm leading-7 text-muted">
                 {group.skills.map((skill) => skill.name).join(' · ')}
               </p>
@@ -36,4 +40,3 @@ export function SkillsSection() {
     </section>
   )
 }
-

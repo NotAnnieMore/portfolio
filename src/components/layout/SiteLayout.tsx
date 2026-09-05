@@ -4,6 +4,7 @@ import { NavLink, Outlet, useParams } from 'react-router'
 import { LanguageToggle } from '../ui/LanguageToggle'
 import { ThemeToggle } from '../ui/ThemeToggle'
 import { BackToTop } from '../ui/BackToTop'
+import { BrandMark } from '../ui/BrandMark'
 import { isSupportedLocale } from '../../i18n/locales'
 
 export function SiteLayout() {
@@ -26,10 +27,12 @@ export function SiteLayout() {
       <header className="sticky top-0 z-40 border-b border-line bg-page">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-5 gap-y-4 px-6 py-6 lg:px-10">
           <NavLink
-            className="text-base font-semibold tracking-tight"
+            aria-label="Ivo Camacho"
+            className="inline-flex items-center gap-2.5 text-base font-semibold tracking-tight"
             to={`/${activeLocale}`}
           >
-            Ivo Camacho
+            <BrandMark />
+            <span>Ivo Camacho</span>
           </NavLink>
 
           <nav

@@ -5,6 +5,8 @@ import { education } from '../data/education'
 import { experience } from '../data/experience'
 import { profileLinks } from '../data/links'
 import { skillGroups } from '../data/skills'
+import { ProfileLinkIcon } from '../components/ui/ProfileLinkIcon'
+import { SkillGroupIcon } from '../components/ui/SkillGroupIcon'
 import { isSupportedLocale } from '../i18n/locales'
 import { formatDateRange } from '../utils/formatDateRange'
 import { usePageMeta } from '../utils/usePageMeta'
@@ -37,12 +39,13 @@ export function AboutPage() {
             <div className="mt-5 flex flex-col items-start gap-2 font-semibold text-ink">
               {profileLinks.slice(0, 3).map((link) => (
                 <a
-                  className="focus-ring border-b border-line transition-colors hover:border-action"
+                  className="focus-ring inline-flex items-center gap-2 border-b border-line transition-colors hover:border-action"
                   href={link.href}
                   key={link.id}
                   rel={link.kind === 'email' ? undefined : 'noreferrer'}
                   target={link.kind === 'email' ? undefined : '_blank'}
                 >
+                  <ProfileLinkIcon id={link.id} />
                   {t(`content.links.${link.id}`)}
                 </a>
               ))}
@@ -154,9 +157,12 @@ export function AboutPage() {
                     }`}
                     key={group.id}
                   >
-                    <h3 className="text-lg font-semibold">
-                      {t(group.labelKey)}
-                    </h3>
+                    <div className="flex items-center gap-3">
+                      <SkillGroupIcon groupId={group.id} />
+                      <h3 className="text-lg font-semibold">
+                        {t(group.labelKey)}
+                      </h3>
+                    </div>
                     <p className="mt-4 text-sm leading-7 text-muted">
                       {group.skills.map((skill) => skill.name).join(' · ')}
                     </p>

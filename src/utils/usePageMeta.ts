@@ -16,6 +16,47 @@ function setMeta(name: string, content: string) {
   element.content = content
 }
 
+function setPropertyMeta(property: string, content: string) {
+  let element = document.head.querySelector<HTMLMetaElement>(
+    `meta[property="${property}"]`,
+  )
+
+  if (!element) {
+    element = document.createElement('meta')
+    element.setAttribute('property', property)
+    document.head.append(element)
+  }
+
+  element.content = content
+}
+
+function setAlternateLink(language: string, href: string) {
+  let element = document.head.querySelector<HTMLLinkElement>(
+    `link[rel="alternate"][hreflang="${language}"]`,
+  )
+
+  if (!element) {
+    element = document.createElement('link')
+    element.rel = 'alternate'
+    element.hreflang = language
+    document.head.append(element)
+  }
+
+  element.href = href
+}
+
+function pathForLocale(pathname: string, locale: 'en' | 'pt') {
+  const segments = pathname.split('/')
+
+  if (segments[1] === 'en' || segments[1] === 'pt') {
+    segments[1] = locale
+  } else {
+    segments.splice(1, 0, locale)
+  }
+
+  return segments.join('/') || `/${locale}`
+}
+
 export function usePageMeta(
   title: string,
   description: string,
@@ -25,8 +66,29 @@ export function usePageMeta(
     document.title = title
     setMeta('description', description)
     setMeta('robots', noIndex ? 'noindex, nofollow' : 'index, follow')
+    setMeta('twitter:title', title)
+    setMeta('twitter:description', description)
 
     const canonicalUrl = new URL(window.location.pathname, SITE_URL).toString()
+    const isPortuguese = window.location.pathname.split('/')[1] === 'pt'
+    const englishUrl = new URL(
+      pathForLocale(window.location.pathname, 'en'),
+      SITE_URL,
+    ).toString()
+    const portugueseUrl = new URL(
+      pathForLocale(window.location.pathname, 'pt'),
+      SITE_URL,
+    ).toString()
+
+    setPropertyMeta('og:title', title)
+    setPropertyMeta('og:description', description)
+    setPropertyMeta('og:url', canonicalUrl)
+    setPropertyMeta('og:locale', isPortuguese ? 'pt_PT' : 'en_GB')
+    setPropertyMeta('og:locale:alternate', isPortuguese ? 'en_GB' : 'pt_PT')
+    setAlternateLink('en', englishUrl)
+    setAlternateLink('pt', portugueseUrl)
+    setAlternateLink('x-default', englishUrl)
+
     let canonical = document.head.querySelector<HTMLLinkElement>(
       'link[rel="canonical"]',
     )
@@ -40,4 +102,3 @@ export function usePageMeta(
     canonical.href = canonicalUrl
   }, [description, noIndex, title])
 }
-

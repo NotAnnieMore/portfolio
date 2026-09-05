@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router'
 
 import { profileLinks } from '../../data/links'
 import { isSupportedLocale } from '../../i18n/locales'
+import { ProfileLinkIcon } from '../ui/ProfileLinkIcon'
 
 const visibleProfileLinks = new Set(['email', 'linkedin', 'github'])
 
@@ -51,11 +52,12 @@ export function HomeHero() {
               .map((link) => (
                 <li key={link.id}>
                   <a
-                    className="focus-ring inline-block font-medium underline decoration-line underline-offset-4 transition-colors hover:decoration-action"
+                    className="focus-ring inline-flex items-center gap-2 font-medium underline decoration-line underline-offset-4 transition-colors hover:decoration-action"
                     href={link.href}
                     rel={link.kind === 'email' ? undefined : 'noreferrer'}
                     target={link.kind === 'email' ? undefined : '_blank'}
                   >
+                    <ProfileLinkIcon id={link.id} />
                     {t(`content.links.${link.id}`)}
                   </a>
                 </li>

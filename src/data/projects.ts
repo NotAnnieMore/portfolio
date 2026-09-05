@@ -37,6 +37,33 @@ export const projects: readonly Project[] = [
         height: 880,
         loading: 'eager',
       },
+      {
+        src: '/images/projects/job-application-tracker/applications.webp',
+        altKey: 'content.projects.jobApplicationTracker.applicationsImageAlt',
+        captionKey:
+          'content.projects.jobApplicationTracker.applicationsImageCaption',
+        width: 1787,
+        height: 880,
+        loading: 'lazy',
+      },
+      {
+        src: '/images/projects/job-application-tracker/interview.webp',
+        altKey: 'content.projects.jobApplicationTracker.interviewImageAlt',
+        captionKey:
+          'content.projects.jobApplicationTracker.interviewImageCaption',
+        width: 1787,
+        height: 880,
+        loading: 'lazy',
+      },
+      {
+        src: '/images/projects/job-application-tracker/interview-mobile.webp',
+        altKey: 'content.projects.jobApplicationTracker.mobileImageAlt',
+        captionKey:
+          'content.projects.jobApplicationTracker.mobileImageCaption',
+        width: 640,
+        height: 1453,
+        loading: 'lazy',
+      },
     ],
   },
   {

@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router'
 
 import { PageIntro } from '../components/layout/PageIntro'
+import { JobApplicationTrackerCaseStudy } from '../components/projects/JobApplicationTrackerCaseStudy'
 import { getProjectBySlug } from '../data/projects'
 import type { Project } from '../types/content'
 import { usePageMeta } from '../utils/usePageMeta'
@@ -15,7 +16,20 @@ export function ProjectPage() {
     return <NotFoundPage />
   }
 
+  if (project.id === 'job-application-tracker') {
+    return <JobTrackerPage project={project} />
+  }
+
   return <ProjectPlaceholder project={project} />
+}
+
+function JobTrackerPage({ project }: { project: Project }) {
+  const { t } = useTranslation()
+  const title = t(`${project.translationKey}.title`)
+  const description = t('pages.project.jobTracker.metaDescription')
+  usePageMeta(`${title} — Ivo Camacho`, description)
+
+  return <JobApplicationTrackerCaseStudy project={project} />
 }
 
 function ProjectPlaceholder({ project }: { project: Project }) {

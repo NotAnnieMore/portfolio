@@ -1,17 +1,137 @@
 import { useTranslation } from 'react-i18next'
+import { Link, useParams } from 'react-router'
 
-import { PageIntro } from '../components/layout/PageIntro'
+import { getOrderedProjects } from '../data/projects'
+import { isSupportedLocale } from '../i18n/locales'
 import { usePageMeta } from '../utils/usePageMeta'
 
 export function ProjectsPage() {
   const { t } = useTranslation()
+  const { locale } = useParams()
+  const activeLocale = isSupportedLocale(locale) ? locale : 'en'
+  const projects = getOrderedProjects()
+
   usePageMeta(t('pages.projects.metaTitle'), t('pages.projects.metaDescription'))
 
   return (
-    <PageIntro
-      description={t('pages.projects.description')}
-      title={t('pages.projects.title')}
-    />
+    <>
+      <header className="mx-auto max-w-6xl px-6 pb-20 pt-24 sm:pb-28 sm:pt-32 lg:px-10 lg:pb-36 lg:pt-40">
+        <p className="text-sm font-medium text-green-readable">
+          {t('pages.projects.eyebrow')}
+        </p>
+        <div className="mt-7 grid gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(16rem,0.6fr)] lg:items-end">
+          <h1 className="max-w-4xl text-[clamp(3rem,7vw,5.75rem)] font-semibold leading-[0.98] tracking-[-0.055em] text-balance">
+            {t('pages.projects.title')}
+          </h1>
+          <p className="max-w-xl text-lg leading-8 text-muted">
+            {t('pages.projects.description')}
+          </p>
+        </div>
+      </header>
+
+      <section className="bg-surface py-20 sm:py-28 lg:py-36">
+        <div className="mx-auto max-w-6xl px-6 lg:px-10">
+          <div className="flex items-baseline justify-between gap-6 border-t border-line pt-5">
+            <h2 className="text-2xl font-semibold tracking-[-0.025em]">
+              {t('pages.projects.selectedTitle')}
+            </h2>
+            <p className="font-mono text-xs tracking-[0.16em] text-green-readable">
+              {String(projects.length).padStart(2, '0')}
+            </p>
+          </div>
+
+          <div className="mt-16">
+            {projects.map((project, index) => {
+              const image = project.media[0]
+
+              return (
+                <article
+                  className="grid gap-8 border-t border-line py-12 first:border-t-0 first:pt-0 sm:grid-cols-[5rem_minmax(0,1fr)] lg:grid-cols-[8rem_minmax(0,0.9fr)_minmax(20rem,1.1fr)] lg:gap-12 lg:py-16"
+                  key={project.id}
+                >
+                  <p className="font-mono text-xs text-green-readable">
+                    {String(index + 1).padStart(2, '0')}
+                  </p>
+
+                  <div>
+                    <div className="flex flex-wrap gap-x-4 gap-y-2 font-mono text-xs uppercase tracking-[0.12em] text-muted">
+                      <span>
+                        {t(`content.projectCategories.${project.category}`)}
+                      </span>
+                      <span aria-hidden="true">·</span>
+                      <span>
+                        {t(`content.projectStatuses.${project.status}`)}
+                      </span>
+                    </div>
+                    <h3 className="mt-5 text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">
+                      <Link
+                        className="focus-ring transition-colors hover:text-action-readable"
+                        to={`/${activeLocale}/projects/${project.slug}`}
+                      >
+                        {t(`${project.translationKey}.title`)}
+                      </Link>
+                    </h3>
+                    <p className="mt-5 max-w-xl text-base leading-7 text-muted">
+                      {t(`${project.translationKey}.summary`)}
+                    </p>
+                    <p className="mt-6 max-w-xl text-sm leading-6 text-muted">
+                      {project.technologies.join(' · ')}
+                    </p>
+                    <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold">
+                      <Link
+                        className="focus-ring border-b border-action pb-1 transition-colors hover:border-action-hover"
+                        to={`/${activeLocale}/projects/${project.slug}`}
+                      >
+                        {t('pages.projects.viewProject')}
+                      </Link>
+                      {project.links.map((link) => (
+                        <a
+                          className={
+                            link.kind === 'live'
+                              ? 'focus-ring border-b border-action pb-1 text-action-readable transition-colors hover:border-action-hover'
+                              : 'focus-ring border-b border-line pb-1 transition-colors hover:border-action'
+                          }
+                          href={link.href}
+                          key={`${link.kind}-${link.href}`}
+                          rel="noreferrer"
+                          target="_blank"
+                        >
+                          {link.labelKey
+                            ? t(link.labelKey)
+                            : t(`content.links.${link.kind}`)}{' '}
+                          <span aria-hidden="true">↗</span>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+
+                  {image ? (
+                    <figure className="sm:col-start-2 lg:col-start-3 lg:row-start-1">
+                      <div className="overflow-hidden border border-line bg-page">
+                        <img
+                          alt={t(image.altKey)}
+                          className="h-auto w-full"
+                          decoding="async"
+                          height={image.height}
+                          loading={index === 0 ? 'eager' : image.loading}
+                          src={image.src}
+                          width={image.width}
+                        />
+                      </div>
+                    </figure>
+                  ) : (
+                    <div className="hidden min-h-52 items-end border-t border-line-strong lg:flex">
+                      <p className="max-w-sm pb-2 text-2xl font-semibold leading-9 tracking-[-0.025em]">
+                        {t('pages.projects.currentProjectNote')}
+                      </p>
+                    </div>
+                  )}
+                </article>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+    </>
   )
 }
-

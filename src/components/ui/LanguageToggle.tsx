@@ -44,7 +44,7 @@ export function LanguageToggle() {
       onClick={changeLocale}
       type="button"
     >
-      {nextLocale}
+      {currentLocale.toUpperCase()}
     </button>
   )
 }

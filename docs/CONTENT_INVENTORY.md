@@ -1,6 +1,7 @@
 # Portfolio content inventory
 
-This inventory records approved and potential portfolio material. Public copy still requires editorial review before page implementation.
+This inventory records approved and potential portfolio material. Public copy
+must continue to be based on verified project or CV evidence.
 
 ## Approved Featured Projects
 
@@ -8,7 +9,7 @@ This inventory records approved and potential portfolio material. Public copy st
 2. ALS thesis and replication work, presented as one case study
 3. Professional Portfolio
 
-## Strong candidate
+## Implemented case study
 
 ### Job Application Tracker
 
@@ -16,13 +17,15 @@ This inventory records approved and potential portfolio material. Public copy st
 - Live application: https://jobs.ivocamacho.com
 - Documented stack: Next.js 16, React 19, TypeScript, Tailwind CSS 4, Supabase Auth, PostgreSQL with Row Level Security, Supabase Storage, next-intl, and Vercel.
 - Available evidence: a detailed README, architecture documentation, product decisions, testing documentation, and anonymised desktop/mobile screenshots.
-- Portfolio potential: strong standalone product case study covering product thinking, data modelling, authentication, security, internationalisation, responsive UI, and deployment.
-
-Content decisions still needed:
-
-- which decisions and challenges best represent the work;
-- whether the public repository and live application should both be linked;
-- confirmation that the existing anonymised screenshots may be reused.
+- Portfolio treatment: full product case study covering the workflow problem,
+  connected features, architecture, authentication and RLS, assisted import,
+  URL-based filters, internationalisation, responsive UI, quality checks, and
+  deployment.
+- Public evidence used: README, product/decision records, testing documentation,
+  and the repository's anonymised presentation gallery.
+- Links: both the public repository and live application are shown.
+- Media: four optimised WebP assets are used, with the repository's disclosure
+  that presentation data was anonymised through AI-assisted image editing.
 
 ## Academic candidate
 
@@ -65,14 +68,7 @@ Information still needed:
 
 Older classroom exercises, forks, demos, and the first personal page should not be promoted by default. They can remain on GitHub without appearing in the curated portfolio unless one contains work that is particularly important to explain.
 
-## Missing profile content
+## Future content opportunities
 
-- professional positioning/title;
-- short introduction in English and Portuguese;
-- professional experience and verified dates;
-- education and verified dates;
-- skills supported by real evidence;
-- LinkedIn URL;
-- professional email;
-- Portuguese and English CV files;
-- any non-GitHub or private projects that can be discussed publicly.
+- Any non-GitHub or private projects that can be discussed publicly.
+- Verified outcomes or usage evidence for existing products, if available later.

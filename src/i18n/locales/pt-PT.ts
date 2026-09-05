@@ -50,6 +50,18 @@ export const ptPT = {
           'Pipeline experimental de Machine Learning desde a definição da coorte até à avaliação e explicabilidade dos modelos',
         imageCaption:
           'Pipeline experimental que abrange definição da coorte, seleção de modelos, avaliação hold-out e interpretabilidade com SHAP.',
+        precisionRecallImageAlt:
+          'Curvas Precision–Recall de sete modelos no conjunto de teste da progressão funcional aos seis meses',
+        precisionRecallImageCaption:
+          'Curvas Precision–Recall hold-out do Estudo I. A linha tracejada representa a prevalência de 0,30 da classe de progressão rápida.',
+        studyOneShapImageAlt:
+          'Gráfico SHAP beeswarm que mostra a influência das variáveis iniciais nas previsões de progressão funcional do XGBoost',
+        studyOneShapImageCaption:
+          'Visão SHAP global do Estudo I. O ALSFRS-R inicial teve o maior contributo global; medidas respiratórias e idade também surgiram de forma recorrente.',
+        studyTwoShapImageAlt:
+          'Importância das variáveis e distribuições dos valores SHAP do modelo LightGBM de sobrevivência com sobreamostragem aleatória',
+        studyTwoShapImageCaption:
+          'No Estudo II, o atraso no diagnóstico e os declives dos itens ALSFRS-R destacaram-se nas explicações do LightGBM. São associações preditivas, não efeitos causais.',
       },
       professionalPortfolio: {
         title: 'Portefólio Profissional',
@@ -296,6 +308,110 @@ export const ptPT = {
             'O resultado é uma aplicação publicada e autenticada que cobre o percurso desde a criação da conta até às candidaturas, entrevistas, tarefas, agenda e gestão do perfil. Está disponível em dois idiomas e foi concebida para computador e telemóvel.',
           bodyTwo:
             'O repositório regista as decisões e verificações de qualidade por detrás da interface: TypeScript, lint, paridade das traduções, scripts de validação de domínio, builds de produção e testes de RLS ao nível da base de dados. O projeto continua em manutenção ativa à medida que o fluxo real evolui.',
+        },
+      },
+      alsThesis: {
+        metaDescription:
+          'Caso de estudo de uma tese de mestrado sobre Machine Learning explicável para progressão funcional e prognóstico de sobrevivência em ALS com dados PRO-ACT.',
+        eyebrow: 'Investigação académica · Tese de mestrado',
+        introduction:
+          'Dois estudos ligados partem da mesma pergunta: quando os dados de prognóstico são desequilibrados e clinicamente sensíveis, o que torna credível um resultado de Machine Learning para além de uma métrica forte?',
+        facts: {
+          role: {
+            label: 'Papel',
+            value: 'Desenho da investigação, implementação, análise e escrita',
+          },
+          period: { label: 'Período', value: '2024 — atual' },
+          dataset: {
+            label: 'Dataset',
+            value: 'PRO-ACT · 23 ensaios clínicos de ALS',
+          },
+          status: { label: 'Estado', value: 'Tese em desenvolvimento' },
+        },
+        problem: {
+          title: 'Prognóstico não é apenas um problema de classificação',
+          body:
+            'A esclerose lateral amiotrófica progride de forma muito diferente entre pessoas. Um fluxo de prognóstico útil tem, por isso, de lidar com registos longitudinais, poucos casos da classe minoritária, horizontes clínicos distintos e as consequências de falsos negativos e falsos positivos.',
+          bodyTwo:
+            'A tese usa registos longitudinais de 23 ensaios clínicos da base PRO-ACT. Em vez de reduzir o trabalho a um único modelo, estuda dois resultados diferentes e trata o desenho da validação, o desequilíbrio de classes, os limiares de decisão e a explicabilidade como partes da própria modelação.',
+        },
+        studies: {
+          title: 'Dois resultados, uma questão metodológica',
+          functional: {
+            label: 'Estudo I · Pipeline original',
+            title: 'Progressão funcional aos três e seis meses',
+            body:
+              'Sete classificadores usam informação clínica inicial para distinguir progressão rápida e lenta do ALSFRS-R. Grupos de variáveis, ponderação de classes, horizonte de previsão e explicações globais e individuais são avaliados em conjunto.',
+            detail:
+              'O limiar que define progressão rápida é estimado dentro de cada fold de treino, evitando que informação dos participantes de validação entre na construção do target.',
+          },
+          survival: {
+            label: 'Estudo II · Replicação e extensão',
+            title: 'Prognóstico de sobrevivência até 24 meses',
+            body:
+              'Uma replicação parcial de trabalho publicado com BalancedBagging é alargada com sete classificadores, dez estratégias para desequilíbrio, otimização Bayesiana, teste hold-out, análise de thresholds, estimativas de incerteza e SHAP.',
+            detail:
+              'O estudo testa se uma ROC-AUC elevada também se traduz numa deteção adequada da classe minoritária Short Survivor.',
+          },
+        },
+        safeguards: {
+          title: 'Rigor integrado no fluxo experimental',
+          introduction:
+            'O trabalho de engenharia mais importante acontece antes de surgir uma pontuação final. O pipeline torna explícitas as fronteiras entre aprendizagem, seleção e avaliação.',
+          separation: {
+            title: 'Separar pessoas, não linhas',
+            body:
+              'Os participantes são separados entre partições para impedir que vários registos clínicos da mesma pessoa tornem os resultados de validação artificialmente fortes.',
+          },
+          folds: {
+            title: 'Manter transformações dentro do treino',
+            body:
+              'A estimação do target e o resampling acontecem apenas nos folds de treino. Os hiperparâmetros são escolhidos com validação cruzada, sem consultar repetidamente o conjunto de teste final.',
+          },
+          evaluation: {
+            title: 'Avaliar uma vez, por vários ângulos',
+            body:
+              'Os candidatos finais são avaliados numa coorte hold-out com intervalos de confiança, métricas da classe minoritária, comportamento dos limiares de decisão e métricas adequadas a cada resultado.',
+          },
+          interpretation: {
+            title: 'Explicar sem afirmar causalidade',
+            body:
+              'SHAP, LIME e coeficientes revelam padrões usados pelos modelos. A concordância e discordância entre explicações é analisada, mantendo-as como associações preditivas e não causas clínicas.',
+          },
+        },
+        results: {
+          title: 'Resultados com os trade-offs visíveis',
+          introduction:
+            'Os resultados sustentam o valor do pipeline, mas também mostram por que razão uma única métrica não basta para uma afirmação de prognóstico.',
+          functional: {
+            label: 'Estudo I · Hold-out aos seis meses',
+            metric: '0,456',
+            metricLabel: 'PR-AUC · XGBoost · n = 279',
+            body:
+              'No threshold de 0,21, derivado no desenvolvimento, o modelo atingiu 85,7% de recall e 35,1% de precisão. A escolha privilegiou sensibilidade, mas também produziu muitos falsos positivos — um compromisso que deve permanecer explícito.',
+          },
+          survival: {
+            label: 'Estudo II · Teste hold-out',
+            metric: '0,923',
+            metricLabel: 'ROC-AUC · LightGBM + ROS · n = 301',
+            body:
+              'O modelo atingiu 85,7% de sensibilidade e 83,1% de especificidade, com intervalo ROC-AUC de 95% entre 0,868 e 0,966. Outra configuração apresentou intervalos sobrepostos, pelo que a evidência não demonstra superioridade clara.',
+          },
+          caution:
+            'Um modelo neuronal deixou um aviso particularmente útil: uma boa capacidade de ordenação no threshold predefinido detetou apenas 1 dos 35 Short Survivors. A escolha do threshold faz parte do modelo, não é um acabamento.',
+        },
+        evidence: {
+          title: 'Do desempenho agregado ao comportamento do modelo',
+          introduction:
+            'A análise passa da discriminação hold-out para as variáveis que moldam as previsões. As figuras são resultados dos pipelines experimentais reais, não gráficos de marketing recriados.',
+          studyTwoLabel: 'Estudo II · Camada de explicação',
+        },
+        outcome: {
+          title: 'O contributo é metodológico, não uma promessa de utilização clínica',
+          body:
+            'Em duas tarefas de prognóstico, a tese mostra como separação de participantes, construção do target, estratégia de desequilíbrio, escolha do threshold, incerteza e explicabilidade podem alterar materialmente o significado de uma métrica principal.',
+          bodyTwo:
+            'O trabalho não propõe que as previsões determinem cuidados de forma isolada. O resultado é um pipeline de investigação reprodutível e uma leitura prudente de onde os modelos informam, onde falham e do que precisaria de validação adicional antes de qualquer uso clínico.',
         },
       },
     },

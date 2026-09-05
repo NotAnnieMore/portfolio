@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router'
 
 import { PageIntro } from '../components/layout/PageIntro'
+import { AlsThesisCaseStudy } from '../components/projects/AlsThesisCaseStudy'
 import { JobApplicationTrackerCaseStudy } from '../components/projects/JobApplicationTrackerCaseStudy'
 import { getProjectBySlug } from '../data/projects'
 import type { Project } from '../types/content'
@@ -20,7 +21,20 @@ export function ProjectPage() {
     return <JobTrackerPage project={project} />
   }
 
+  if (project.id === 'als-thesis') {
+    return <AlsThesisPage project={project} />
+  }
+
   return <ProjectPlaceholder project={project} />
+}
+
+function AlsThesisPage({ project }: { project: Project }) {
+  const { t } = useTranslation()
+  const title = t(`${project.translationKey}.title`)
+  const description = t('pages.project.alsThesis.metaDescription')
+  usePageMeta(`${title} — Ivo Camacho`, description)
+
+  return <AlsThesisCaseStudy project={project} />
 }
 
 function JobTrackerPage({ project }: { project: Project }) {

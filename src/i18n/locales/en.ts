@@ -50,6 +50,18 @@ export const en = {
           'Experimental machine learning pipeline from cohort definition to model assessment and explainability',
         imageCaption:
           'Experimental pipeline covering cohort definition, model selection, held-out evaluation, and SHAP interpretability.',
+        precisionRecallImageAlt:
+          'Precision–recall curves for seven models on the six-month functional progression test set',
+        precisionRecallImageCaption:
+          'Held-out Precision–Recall curves for Study I. The dashed line marks the rapid-progression prevalence baseline of 0.30.',
+        studyOneShapImageAlt:
+          'SHAP beeswarm showing how baseline variables influenced the XGBoost functional progression predictions',
+        studyOneShapImageCaption:
+          'Study I global SHAP view. Baseline ALSFRS-R had the largest overall contribution, with respiratory measurements and age also recurring.',
+        studyTwoShapImageAlt:
+          'Feature importance and SHAP value distributions for the LightGBM survival model with random oversampling',
+        studyTwoShapImageCaption:
+          'In Study II, diagnostic delay and ALSFRS-R item slopes were prominent in the LightGBM explanations. These are predictive associations, not causal effects.',
       },
       professionalPortfolio: {
         title: 'Professional Portfolio',
@@ -295,6 +307,110 @@ export const en = {
             'The result is a deployed, authenticated application covering the flow from account creation to applications, interviews, tasks, agenda, and profile management. It is available in two languages and designed for desktop and mobile use.',
           bodyTwo:
             'The repository records the decisions and quality checks behind the interface: TypeScript, linting, translation parity, domain-validation scripts, production builds, and database-level RLS tests. The project remains actively maintained as the real workflow evolves.',
+        },
+      },
+      alsThesis: {
+        metaDescription:
+          'Case study of a master’s thesis on explainable machine learning for ALS functional progression and survival prognosis using PRO-ACT data.',
+        eyebrow: 'Academic research · Master’s thesis',
+        introduction:
+          'Two connected studies ask a shared question: when prognosis data is imbalanced and clinically sensitive, what makes a machine-learning result credible beyond a strong headline metric?',
+        facts: {
+          role: {
+            label: 'Role',
+            value: 'Research design, implementation, analysis, and writing',
+          },
+          period: { label: 'Period', value: '2024 — present' },
+          dataset: {
+            label: 'Dataset',
+            value: 'PRO-ACT · 23 ALS clinical trials',
+          },
+          status: { label: 'Status', value: 'Thesis in progress' },
+        },
+        problem: {
+          title: 'Prognosis is not just a classification problem',
+          body:
+            'Amyotrophic lateral sclerosis progresses very differently between people. A useful prognosis workflow must therefore handle longitudinal records, limited minority cases, changing clinical horizons, and the consequences of false negatives and false positives.',
+          bodyTwo:
+            'The thesis uses longitudinal records from 23 clinical trials in the PRO-ACT database. Instead of collapsing the work into one model, it examines two distinct outcomes and treats validation design, class imbalance, decision thresholds, and explainability as part of the modelling itself.',
+        },
+        studies: {
+          title: 'Two outcomes, one methodological question',
+          functional: {
+            label: 'Study I · Original pipeline',
+            title: 'Functional progression at three and six months',
+            body:
+              'Seven classifiers use baseline clinical information to distinguish rapid from slow ALSFRS-R progression. Feature groups, class weighting, prediction horizon, global explanations, and individual explanations are evaluated together.',
+            detail:
+              'The rapid-progression target is estimated inside each training fold, avoiding information from validation participants leaking into target construction.',
+          },
+          survival: {
+            label: 'Study II · Replication and extension',
+            title: 'Survival prognosis within 24 months',
+            body:
+              'A partial replication of published BalancedBagging work is extended with seven classifiers, ten imbalance-handling strategies, Bayesian optimisation, held-out testing, threshold analysis, uncertainty estimates, and SHAP.',
+            detail:
+              'The study tests whether strong ROC-AUC ranking also translates into adequate detection of the smaller Short Survivor class.',
+          },
+        },
+        safeguards: {
+          title: 'Rigor designed into the workflow',
+          introduction:
+            'The most important engineering work happens before a final score appears. The pipeline makes the boundaries between learning, selection, and evaluation explicit.',
+          separation: {
+            title: 'Separate people, not rows',
+            body:
+              'Participants are separated across partitions so repeated clinical records from the same person cannot make validation results look artificially strong.',
+          },
+          folds: {
+            title: 'Keep transformations inside training',
+            body:
+              'Target estimation and resampling happen only within training folds. Hyperparameters are selected with cross-validation rather than by repeatedly consulting the final test set.',
+          },
+          evaluation: {
+            title: 'Evaluate once, from several angles',
+            body:
+              'Final candidates are assessed on a held-out cohort with confidence intervals, minority-class measures, decision-threshold behaviour, and metrics suited to each outcome.',
+          },
+          interpretation: {
+            title: 'Explain without claiming causality',
+            body:
+              'SHAP, LIME, and coefficients reveal patterns used by the models. Their agreement and disagreement are examined, while explanations remain predictive associations rather than clinical causes.',
+          },
+        },
+        results: {
+          title: 'Results with the trade-offs left visible',
+          introduction:
+            'The results support the workflow’s value, but they also show why no single metric is enough for a prognosis claim.',
+          functional: {
+            label: 'Study I · Six-month hold-out',
+            metric: '0.456',
+            metricLabel: 'PR-AUC · XGBoost · n = 279',
+            body:
+              'At the development-derived threshold of 0.21, the model reached 85.7% recall and 35.1% precision. This prioritised sensitivity, but also produced many false positives — a trade-off that must remain explicit.',
+          },
+          survival: {
+            label: 'Study II · Held-out test',
+            metric: '0.923',
+            metricLabel: 'ROC-AUC · LightGBM + ROS · n = 301',
+            body:
+              'The model reached 85.7% sensitivity and 83.1% specificity, with a 95% ROC-AUC interval of 0.868–0.966. Another configuration had overlapping intervals, so the evidence does not establish clear superiority.',
+          },
+          caution:
+            'A neural model provided a particularly useful warning: strong ranking performance at the default threshold still detected only 1 of 35 Short Survivors. Threshold choice is part of the model, not a finishing detail.',
+        },
+        evidence: {
+          title: 'From aggregate performance to model behaviour',
+          introduction:
+            'The analysis moves from held-out discrimination to the variables shaping predictions. The figures are outputs from the actual experimental pipelines, not recreated marketing graphics.',
+          studyTwoLabel: 'Study II · Explanation layer',
+        },
+        outcome: {
+          title: 'The contribution is methodological, not a deployment claim',
+          body:
+            'Across two prognosis tasks, the thesis shows how patient separation, target construction, imbalance strategy, threshold choice, uncertainty, and explainability can materially change what a headline score means.',
+          bodyTwo:
+            'The work does not propose that predictions should determine care in isolation. Its output is a reproducible research pipeline and a cautious account of where the models are informative, where they fail, and what would need further validation before clinical use.',
         },
       },
     },

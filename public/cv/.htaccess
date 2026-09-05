@@ -1,0 +1,7 @@
+Options -Indexes
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.pdf$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>

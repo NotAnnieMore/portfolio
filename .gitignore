@@ -4,5 +4,6 @@ dist/
 *.local
 *.log
 *.tsbuildinfo
+tmp/
 .DS_Store
 Thumbs.db

@@ -10,9 +10,13 @@ export function applyTheme(theme: Theme) {
   document.documentElement.dataset.theme = theme
   document.documentElement.style.colorScheme = theme
 
-  const themeColor = theme === 'dark' ? '#171817' : '#f6f5f2'
-  document
-    .querySelector('meta[name="theme-color"]')
-    ?.setAttribute('content', themeColor)
-}
+  const themeColor = getComputedStyle(document.documentElement)
+    .getPropertyValue('--theme-background')
+    .trim()
 
+  if (themeColor) {
+    document
+      .querySelector('meta[name="theme-color"]')
+      ?.setAttribute('content', themeColor)
+  }
+}

@@ -1,6 +1,12 @@
 # Portfolio content inventory
 
-This inventory records potential portfolio material without treating it as approved public content.
+This inventory records approved and potential portfolio material. Public copy still requires editorial review before page implementation.
+
+## Approved Featured Projects
+
+1. Job Application Tracker
+2. ALS thesis and replication work, presented as one case study
+3. Professional Portfolio
 
 ## Strong candidate
 
@@ -12,9 +18,8 @@ This inventory records potential portfolio material without treating it as appro
 - Available evidence: a detailed README, architecture documentation, product decisions, testing documentation, and anonymised desktop/mobile screenshots.
 - Portfolio potential: strong standalone product case study covering product thinking, data modelling, authentication, security, internationalisation, responsive UI, and deployment.
 
-Approval still needed:
+Content decisions still needed:
 
-- whether it should be the first Featured Project;
 - which decisions and challenges best represent the work;
 - whether the public repository and live application should both be linked;
 - confirmation that the existing anonymised screenshots may be reused.
@@ -26,7 +31,7 @@ Approval still needed:
 - Main repository: https://github.com/NotAnnieMore/ALSThesis
 - Replication repository: https://github.com/NotAnnieMore/ThesisReplication
 - Observed material: Python, Jupyter notebooks, TeX, data folders, source/scripts, outputs, models, replication material, and thesis documents.
-- Portfolio potential: one academic/research case study, rather than two repository-shaped entries, if both repositories belong to the same thesis narrative.
+- Portfolio treatment: one academic/research case study rather than two repository-shaped entries.
 
 Information still needed:
 
@@ -47,6 +52,15 @@ Information still needed:
 - Observable information: JavaScript source with no public README or project description.
 - Recommendation: do not feature it unless there is meaningful technical context, a working result, and a reason it strengthens the professional narrative.
 
+## Approved product candidate
+
+### Professional Portfolio
+
+- Repository: https://github.com/NotAnnieMore/portfolio
+- Intended website: https://ivocamacho.com
+- Portfolio potential: a concise meta-case-study covering content architecture, bilingual URLs, accessible theming, static deployment constraints, responsive design, performance, and the deliberate avoidance of generic portfolio patterns.
+- Recommendation: keep this case study shorter than the Job Application Tracker and thesis; its value is in explaining decisions and constraints, not describing the page the visitor is already viewing.
+
 ## Low-priority repositories
 
 Older classroom exercises, forks, demos, and the first personal page should not be promoted by default. They can remain on GitHub without appearing in the curated portfolio unless one contains work that is particularly important to explain.
@@ -62,4 +76,3 @@ Older classroom exercises, forks, demos, and the first personal page should not 
 - professional email;
 - Portuguese and English CV files;
 - any non-GitHub or private projects that can be discussed publicly.
-

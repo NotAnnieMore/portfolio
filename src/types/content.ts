@@ -1,4 +1,10 @@
-export type ContentLinkKind = 'live' | 'github' | 'document' | 'external'
+export type ContentLinkKind =
+  | 'live'
+  | 'github'
+  | 'document'
+  | 'email'
+  | 'linkedin'
+  | 'external'
 
 export interface ContentLink {
   readonly kind: ContentLinkKind
@@ -64,4 +70,3 @@ export interface SkillGroup {
 export interface ProfileLink extends ContentLink {
   readonly id: string
 }
-

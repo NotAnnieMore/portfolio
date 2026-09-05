@@ -41,7 +41,7 @@ export function SiteLayout() {
                   <NavLink
                     className={({ isActive }) =>
                       isActive
-                        ? 'text-sm text-ink underline decoration-accent decoration-2 underline-offset-8'
+                        ? 'text-sm text-ink underline decoration-action decoration-2 underline-offset-8'
                         : 'text-sm text-muted transition-colors hover:text-ink'
                     }
                     to={item.to}
@@ -66,7 +66,7 @@ export function SiteLayout() {
 
       <footer className="border-t border-line">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-8 text-sm text-muted sm:flex-row sm:items-center sm:justify-between lg:px-10">
-          <p>{t('footer.note')}</p>
+          <p>{t('footer.note', { year: new Date().getFullYear() })}</p>
           <a
             className="focus-ring transition-colors hover:text-ink"
             href="https://github.com/NotAnnieMore"

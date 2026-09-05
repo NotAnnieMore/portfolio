@@ -40,7 +40,7 @@ export function LanguageToggle() {
       aria-label={t('language.switchTo', {
         language: nextLocale === 'pt' ? 'Português' : 'English',
       })}
-      className="focus-ring min-h-10 min-w-10 px-2 text-sm font-medium uppercase text-muted transition-colors hover:text-ink"
+      className="focus-ring min-h-10 min-w-10 px-2 text-sm font-semibold uppercase text-action-readable transition-colors hover:bg-action-soft"
       onClick={changeLocale}
       type="button"
     >
@@ -48,4 +48,3 @@ export function LanguageToggle() {
     </button>
   )
 }
-

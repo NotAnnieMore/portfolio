@@ -9,7 +9,9 @@ export function PageIntro({ eyebrow, title, description }: PageIntroProps) {
     <section className="mx-auto min-h-[62vh] max-w-6xl px-6 py-24 sm:py-32 lg:px-10">
       <div className="max-w-3xl">
         {eyebrow ? (
-          <p className="mb-5 text-sm font-medium text-accent">{eyebrow}</p>
+          <p className="mb-5 text-sm font-medium text-green-readable">
+            {eyebrow}
+          </p>
         ) : null}
         <h1 className="text-4xl font-semibold tracking-[-0.035em] text-balance sm:text-5xl">
           {title}
@@ -21,4 +23,3 @@ export function PageIntro({ eyebrow, title, description }: PageIntroProps) {
     </section>
   )
 }
-

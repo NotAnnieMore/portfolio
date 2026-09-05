@@ -13,7 +13,7 @@ export function NotFoundPage() {
   return (
     <main className="grid min-h-screen place-items-center bg-page px-6 text-ink">
       <div className="max-w-xl text-center">
-        <p className="text-sm font-medium text-accent">404</p>
+        <p className="text-sm font-medium text-green-readable">404</p>
         <h1 className="mt-5 text-4xl font-semibold tracking-tight">
           {t('pages.notFound.title')}
         </h1>
@@ -21,7 +21,7 @@ export function NotFoundPage() {
           {t('pages.notFound.description')}
         </p>
         <Link
-          className="focus-ring mt-8 inline-block border-b-2 border-accent pb-1 font-medium"
+          className="focus-ring mt-8 inline-block border-b-2 border-action pb-1 font-medium transition-colors hover:border-action-hover"
           to={`/${homeLocale}`}
         >
           {t('pages.notFound.backHome')}
@@ -30,4 +30,3 @@ export function NotFoundPage() {
     </main>
   )
 }
-

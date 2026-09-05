@@ -3,6 +3,7 @@ import { useParams } from 'react-router'
 
 import { PageIntro } from '../components/layout/PageIntro'
 import { getProjectBySlug } from '../data/projects'
+import type { Project } from '../types/content'
 import { usePageMeta } from '../utils/usePageMeta'
 import { NotFoundPage } from './NotFoundPage'
 
@@ -14,18 +15,20 @@ export function ProjectPage() {
     return <NotFoundPage />
   }
 
-  return <ProjectPlaceholder slug={project.slug} />
+  return <ProjectPlaceholder project={project} />
 }
 
-function ProjectPlaceholder({ slug }: { slug: string }) {
+function ProjectPlaceholder({ project }: { project: Project }) {
   const { t } = useTranslation()
-  usePageMeta(t('pages.project.metaTitle'), t('pages.project.metaDescription'))
+  const title = t(`${project.translationKey}.title`)
+  const description = t(`${project.translationKey}.summary`)
+  usePageMeta(`${title} — Ivo Camacho`, description)
 
   return (
     <PageIntro
-      description={t('pages.project.description')}
-      eyebrow={slug}
-      title={t('pages.project.title')}
+      description={description}
+      eyebrow={t('pages.project.eyebrow')}
+      title={title}
     />
   )
 }

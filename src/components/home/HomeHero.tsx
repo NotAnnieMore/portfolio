@@ -5,7 +5,7 @@ import { profileLinks } from '../../data/links'
 import { isSupportedLocale } from '../../i18n/locales'
 import { ProfileLinkIcon } from '../ui/ProfileLinkIcon'
 
-const visibleProfileLinks = new Set(['email', 'linkedin', 'github'])
+const heroProfileLinks = new Set(['linkedin', 'github'])
 
 export function HomeHero() {
   const { t } = useTranslation()
@@ -37,11 +37,33 @@ export function HomeHero() {
               {t('pages.home.actions.viewCv')}
             </Link>
           </div>
+
+          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 border-l border-green pl-5">
+            <p className="text-sm leading-6 text-muted">
+              {t('pages.home.hero.location')}
+            </p>
+            <ul className="flex flex-wrap items-center gap-x-5 gap-y-2.5 text-sm">
+              {profileLinks
+                .filter((link) => heroProfileLinks.has(link.id))
+                .map((link) => (
+                  <li key={link.id}>
+                    <a
+                      className="focus-ring inline-flex items-center gap-2 font-medium underline decoration-line underline-offset-4 transition-colors hover:decoration-action"
+                      href={link.href}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      <ProfileLinkIcon id={link.id} />
+                      {t(`content.links.${link.id}`)}
+                    </a>
+                  </li>
+                ))}
+            </ul>
+          </div>
         </div>
 
         <aside className="lg:-mr-10 xl:-mr-20">
-          <figure className="relative min-h-[27rem] overflow-hidden border border-line bg-surface-soft sm:min-h-[32rem] lg:min-h-[36rem]">
-            <span aria-hidden="true" className="surface-texture-layer" />
+          <figure className="relative min-h-[27rem] overflow-hidden sm:min-h-[32rem] lg:min-h-[36rem] lg:overflow-visible">
             <img
               alt={t('pages.home.hero.illustrationAlt')}
               className="absolute -bottom-10 left-1/2 z-10 h-[116%] w-auto max-w-none -translate-x-1/2 object-contain sm:-bottom-12 sm:h-[120%] lg:-bottom-16 lg:h-[124%]"
@@ -52,28 +74,6 @@ export function HomeHero() {
               width="800"
             />
           </figure>
-          <div className="mt-5 border-l border-green pl-5">
-            <p className="text-sm leading-6 text-muted">
-              {t('pages.home.hero.location')}
-            </p>
-            <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-2.5 text-sm lg:flex-col lg:items-start">
-              {profileLinks
-                .filter((link) => visibleProfileLinks.has(link.id))
-                .map((link) => (
-                  <li key={link.id}>
-                    <a
-                      className="focus-ring inline-flex items-center gap-2 font-medium underline decoration-line underline-offset-4 transition-colors hover:decoration-action"
-                      href={link.href}
-                      rel={link.kind === 'email' ? undefined : 'noreferrer'}
-                      target={link.kind === 'email' ? undefined : '_blank'}
-                    >
-                      <ProfileLinkIcon id={link.id} />
-                      {t(`content.links.${link.id}`)}
-                    </a>
-                  </li>
-                ))}
-            </ul>
-          </div>
         </aside>
       </div>
     </section>

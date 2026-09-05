@@ -1,6 +1,7 @@
 export const ptPT = {
   accessibility: {
     skipToContent: 'Saltar para o conteúdo',
+    backToTop: 'Voltar ao topo',
   },
   navigation: {
     primary: 'Navegação principal',

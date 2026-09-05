@@ -27,7 +27,7 @@ export function HomeHero() {
 
           <div className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-5">
             <Link
-              className="focus-ring inline-flex min-h-11 items-center bg-action px-5 py-3 text-sm font-semibold text-action-contrast transition-colors hover:bg-action-hover"
+              className="focus-ring inline-flex min-h-11 items-center bg-action-fill px-5 py-3 text-sm font-semibold text-action-contrast transition-colors hover:bg-action-fill-hover"
               to={`/${activeLocale}/projects`}
             >
               {t('pages.home.actions.viewProjects')}

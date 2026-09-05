@@ -16,6 +16,8 @@
   --color-action-readable: var(--theme-action-readable);
   --color-action-hover: var(--theme-orange-hover);
   --color-action-soft: var(--theme-orange-soft);
+  --color-action-fill: var(--theme-action-fill);
+  --color-action-fill-hover: var(--theme-action-fill-hover);
   --color-action-contrast: var(--theme-action-contrast);
   --color-contact: var(--theme-contact);
   --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
@@ -38,7 +40,9 @@
   --theme-action-readable: color-mix(in srgb, var(--theme-orange) 55%, var(--theme-text));
   --theme-orange-hover: #B96D0D;
   --theme-orange-soft: #F8EBD7;
-  --theme-action-contrast: #0C1419;
+  --theme-action-fill: #A45E08;
+  --theme-action-fill-hover: #8B4D08;
+  --theme-action-contrast: #FFFFFF;
   --theme-contact: #E8F0E7;
   color-scheme: light;
   font-family: var(--font-sans);
@@ -62,7 +66,9 @@
   --theme-action-readable: var(--theme-orange);
   --theme-orange-hover: #FFB43C;
   --theme-orange-soft: #3A2914;
-  --theme-action-contrast: #11181C;
+  --theme-action-fill: #A45E08;
+  --theme-action-fill-hover: #8B4D08;
+  --theme-action-contrast: #FFFFFF;
   --theme-contact: #102D21;
   color-scheme: dark;
 }

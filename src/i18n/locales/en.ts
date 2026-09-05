@@ -1,6 +1,7 @@
 export const en = {
   accessibility: {
     skipToContent: 'Skip to content',
+    backToTop: 'Back to top',
   },
   navigation: {
     primary: 'Primary navigation',

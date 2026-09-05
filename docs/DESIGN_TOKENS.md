@@ -23,8 +23,9 @@ Components must consume the semantic CSS variables defined in
 | Orange hover | `#B96D0D` |
 | Soft orange | `#F8EBD7` |
 | Contact background | `#E8F0E7` |
-| Requested primary action text | `#FFFFFF` |
-| Implemented accessible primary action text | `#0C1419` |
+| Primary action fill | `#A45E08` |
+| Primary action fill hover | `#8B4D08` |
+| Primary action text | `#FFFFFF` |
 
 ## Dark mode
 
@@ -44,7 +45,9 @@ Components must consume the semantic CSS variables defined in
 | Orange hover | `#FFB43C` |
 | Soft orange | `#3A2914` |
 | Contact background | `#102D21` |
-| Primary action text | `#11181C` |
+| Primary action fill | `#A45E08` |
+| Primary action fill hover | `#8B4D08` |
+| Primary action text | `#FFFFFF` |
 
 ## Usage rules
 
@@ -53,8 +56,8 @@ Components must consume the semantic CSS variables defined in
   natural details.
 - Use orange for primary calls to action, important links, interactive states,
   the language control and live application links.
-- Primary buttons use the orange background and the theme-specific action text;
-  their hover state uses the orange hover token.
+- Primary buttons use the dedicated deeper-orange fill and white text; their
+  hover state uses the corresponding button-fill hover token.
 - Secondary buttons stay transparent with neutral borders.
 - Preserve accessible contrast in both themes.
 - Do not use gradients, neon or glow effects, and do not use pure black for the
@@ -62,9 +65,10 @@ Components must consume the semantic CSS variables defined in
 
 ### Accessibility adaptations
 
-White text on the requested light-mode orange has a contrast ratio of 2.86:1.
-The implementation therefore uses `#0C1419` for light primary-button text so
-that the orange remains unchanged while the label passes WCAG AA. Small green
-and orange text uses readable semantic tokens derived from the corresponding
-accent and primary-text tokens; decorative borders and backgrounds retain the
-exact palette values above.
+White text on the original primary oranges has a contrast ratio of 2.86:1 in
+light mode and 1.95:1 in dark mode. Primary buttons therefore use a dedicated,
+deeper orange fill with white text: `#A45E08` reaches 5.02:1, while the darker
+hover fill reaches 6.64:1. The original orange tokens remain in use for borders,
+links, highlights, and other non-button roles. Small green and orange text uses
+readable semantic tokens derived from the corresponding accent and primary-text
+tokens.

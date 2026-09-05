@@ -3,6 +3,7 @@ import { NavLink, Outlet, useParams } from 'react-router'
 
 import { LanguageToggle } from '../ui/LanguageToggle'
 import { ThemeToggle } from '../ui/ThemeToggle'
+import { BackToTop } from '../ui/BackToTop'
 import { isSupportedLocale } from '../../i18n/locales'
 
 export function SiteLayout() {
@@ -22,7 +23,7 @@ export function SiteLayout() {
         {t('accessibility.skipToContent')}
       </a>
 
-      <header className="border-b border-line">
+      <header className="sticky top-0 z-40 border-b border-line bg-page">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-5 gap-y-4 px-6 py-6 lg:px-10">
           <NavLink
             className="text-base font-semibold tracking-tight"
@@ -63,6 +64,8 @@ export function SiteLayout() {
       <main className="flex-1" id="main-content">
         <Outlet />
       </main>
+
+      <BackToTop />
 
       <footer className="border-t border-line">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-8 text-sm text-muted sm:flex-row sm:items-center sm:justify-between lg:px-10">

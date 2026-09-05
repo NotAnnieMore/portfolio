@@ -8,12 +8,14 @@ import { HomePage } from '../pages/HomePage'
 import { NotFoundPage } from '../pages/NotFoundPage'
 import { ProjectPage } from '../pages/ProjectPage'
 import { ProjectsPage } from '../pages/ProjectsPage'
+import { ScrollReveal } from '../components/ui/ScrollReveal'
 import { ScrollToTop } from '../components/ui/ScrollToTop'
 
 export function App() {
   return (
     <>
       <ScrollToTop />
+      <ScrollReveal />
       <Routes>
         <Route index element={<LanguageRedirect />} />
         <Route path=":locale" element={<LocaleRoute />}>

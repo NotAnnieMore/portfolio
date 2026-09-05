@@ -16,9 +16,6 @@ export function HomeHero() {
     <section className="mx-auto max-w-6xl px-6 pb-24 pt-20 sm:pb-28 sm:pt-24 lg:px-10 lg:pb-32 lg:pt-28">
       <div className="grid gap-12 lg:grid-cols-[minmax(0,4fr)_minmax(15rem,1.4fr)] lg:items-end">
         <div className="max-w-4xl">
-          <p className="mb-7 text-sm font-medium text-green-readable">
-            {t('pages.home.hero.name')}
-          </p>
           <h1 className="text-[clamp(2.75rem,7vw,5.75rem)] font-semibold leading-[0.98] tracking-[-0.055em] text-balance">
             {t('pages.home.hero.title')}
           </h1>

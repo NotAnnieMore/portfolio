@@ -46,10 +46,10 @@ export function SiteLayout() {
           >
             <img
               alt=""
-              className="size-6"
-              height="24"
+              className="size-7"
+              height="28"
               src="/logo-icon.png"
-              width="24"
+              width="28"
             />
             <span>Ivo Camacho</span>
           </NavLink>

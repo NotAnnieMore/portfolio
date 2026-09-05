@@ -1,3 +1,4 @@
+import { Database, LayoutDashboard, ServerCog, ShieldCheck } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { Link, useParams } from 'react-router'
 
@@ -6,6 +7,12 @@ import type { Project } from '../../types/content'
 
 const capabilityKeys = ['workflow', 'interviews', 'agenda', 'experience'] as const
 const decisionKeys = ['security', 'import', 'filters', 'localisation'] as const
+const architectureNodes = [
+  { key: 'interface', Icon: LayoutDashboard },
+  { key: 'application', Icon: ServerCog },
+  { key: 'identity', Icon: ShieldCheck },
+  { key: 'data', Icon: Database },
+] as const
 
 interface JobApplicationTrackerCaseStudyProps {
   project: Project
@@ -159,15 +166,20 @@ export function JobApplicationTrackerCaseStudy({
               {t('pages.project.jobTracker.architecture.description')}
             </p>
             <ol className="mt-14 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
-              {(['interface', 'application', 'identity', 'data'] as const).map(
-                (node, index) => (
+              {architectureNodes.map(
+                ({ key: node, Icon }, index) => (
                   <li
                     className="bg-surface-soft p-6 sm:min-h-48 lg:p-7"
                     key={node}
                   >
-                    <p className="font-mono text-xs text-green-readable">
-                      {String(index + 1).padStart(2, '0')}
-                    </p>
+                    <div className="flex items-center justify-between gap-4">
+                      <span className="inline-flex size-11 items-center justify-center bg-green-soft text-green-readable">
+                        <Icon aria-hidden="true" size={21} strokeWidth={1.8} />
+                      </span>
+                      <p className="font-mono text-xs text-green-readable">
+                        {String(index + 1).padStart(2, '0')}
+                      </p>
+                    </div>
                     <h3 className="mt-8 text-lg font-semibold">
                       {t(
                         `pages.project.jobTracker.architecture.${node}.title`,

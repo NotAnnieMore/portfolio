@@ -58,8 +58,8 @@ export function CvPage() {
 
               <div className="mt-14 grid gap-10 md:grid-cols-2 md:gap-12">
                 {orderedDocuments.map((document) => (
-                  <article className="border-t border-line pt-6" key={document.locale}>
-                    <div className="flex items-start justify-between gap-6">
+                  <article className="flex flex-col border-t border-line pt-6" key={document.locale}>
+                    <div className="flex items-start justify-between gap-6 md:min-h-32">
                       <div>
                         <p className="font-mono text-xs uppercase tracking-[0.14em] text-green-readable">
                           {t(`pages.cv.documents.${document.locale}.label`)}

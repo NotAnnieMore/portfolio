@@ -11,9 +11,12 @@ export function SectionHeading({
 }: SectionHeadingProps) {
   return (
     <div className="grid gap-4 border-t border-line pt-5 sm:grid-cols-[8rem_1fr] lg:grid-cols-[12rem_1fr]">
-      <p className="font-mono text-xs tracking-[0.16em] text-green-readable">
-        {index}
-      </p>
+      <div className="flex items-center gap-3 self-start">
+        <p className="font-mono text-xs font-semibold tracking-[0.16em] text-green-readable">
+          {index}
+        </p>
+        <span aria-hidden="true" className="h-px w-8 bg-green" />
+      </div>
       <div className="max-w-2xl">
         <h2 className="text-2xl font-semibold tracking-[-0.025em] sm:text-3xl">
           {title}

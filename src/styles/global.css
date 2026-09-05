@@ -33,7 +33,7 @@
   --theme-border: #DCE1DC;
   --theme-border-strong: #C8CFC9;
   --theme-green: #3FAE63;
-  --theme-green-readable: color-mix(in srgb, var(--theme-green) 55%, var(--theme-text));
+  --theme-green-readable: #24723D;
   --theme-green-hover: #318C4D;
   --theme-green-soft: #E5F3E8;
   --theme-orange: #D88618;
@@ -96,6 +96,10 @@ a {
 
 button {
   cursor: pointer;
+}
+
+.font-mono.text-green-readable {
+  font-weight: 600;
 }
 
 .focus-ring:focus-visible,

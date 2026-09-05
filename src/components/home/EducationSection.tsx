@@ -12,13 +12,20 @@ export function EducationSection() {
   const activeLocale = isSupportedLocale(locale) ? locale : 'en'
 
   return (
-    <section className="mx-auto max-w-6xl px-6 py-24 sm:py-32 lg:px-10 lg:py-40">
+    <section className="mx-auto max-w-6xl px-6 py-20 sm:py-28 lg:px-10 lg:py-32">
       <SectionHeading index="04 / 05" title={t('pages.home.education.title')} />
 
-      <div className="mt-16 grid gap-x-10 gap-y-10 sm:mt-20 lg:grid-cols-3">
+      <div className="mt-14 grid gap-x-10 gap-y-10 sm:mt-16 lg:grid-cols-3">
         {education.slice(0, 3).map((item) => (
-          <article className="border-t border-line pt-5" key={item.id}>
-            <p className="font-mono text-xs text-muted">
+          <article
+            className="relative border-l border-line pl-6 pt-1"
+            key={item.id}
+          >
+            <span
+              aria-hidden="true"
+              className="absolute -left-1 top-1 size-2 bg-green"
+            />
+            <p className="font-mono text-xs font-semibold text-green-readable">
               {formatDateRange(
                 item.startDate,
                 item.endDate,
@@ -38,4 +45,3 @@ export function EducationSection() {
     </section>
   )
 }
-

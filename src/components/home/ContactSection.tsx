@@ -10,7 +10,7 @@ export function ContactSection() {
   const activeLocale = isSupportedLocale(locale) ? locale : 'en'
 
   return (
-    <section className="bg-contact py-24 text-ink sm:py-32 lg:py-40">
+    <section className="border-t border-line bg-contact py-20 text-ink sm:py-28 lg:py-32">
       <div className="mx-auto max-w-6xl px-6 lg:px-10">
         <div>
           <SectionHeading index="05 / 05" title={t('pages.home.contact.label')} />

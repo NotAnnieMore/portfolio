@@ -44,7 +44,7 @@ function ProjectDetails({ project }: { project: Project }) {
 
   return (
     <div>
-      <p className="font-mono text-xs uppercase tracking-[0.16em] text-muted">
+      <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-green-readable">
         {t(`content.projectCategories.${project.category}`)}
       </p>
       <h3 className="mt-4 text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">
@@ -72,7 +72,7 @@ export function FeaturedWork() {
   const thesisImage = thesis.media[0]
 
   return (
-    <section className="bg-surface py-24 sm:py-32 lg:py-40">
+    <section className="border-y border-line bg-surface py-20 sm:py-28 lg:py-32">
       <div className="mx-auto max-w-6xl px-6 lg:px-10">
         <SectionHeading
           description={t('pages.home.featured.description')}
@@ -80,10 +80,12 @@ export function FeaturedWork() {
           title={t('pages.home.featured.title')}
         />
 
-        <div className="mt-20 space-y-28 sm:mt-24 sm:space-y-36">
-          <article className="grid gap-10 lg:grid-cols-[minmax(17rem,0.72fr)_minmax(0,1.45fr)] lg:items-center lg:gap-14">
+        <div className="mt-16 divide-y divide-line sm:mt-20">
+          <article className="grid gap-10 pb-14 lg:grid-cols-[minmax(17rem,0.72fr)_minmax(0,1.45fr)] lg:items-center lg:gap-14 sm:pb-16">
             <div>
-              <p className="mb-8 font-mono text-xs text-green-readable">01</p>
+              <p className="mb-8 flex items-center gap-3 font-mono text-xs font-semibold text-green-readable">
+                01 <span aria-hidden="true" className="h-px w-8 bg-green" />
+              </p>
               <ProjectDetails project={jobTracker} />
               <ProjectLinks project={jobTracker} locale={activeLocale} />
             </div>
@@ -110,7 +112,7 @@ export function FeaturedWork() {
             ) : null}
           </article>
 
-          <article className="grid gap-10 lg:grid-cols-[minmax(0,1.35fr)_minmax(17rem,0.72fr)] lg:items-center lg:gap-14">
+          <article className="grid gap-10 py-14 sm:py-16 lg:grid-cols-[minmax(0,1.35fr)_minmax(17rem,0.72fr)] lg:items-center lg:gap-14">
             {thesisImage ? (
               <figure className="lg:order-1">
                 <div className="overflow-hidden border border-line bg-surface">
@@ -132,14 +134,18 @@ export function FeaturedWork() {
               </figure>
             ) : null}
             <div className="lg:order-2">
-              <p className="mb-8 font-mono text-xs text-green-readable">02</p>
+              <p className="mb-8 flex items-center gap-3 font-mono text-xs font-semibold text-green-readable">
+                02 <span aria-hidden="true" className="h-px w-8 bg-green" />
+              </p>
               <ProjectDetails project={thesis} />
               <ProjectLinks project={thesis} locale={activeLocale} />
             </div>
           </article>
 
-          <article className="grid gap-8 border-y border-line py-10 sm:grid-cols-[5rem_1fr] lg:grid-cols-[8rem_1fr_auto] lg:items-center lg:py-12">
-            <p className="font-mono text-xs text-green-readable">03</p>
+          <article className="grid gap-8 pt-14 sm:grid-cols-[5rem_1fr] sm:pt-16 lg:grid-cols-[8rem_1fr_auto] lg:items-center">
+            <p className="flex items-center gap-3 self-start font-mono text-xs font-semibold text-green-readable">
+              03 <span aria-hidden="true" className="h-px w-8 bg-green" />
+            </p>
             <ProjectDetails project={portfolio} />
             <div className="sm:col-start-2 lg:col-start-auto">
               <ProjectLinks project={portfolio} locale={activeLocale} />
@@ -147,7 +153,7 @@ export function FeaturedWork() {
           </article>
         </div>
 
-        <div className="mt-14 flex justify-end">
+        <div className="mt-12 flex justify-end">
           <Link
             className="focus-ring border-b border-ink pb-1 text-sm font-semibold"
             to={`/${activeLocale}/projects`}

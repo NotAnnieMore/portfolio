@@ -1,16 +1,25 @@
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { NavLink, Outlet, useParams } from 'react-router'
 
 import { LanguageToggle } from '../ui/LanguageToggle'
 import { ThemeToggle } from '../ui/ThemeToggle'
 import { BackToTop } from '../ui/BackToTop'
-import { BrandMark } from '../ui/BrandMark'
 import { isSupportedLocale } from '../../i18n/locales'
 
 export function SiteLayout() {
   const { t } = useTranslation()
   const { locale } = useParams()
   const activeLocale = isSupportedLocale(locale) ? locale : 'en'
+  const [isCompact, setIsCompact] = useState(false)
+
+  useEffect(() => {
+    const updateHeader = () => setIsCompact(window.scrollY > 56)
+
+    updateHeader()
+    window.addEventListener('scroll', updateHeader, { passive: true })
+    return () => window.removeEventListener('scroll', updateHeader)
+  }, [])
 
   const navItems = [
     { to: `/${activeLocale}/projects`, label: t('navigation.projects') },
@@ -25,13 +34,23 @@ export function SiteLayout() {
       </a>
 
       <header className="sticky top-0 z-40 border-b border-line bg-page">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-5 gap-y-4 px-6 py-6 lg:px-10">
+        <div
+          className={`mx-auto flex max-w-6xl flex-wrap items-center gap-x-5 px-6 transition-[padding] duration-200 motion-reduce:transition-none lg:px-10 ${
+            isCompact ? 'gap-y-2 py-3' : 'gap-y-4 py-6'
+          }`}
+        >
           <NavLink
             aria-label="Ivo Camacho"
             className="inline-flex items-center gap-2.5 text-base font-semibold tracking-tight"
             to={`/${activeLocale}`}
           >
-            <BrandMark />
+            <img
+              alt=""
+              className="size-6"
+              height="24"
+              src="/logo-icon.png"
+              width="24"
+            />
             <span>Ivo Camacho</span>
           </NavLink>
 

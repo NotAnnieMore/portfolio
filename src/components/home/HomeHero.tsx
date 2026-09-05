@@ -13,7 +13,7 @@ export function HomeHero() {
   const activeLocale = isSupportedLocale(locale) ? locale : 'en'
 
   return (
-    <section className="mx-auto max-w-6xl px-6 pb-24 pt-24 sm:pb-32 sm:pt-32 lg:px-10 lg:pb-40 lg:pt-40">
+    <section className="mx-auto max-w-6xl px-6 pb-24 pt-20 sm:pb-28 sm:pt-24 lg:px-10 lg:pb-32 lg:pt-28">
       <div className="grid gap-12 lg:grid-cols-[minmax(0,4fr)_minmax(15rem,1.4fr)] lg:items-end">
         <div className="max-w-4xl">
           <p className="mb-7 text-sm font-medium text-green-readable">

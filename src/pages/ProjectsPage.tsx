@@ -15,10 +15,13 @@ export function ProjectsPage() {
 
   return (
     <>
-      <header className="mx-auto max-w-6xl px-6 pb-20 pt-24 sm:pb-28 sm:pt-32 lg:px-10 lg:pb-36 lg:pt-40">
-        <p className="text-sm font-medium text-green-readable">
-          {t('pages.projects.eyebrow')}
-        </p>
+      <header className="mx-auto max-w-6xl border-b border-line px-6 py-20 sm:py-24 lg:px-10 lg:py-28">
+        <div className="flex items-center gap-3">
+          <span aria-hidden="true" className="h-px w-8 bg-green" />
+          <p className="text-sm font-semibold text-green-readable">
+            {t('pages.projects.eyebrow')}
+          </p>
+        </div>
         <div className="mt-7 grid gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(16rem,0.6fr)] lg:items-end">
           <h1 className="max-w-4xl text-[clamp(3rem,7vw,5.75rem)] font-semibold leading-[0.98] tracking-[-0.055em] text-balance">
             {t('pages.projects.title')}
@@ -29,7 +32,7 @@ export function ProjectsPage() {
         </div>
       </header>
 
-      <section className="bg-surface py-20 sm:py-28 lg:py-36">
+      <section className="bg-surface py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-6xl px-6 lg:px-10">
           <div className="flex items-baseline justify-between gap-6 border-t border-line pt-5">
             <h2 className="text-2xl font-semibold tracking-[-0.025em]">
@@ -40,26 +43,27 @@ export function ProjectsPage() {
             </p>
           </div>
 
-          <div className="mt-16">
+          <div className="mt-12 sm:mt-14">
             {projects.map((project, index) => {
               const image = project.media[0]
 
               return (
                 <article
-                  className="grid gap-8 border-t border-line py-12 first:border-t-0 first:pt-0 sm:grid-cols-[5rem_minmax(0,1fr)] lg:grid-cols-[8rem_minmax(0,0.9fr)_minmax(20rem,1.1fr)] lg:gap-12 lg:py-16"
+                  className="grid gap-8 border-t border-line py-10 first:border-t-0 first:pt-0 sm:grid-cols-[5rem_minmax(0,1fr)] lg:grid-cols-[8rem_minmax(0,0.9fr)_minmax(20rem,1.1fr)] lg:gap-12 lg:py-12"
                   key={project.id}
                 >
-                  <p className="font-mono text-xs text-green-readable">
+                  <p className="flex items-center gap-3 self-start font-mono text-xs font-semibold text-green-readable">
                     {String(index + 1).padStart(2, '0')}
+                    <span aria-hidden="true" className="h-px w-8 bg-green" />
                   </p>
 
                   <div>
-                    <div className="flex flex-wrap gap-x-4 gap-y-2 font-mono text-xs uppercase tracking-[0.12em] text-muted">
-                      <span>
+                    <div className="flex flex-wrap gap-x-4 gap-y-2 font-mono text-xs uppercase tracking-[0.12em]">
+                      <span className="font-semibold text-green-readable">
                         {t(`content.projectCategories.${project.category}`)}
                       </span>
-                      <span aria-hidden="true">·</span>
-                      <span>
+                      <span aria-hidden="true" className="text-muted">·</span>
+                      <span className="text-muted">
                         {t(`content.projectStatuses.${project.status}`)}
                       </span>
                     </div>

@@ -185,7 +185,7 @@ export const en = {
     },
     projects: {
       title: 'Projects',
-      eyebrow: 'Selected work',
+      eyebrow: 'Project index',
       description:
         'A focused selection of product development and applied research, presented through the problem, the decisions, and the resulting system.',
       selectedTitle: 'Three projects, three contexts',

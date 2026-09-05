@@ -186,7 +186,7 @@ export const ptPT = {
     },
     projects: {
       title: 'Projetos',
-      eyebrow: 'Trabalho selecionado',
+      eyebrow: 'Projetos em detalhe',
       description:
         'Uma seleção focada de desenvolvimento de produto e investigação aplicada, apresentada através do problema, das decisões e do sistema resultante.',
       selectedTitle: 'Três projetos, três contextos',

@@ -524,17 +524,89 @@ export const ptPT = {
     },
     about: {
       title: 'Sobre',
-      description:
-        'A experiência profissional, formação e interesses técnicos serão adicionados a partir de informação validada.',
+      eyebrow: 'Perfil e experiência',
+      introduction:
+        'Programador de software com trabalho em aplicações web, dados relacionais e Machine Learning aplicado, e experiência que inclui também ensino de programação, fluxos móveis e resolução de problemas técnicos.',
+      location: 'Em Portugal · Trabalho em português e inglês',
+      focus: {
+        title: 'Trabalho entre camadas técnicas ligadas',
+        introduction:
+          'O meu trabalho mais forte acontece onde decisões de interface, estruturas de dados e restrições práticas se encontram. Sinto-me confortável entre o detalhe da implementação e o propósito mais amplo de um sistema.',
+        product: {
+          title: 'Produtos web',
+          body:
+            'Interfaces responsivas e fluxos full-stack desenvolvidos com React, TypeScript, Next.js, Vite, Supabase e PostgreSQL.',
+        },
+        data: {
+          title: 'Dados e operações',
+          body:
+            'Modelação relacional, controlo de acesso, processos suportados por SQL e interfaces desenhadas em torno de informação operacional real.',
+        },
+        research: {
+          title: 'Machine Learning aplicado',
+          body:
+            'Pipelines experimentais reprodutíveis, classificação desequilibrada, desenho de validação e explicabilidade prudente para investigação de prognóstico em ALS.',
+        },
+      },
+      experience: {
+        title: 'Experiência profissional',
+        introduction:
+          'Experiência em ensino de programação, desenvolvimento web, aplicações móveis operacionais, migração de dados e produção multimédia numa fase anterior.',
+      },
+      skills: {
+        title: 'Áreas técnicas',
+        introduction:
+          'As tecnologias estão agrupadas pelas situações em que as usei em projetos ou trabalho profissional — não por percentagens arbitrárias de domínio.',
+      },
+      education: {
+        title: 'Educação e formação',
+        introduction:
+          'Um percurso desde a formação em multimédia e sistemas de informação até Informática, Engenharia Informática e um Mestrado em Informática Aplicada.',
+      },
+      closing: {
+        title: 'Os projetos mostram o detalhe por detrás do perfil.',
+        body:
+          'Para arquitetura, compromissos, resultados de investigação e interfaces funcionais, os casos de estudo selecionados são o melhor ponto para continuar. O CV apresenta a versão cronológica compacta.',
+        projects: 'Explorar projetos',
+        cv: 'Ver CV',
+      },
       metaTitle: 'Sobre — Ivo Camacho',
-      metaDescription: 'Perfil profissional, experiência e formação de Ivo Camacho.',
+      metaDescription:
+        'Perfil profissional, experiência, áreas técnicas e formação do programador de software Ivo Camacho.',
     },
     cv: {
       title: 'Curriculum Vitae',
-      description:
-        'Os CVs em português e inglês estarão disponíveis aqui para consulta e transferência.',
+      eyebrow: 'Documentos profissionais',
+      introduction:
+        'Escolhe a versão em português ou inglês. Ambos os documentos podem ser abertos no browser ou descarregados como PDF original.',
+      documents: {
+        title: 'Dois idiomas, o mesmo percurso profissional',
+        introduction:
+          'A versão correspondente ao idioma do website surge primeiro. Cada PDF tem duas páginas A4 e abre de forma independente do portefólio.',
+        current: 'Idioma atual',
+        pt: {
+          label: 'Português · PT-PT',
+          title: 'Curriculum Vitae em português',
+          previewAlt: 'Pré-visualização da primeira página do CV em português de Ivo Camacho',
+          viewLabel: 'Abrir o CV em português de Ivo Camacho num novo separador',
+          downloadLabel: 'Descarregar o CV em português de Ivo Camacho',
+        },
+        en: {
+          label: 'English · EN',
+          title: 'Curriculum Vitae em inglês',
+          previewAlt: 'Pré-visualização da primeira página do CV em inglês de Ivo Camacho',
+          viewLabel: 'Abrir o CV em inglês de Ivo Camacho num novo separador',
+          downloadLabel: 'Descarregar o CV em inglês de Ivo Camacho',
+        },
+        fileMeta: 'PDF · 2 páginas · A4',
+        view: 'Abrir PDF',
+        download: 'Descarregar',
+      },
+      updateNote:
+        'Os endereços dos PDFs mantêm-se estáveis. Quando um CV for atualizado, o ficheiro correspondente pode ser substituído sem alterar os links do website.',
       metaTitle: 'CV — Ivo Camacho',
-      metaDescription: 'Consultar ou transferir o CV de Ivo Camacho.',
+      metaDescription:
+        'Consultar ou descarregar o curriculum vitae de Ivo Camacho em português ou inglês.',
     },
     notFound: {
       title: 'Página não encontrada',

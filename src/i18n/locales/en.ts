@@ -523,17 +523,89 @@ export const en = {
     },
     about: {
       title: 'About',
-      description:
-        'Professional experience, education, and technical interests will be added from verified information.',
+      eyebrow: 'Profile and experience',
+      introduction:
+        'Software developer working across web applications, relational data, and applied Machine Learning, with experience that also includes programming education, mobile workflows, and technical problem-solving.',
+      location: 'Based in Portugal · Working in English and Portuguese',
+      focus: {
+        title: 'Working across connected technical layers',
+        introduction:
+          'My strongest work sits where interface decisions, data structures, and practical constraints meet. I am comfortable moving between implementation detail and the wider purpose of a system.',
+        product: {
+          title: 'Web products',
+          body:
+            'Responsive interfaces and full-stack workflows built with React, TypeScript, Next.js, Vite, Supabase, and PostgreSQL.',
+        },
+        data: {
+          title: 'Data and operations',
+          body:
+            'Relational modelling, access control, SQL-backed processes, and interfaces designed around real operational information.',
+        },
+        research: {
+          title: 'Applied Machine Learning',
+          body:
+            'Reproducible experimental pipelines, imbalanced classification, validation design, and cautious explainability for ALS prognosis research.',
+        },
+      },
+      experience: {
+        title: 'Professional experience',
+        introduction:
+          'Experience spanning programming education, web development, operational mobile applications, data migration, and earlier multimedia production.',
+      },
+      skills: {
+        title: 'Technical areas',
+        introduction:
+          'Technologies are grouped by where I have used them in projects or professional work — not by arbitrary proficiency percentages.',
+      },
+      education: {
+        title: 'Education and training',
+        introduction:
+          'A progression from multimedia and information-systems training to Informatics, Computer Engineering, and a Master’s in Applied Informatics.',
+      },
+      closing: {
+        title: 'The projects show the detail behind the profile.',
+        body:
+          'For architecture, trade-offs, research results, and working interfaces, the selected case studies are the best place to continue. The CV provides the compact chronological version.',
+        projects: 'Explore projects',
+        cv: 'View CV',
+      },
       metaTitle: 'About — Ivo Camacho',
-      metaDescription: 'Professional profile, experience, and education of Ivo Camacho.',
+      metaDescription:
+        'Professional profile, experience, technical areas, and education of software developer Ivo Camacho.',
     },
     cv: {
       title: 'Curriculum Vitae',
-      description:
-        'Portuguese and English CVs will be available to view and download here.',
+      eyebrow: 'Professional documents',
+      introduction:
+        'Choose the Portuguese or English version. Both documents can be opened in the browser or downloaded as the original PDF.',
+      documents: {
+        title: 'Two languages, the same professional record',
+        introduction:
+          'The version matching the website language appears first. Each PDF contains two A4 pages and opens independently from the portfolio.',
+        current: 'Current language',
+        pt: {
+          label: 'Português · PT-PT',
+          title: 'Curriculum Vitae em português',
+          previewAlt: 'Preview of the first page of Ivo Camacho’s Portuguese CV',
+          viewLabel: 'Open Ivo Camacho’s Portuguese CV in a new tab',
+          downloadLabel: 'Download Ivo Camacho’s Portuguese CV',
+        },
+        en: {
+          label: 'English · EN',
+          title: 'Curriculum Vitae in English',
+          previewAlt: 'Preview of the first page of Ivo Camacho’s English CV',
+          viewLabel: 'Open Ivo Camacho’s English CV in a new tab',
+          downloadLabel: 'Download Ivo Camacho’s English CV',
+        },
+        fileMeta: 'PDF · 2 pages · A4',
+        view: 'Open PDF',
+        download: 'Download',
+      },
+      updateNote:
+        'The PDF addresses remain stable. When a CV is updated, the corresponding file can be replaced without changing links across the website.',
       metaTitle: 'CV — Ivo Camacho',
-      metaDescription: 'View or download the CV of Ivo Camacho.',
+      metaDescription:
+        'View or download Ivo Camacho’s curriculum vitae in English or Portuguese.',
     },
     notFound: {
       title: 'Page not found',

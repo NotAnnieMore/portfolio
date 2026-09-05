@@ -1,0 +1,207 @@
+IVO CAMACHO PORTFOLIO — INFORMATION ARCHITECTURE
+
+PROPOSED TOP-LEVEL STRUCTURE
+
+/
+Home
+
+/projects
+Projects index
+
+/projects/[slug]
+Individual project case study
+
+/about
+Professional profile, experience and education
+
+/cv
+CV access in PT and EN
+
+Optional later:
+- /contact
+- /uses
+Only add pages if there is enough real content to justify them.
+
+NAVIGATION
+Initial direction:
+- Projects
+- About
+- CV
+- Contact or direct email action
+- Language switch
+- Theme switch
+
+Navigation should remain simple.
+Do not create menu items for every section on the Home page.
+
+HOME PAGE
+
+1. HERO
+Purpose:
+Immediately explain who Ivo is and what kind of work he does.
+
+Possible content:
+- Ivo Camacho
+- concise professional role/positioning
+- short 1–2 sentence introduction
+- View Projects
+- View/Download CV
+- GitHub
+- LinkedIn
+- professional email
+
+Avoid generic slogans.
+
+2. SELECTED / FEATURED PROJECTS
+Show a curated group, not every repository.
+
+Each preview should contain only what is necessary:
+- project name;
+- short description;
+- strong screenshot/visual;
+- main technologies;
+- case study link;
+- live demo if available;
+- GitHub if useful.
+
+Prefer 1–2 project cards per row on desktop if that gives screenshots more room.
+
+3. EXPERIENCE
+Show selected professional experience in a concise, readable format.
+
+Do not copy the CV word-for-word.
+Highlight:
+- role;
+- organisation;
+- context;
+- what was built/resolved;
+- practical impact;
+- relevant technologies.
+
+4. SKILLS / TECHNICAL AREAS
+Organise by meaningful groups, for example:
+- Frontend
+- Backend & Data
+- Microsoft / Low-code
+- Tools & Infrastructure
+- AI / Machine Learning where appropriate
+
+Do not use arbitrary percentages.
+
+Where useful, associate a skill with projects or experience where it was used.
+
+5. EDUCATION / ACADEMIC WORK
+Include:
+- relevant degrees;
+- Master’s work;
+- thesis project where appropriate.
+
+The thesis may also exist as a project/case study if there is enough technical material.
+
+6. CONTACT / FINAL CTA
+Simple and professional:
+- email;
+- LinkedIn;
+- GitHub;
+- CV.
+
+PROJECTS INDEX
+
+Purpose:
+Allow visitors to browse work without overwhelming the Home page.
+
+Possible grouping:
+- Featured Projects
+- Other Projects
+- Academic / Research Projects
+
+Project order should reflect portfolio value, not repository creation date.
+
+PROJECT CASE STUDY
+
+Recommended optional sections:
+
+A. Project Hero
+- title
+- concise description
+- stack
+- Live Demo
+- GitHub
+- hero screenshot
+
+B. Overview
+What the project is and why it exists.
+
+C. Problem / Context
+What problem or need motivated it.
+
+D. Solution
+What was built.
+
+E. Key Features
+Only the meaningful features.
+
+F. Technical Architecture
+Explain major components and relationships.
+
+G. Technical Decisions
+Explain important choices and trade-offs.
+
+H. Challenges
+Real technical or product problems encountered.
+
+I. Screenshots
+Real UI with captions where useful.
+
+J. What I Learned
+Concrete lessons, not generic statements.
+
+K. Future Improvements
+Only realistic next steps.
+
+L. Project Links
+Live demo, source, relevant documentation.
+
+IMPORTANT
+A case study is not required to have every section.
+Do not invent challenges, metrics, users, impact or lessons.
+
+ABOUT PAGE
+
+Should include:
+- concise introduction;
+- professional interests;
+- experience;
+- education;
+- technical areas;
+- optional short personal note if professionally relevant.
+
+Avoid a long autobiography.
+
+CV PAGE
+
+Purpose:
+Make PT and EN CVs easy to access.
+
+Suggested structure:
+Curriculum Vitae
+
+Português
+- View
+- Download
+
+English
+- View
+- Download
+
+Keep this page simple.
+
+BILINGUAL CONTENT
+All content must have PT-PT and EN versions.
+
+Translation rules:
+- do not translate technology names;
+- use natural PT-PT, not literal English translations;
+- preserve meaning over word-for-word translation;
+- keep job/project names consistent where they are proper names;
+- keep technical terminology understandable to recruiters and technical readers.

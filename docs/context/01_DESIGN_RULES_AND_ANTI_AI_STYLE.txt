@@ -1,0 +1,142 @@
+IVO CAMACHO PORTFOLIO — DESIGN RULES
+
+GOAL
+Create a portfolio that looks intentionally designed by a person, not assembled from common AI-generated web patterns.
+
+GENERAL PRINCIPLES
+- Prioritise typography, spacing and hierarchy over decorative effects.
+- Use real screenshots and real project content as the main visual material.
+- Allow sections to have different visual rhythms.
+- Avoid making every piece of content a card.
+- Avoid excessive borders.
+- Avoid excessive rounded containers.
+- Avoid excessive shadows.
+- Avoid decorative elements without a clear purpose.
+- Prefer restraint.
+
+SPACING
+The website must have noticeably more breathing room than a dashboard.
+
+Recommended direction:
+- generous page gutters;
+- large vertical spacing between major sections;
+- comfortable line height;
+- project screenshots shown at useful sizes;
+- cards, where needed, should have generous internal padding.
+
+Do not compress several large sections into one viewport merely to display more information.
+
+AVOID COMMON “AI WEBSITE” PATTERNS
+Do NOT default to:
+- giant gradient blobs;
+- purple/blue neon gradients;
+- glassmorphism everywhere;
+- glowing borders;
+- animated particles;
+- fake terminal windows;
+- fake code snippets as decoration;
+- meaningless floating 3D shapes;
+- constant pill-shaped badges;
+- skill percentage bars;
+- “95% JavaScript / 90% React” ratings;
+- dozens of technology logos without context;
+- excessive icon usage;
+- three identical cards in every section;
+- a generic “Hi 👋 I’m Ivo” hero;
+- phrases such as “I craft digital experiences” unless they genuinely fit the content;
+- overuse of “journey”, “passion”, “innovative”, “cutting-edge” or similar generic portfolio language;
+- excessive animations triggered on every scroll;
+- cursor-following effects;
+- forced horizontal scrolling;
+- large background text used only as decoration.
+
+CARDS
+Cards are allowed, but should not be the universal layout primitive.
+
+Good uses:
+- project previews;
+- small skill groups;
+- CV language choices;
+- selected supporting information.
+
+Avoid putting:
+- every paragraph;
+- every section;
+- every experience item;
+- every statistic
+inside separate rounded cards.
+
+TYPOGRAPHY
+Prefer a clean modern sans-serif.
+Use typography to establish identity.
+
+Direction:
+- strong but restrained headings;
+- readable body text;
+- clear hierarchy;
+- limited number of font sizes;
+- avoid oversized headings that consume an entire screen.
+
+MONOSPACE
+A monospace font may be used sparingly for:
+- technical labels;
+- URLs;
+- small metadata;
+- technology details.
+
+Do not use monospace as the main body font.
+
+COLOUR
+Primary accent:
+#1447e6
+
+Light mode:
+- neutral or slightly warm/soft background;
+- dark readable text;
+- subtle surfaces;
+- blue used selectively.
+
+Dark mode:
+- avoid absolute black for every surface;
+- use layered dark neutrals;
+- preserve clear hierarchy;
+- avoid turning the UI into a blue neon interface.
+
+MOTION
+Animations should be subtle and functional.
+
+Allowed examples:
+- small hover transitions;
+- understated content reveal;
+- gentle image movement;
+- theme transition if it does not cause flashing.
+
+Avoid:
+- long entrance animations;
+- content that waits for animation before becoming readable;
+- bouncing elements;
+- excessive parallax;
+- distracting motion.
+
+PROJECT SCREENSHOTS
+Screenshots are a major part of the portfolio identity.
+
+Rules:
+- use real screenshots;
+- optimise them for the web;
+- do not shrink them to unreadable thumbnails;
+- give important screenshots enough space;
+- captions may explain why a screen matters;
+- use 4–6 strong screenshots rather than 20 weak ones.
+
+RESPONSIVE DESIGN
+Desktop layout should not simply be squeezed onto mobile.
+Mobile should have its own spacing and hierarchy.
+
+Accessibility:
+- keyboard navigation;
+- visible focus states;
+- sufficient contrast;
+- semantic markup;
+- readable font sizes;
+- respect reduced-motion preference where appropriate.

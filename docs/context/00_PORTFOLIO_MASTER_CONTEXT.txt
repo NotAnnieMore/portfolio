@@ -1,0 +1,142 @@
+IVO CAMACHO PORTFOLIO — MASTER CONTEXT
+
+PROJECT
+Create a personal portfolio website for Ivo Camacho, hosted at:
+https://ivocamacho.com
+
+The website is not meant to be a generic “developer portfolio” template.
+It should present Ivo’s professional profile, experience, CVs, technical skills and selected projects in a polished, credible and personal way.
+
+CORE PURPOSE
+The website should help a recruiter, hiring manager or technical professional understand, in a few minutes:
+- who Ivo is;
+- what areas he works in;
+- what he has built;
+- what technologies he has practical experience with;
+- how he approaches technical problems;
+- where they can see live projects and source code;
+- how to contact him;
+- how to access his CV.
+
+The portfolio should complement GitHub, not reproduce GitHub.
+GitHub remains the source-code repository.
+The portfolio should explain the context, decisions, challenges, architecture and results of selected projects.
+
+DOMAIN / PROJECT LINKS
+Main portfolio:
+https://ivocamacho.com
+
+Known independent project:
+https://jobs.ivocamacho.com
+
+GitHub:
+https://github.com/NotAnnieMore
+
+LANGUAGES
+The website must support:
+- English
+- Portuguese from Portugal (pt-PT)
+
+Internationalisation must be considered from the beginning, not added as an afterthought.
+
+Requirements:
+- all visible content must be translatable;
+- no duplicated page implementations for PT and EN;
+- language switch must be easy to find but visually discreet;
+- user language preference should persist;
+- metadata should also support both languages;
+- Portuguese copy must use correct European Portuguese, not Brazilian Portuguese.
+
+LIGHT / DARK MODE
+The website must support:
+- Light Mode
+- Dark Mode
+
+Requirements:
+- both themes must feel intentionally designed;
+- dark mode must not simply invert colours;
+- contrast and accessibility must be preserved;
+- theme preference should persist;
+- initial theme may respect the user’s system preference;
+- no flash of the wrong theme during load if avoidable.
+
+VISUAL DIRECTION
+The portfolio should feel:
+- modern;
+- calm;
+- editorial;
+- technical;
+- professional;
+- spacious;
+- deliberate.
+
+It should NOT feel like:
+- a generic AI-generated website;
+- a template marketplace developer portfolio;
+- a SaaS dashboard;
+- a clone of the Job Application Tracker;
+- an over-designed agency landing page.
+
+Use generous whitespace and clear visual rhythm.
+Content should have room to breathe.
+
+Avoid placing too much information above the fold.
+Do not attempt to show the entire portfolio on one screen.
+
+PRIMARY ACCENT
+Current preferred accent:
+#1447e6
+
+Use it selectively for:
+- important links;
+- primary buttons;
+- focus states;
+- subtle highlights;
+- selected navigation elements.
+
+Do not flood the entire interface with blue.
+
+CONTENT PRIORITY
+The hierarchy should favour:
+1. selected projects;
+2. real experience;
+3. skills backed by projects/experience;
+4. CV;
+5. education / academic work;
+6. contact.
+
+PROJECTS
+Projects should be presented as case studies, not as README copies.
+
+A project page can include:
+- overview;
+- problem/context;
+- solution;
+- key features;
+- technology stack;
+- architecture;
+- important technical decisions;
+- challenges;
+- screenshots;
+- lessons learned;
+- future improvements;
+- GitHub;
+- live demo when available.
+
+Do not force every project to use every section.
+The structure should adapt to the actual project.
+
+IMPORTANT WORKFLOW RULE
+Do not make major product, architecture or visual-design decisions without first presenting the options and asking Ivo.
+
+Work incrementally.
+Do not redesign several unrelated areas in a single step.
+
+Before implementing a substantial feature:
+1. inspect the current project;
+2. explain the change;
+3. present any meaningful design/technical choices;
+4. wait for approval when a subjective choice is involved;
+5. implement only the approved scope.
+
+Do not perform broad refactors unless they are required.

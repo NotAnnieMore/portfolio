@@ -1,0 +1,155 @@
+IVO CAMACHO PORTFOLIO — CODEX WORKFLOW
+
+ROLE
+Act as an implementation partner for this portfolio.
+Do not behave as an autonomous redesign agent.
+
+The repository itself is the source of truth for the current implementation.
+Always inspect existing code before proposing a change.
+
+STEP-BY-STEP PROCESS
+For each meaningful task:
+
+1. Inspect relevant existing files.
+2. State what currently exists.
+3. Explain what needs to change.
+4. Identify subjective decisions.
+5. Ask Ivo for his preference when needed.
+6. Implement only the agreed scope.
+7. Run the available validation scripts.
+8. Summarise exactly what changed.
+
+Do not bundle unrelated work.
+
+DESIGN DECISIONS
+Do not decide without approval:
+- overall homepage composition;
+- major section ordering changes;
+- typography changes;
+- primary colour changes;
+- navigation structure changes;
+- new large dependencies;
+- new design system;
+- large animation systems;
+- removal of existing content.
+
+TECHNICAL CONSTRAINTS
+The production website will be hosted on OVHcloud shared/static hosting at:
+https://ivocamacho.com
+
+The site should not require a continuously running Node.js backend unless Ivo explicitly changes the hosting plan.
+
+Before choosing the final framework/build configuration:
+- ensure it is compatible with static hosting on OVH;
+- explain the deployment output;
+- do not assume a server runtime is available.
+
+No backend should be added merely for:
+- project data;
+- skills;
+- experience;
+- CV links;
+- translations;
+- theme preference.
+
+Static/local structured data is preferred for these.
+
+ARCHITECTURE
+Project content should be data-driven where practical.
+
+For example:
+- projects data;
+- experience data;
+- skills;
+- links;
+- localisation strings.
+
+Avoid hardcoding the same project information in multiple components.
+
+Do not over-engineer.
+Do not introduce a CMS unless there is a clear future requirement.
+
+LIGHT / DARK MODE
+Implement as a first-class feature.
+
+Requirements:
+- theme tokens/CSS variables rather than scattered hard-coded colours;
+- persisted preference;
+- system preference support;
+- accessible contrast;
+- no obvious flash of incorrect theme.
+
+PT / EN
+Implement internationalisation as a first-class feature.
+
+Requirements:
+- no duplicated pages;
+- structured translation resources;
+- persistent language preference;
+- translated metadata where technically appropriate;
+- correct pt-PT.
+
+SEO / METADATA
+The portfolio should have:
+- meaningful page titles;
+- descriptions;
+- canonical URLs;
+- Open Graph metadata;
+- social preview image;
+- project-specific metadata where useful;
+- sitemap/robots where appropriate for the chosen stack.
+
+PERFORMANCE
+Keep the site lightweight.
+
+Images:
+- use WebP/AVIF where suitable;
+- responsive sizes;
+- avoid shipping original multi-megabyte screenshots;
+- lazy-load non-critical project screenshots.
+
+Do not add heavy libraries for small visual effects.
+
+CODE QUALITY
+- TypeScript where applicable;
+- reusable components where there is real reuse;
+- clear naming;
+- avoid giant components;
+- avoid premature abstraction;
+- preserve accessibility;
+- no unused dependencies;
+- no dead code left behind.
+
+CONTENT INTEGRITY
+Never invent:
+- employment dates;
+- project metrics;
+- user numbers;
+- business impact;
+- technologies not actually used;
+- project challenges that did not happen;
+- features that do not exist.
+
+When information is missing, ask Ivo.
+
+DEPLOYMENT
+Deployment must result in static files compatible with OVH hosting.
+
+Document:
+- build command;
+- generated output directory;
+- files that must be uploaded;
+- any rewrite rules required for client-side routing;
+- environment variables, if any;
+- deployment verification steps.
+
+CHANGE SAFETY
+Before large changes:
+- keep current working behaviour;
+- avoid broad refactors;
+- prefer small commits / logical increments;
+- explain potential risk before changing routing, localisation or theme infrastructure.
+
+FINAL RULE
+The portfolio should feel authored, curated and personal.
+Do not optimise for “looking impressive” at the expense of clarity, authenticity or usability.

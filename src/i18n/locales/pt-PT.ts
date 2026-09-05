@@ -144,6 +144,7 @@ export const ptPT = {
       metaDescription:
         'Programador de software com trabalho em aplicações web, dados e Machine Learning aplicado.',
       hero: {
+        portraitAlt: 'Retrato de Ivo Camacho',
         name: 'Ivo Camacho',
         title:
           'Programador de software com trabalho em aplicações web, dados e Machine Learning aplicado.',
@@ -459,7 +460,7 @@ export const ptPT = {
           restraint: {
             title: 'Os neutros permanecem dominantes',
             body:
-              'O verde organiza etiquetas e pequenos detalhes; o laranja fica reservado para ações importantes. Não existem gradientes, brilhos ou movimento decorativo.',
+              'O verde organiza etiquetas e pequenos detalhes; o laranja fica reservado para ações importantes. Não existem gradientes ou brilhos, e o movimento limita-se a transições discretas no scroll.',
           },
           responsive: {
             title: 'Mobile tem o seu próprio ritmo',

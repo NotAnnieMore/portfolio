@@ -10,7 +10,7 @@ export function SectionHeading({
   description,
 }: SectionHeadingProps) {
   return (
-    <div className="grid gap-4 border-t border-line pt-5 sm:grid-cols-[8rem_1fr] lg:grid-cols-[12rem_1fr]">
+    <div className="grid gap-4 border-t border-line pt-5 sm:grid-cols-[7rem_1fr] lg:grid-cols-[9rem_1fr]">
       <div className="flex items-center gap-3 self-start">
         <p className="font-mono text-xs font-semibold tracking-[0.16em] text-green-readable">
           {index}

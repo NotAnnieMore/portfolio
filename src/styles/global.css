@@ -119,6 +119,14 @@ button {
   will-change: auto;
 }
 
+.botanical-accent {
+  opacity: 0.72;
+}
+
+:root[data-theme='dark'] .botanical-accent {
+  opacity: 0.5;
+}
+
 .focus-ring:focus-visible,
 a:focus-visible,
 button:focus-visible {

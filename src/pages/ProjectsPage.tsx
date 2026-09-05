@@ -22,7 +22,7 @@ export function ProjectsPage() {
             {t('pages.projects.eyebrow')}
           </p>
         </div>
-        <div className="mt-7 grid gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(16rem,0.6fr)] lg:items-end">
+        <div className="mt-7 grid gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(16rem,0.6fr)] lg:items-start">
           <h1 className="max-w-4xl text-[clamp(3rem,7vw,5.75rem)] font-semibold leading-[0.98] tracking-[-0.055em] text-balance">
             {t('pages.projects.title')}
           </h1>

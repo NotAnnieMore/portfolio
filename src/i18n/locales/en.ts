@@ -144,6 +144,7 @@ export const en = {
       metaDescription:
         'Software developer working across web applications, data, and applied machine learning.',
       hero: {
+        portraitAlt: 'Portrait of Ivo Camacho',
         name: 'Ivo Camacho',
         title:
           'Software developer across web applications, data, and applied machine learning.',
@@ -458,7 +459,7 @@ export const en = {
           restraint: {
             title: 'Neutrals remain dominant',
             body:
-              'Green organises labels and small details; orange is reserved for important actions. There are no gradients, glows, or decorative motion.',
+              'Green organises labels and small details; orange is reserved for important actions. There are no gradients or glows, and motion is limited to restrained scroll transitions.',
           },
           responsive: {
             title: 'Mobile has its own rhythm',

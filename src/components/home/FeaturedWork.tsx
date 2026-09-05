@@ -39,15 +39,25 @@ function ProjectLinks({ project, locale }: { project: Project; locale: string })
   )
 }
 
-function ProjectDetails({ project }: { project: Project }) {
+function ProjectDetails({
+  index,
+  project,
+}: {
+  index: string
+  project: Project
+}) {
   const { t } = useTranslation()
 
   return (
     <div>
-      <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-green-readable">
-        {t(`content.projectCategories.${project.category}`)}
-      </p>
-      <h3 className="mt-4 text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">
+      <div className="flex items-center gap-3">
+        <p className="font-mono text-xs text-green-readable">{index}</p>
+        <span aria-hidden="true" className="h-px w-8 bg-green" />
+        <p className="font-mono text-xs uppercase tracking-[0.16em] text-green-readable">
+          {t(`content.projectCategories.${project.category}`)}
+        </p>
+      </div>
+      <h3 className="mt-5 text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">
         {t(`${project.translationKey}.title`)}
       </h3>
       <p className="mt-5 max-w-xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
@@ -70,6 +80,7 @@ export function FeaturedWork() {
 
   const jobImage = jobTracker.media[0]
   const thesisImage = thesis.media[0]
+  const portfolioImage = portfolio.media[0]
 
   return (
     <section className="border-y border-line bg-surface py-20 sm:py-28 lg:py-32">
@@ -80,13 +91,10 @@ export function FeaturedWork() {
           title={t('pages.home.featured.title')}
         />
 
-        <div className="mt-16 divide-y divide-line sm:mt-20">
-          <article className="grid gap-10 pb-14 lg:grid-cols-[minmax(17rem,0.72fr)_minmax(0,1.45fr)] lg:items-center lg:gap-14 sm:pb-16">
+        <div className="mt-10 divide-y divide-line sm:mt-12">
+          <article className="grid gap-10 pb-12 lg:grid-cols-[minmax(17rem,0.72fr)_minmax(0,1.45fr)] lg:items-center lg:gap-14 sm:pb-14">
             <div>
-              <p className="mb-8 flex items-center gap-3 font-mono text-xs font-semibold text-green-readable">
-                01 <span aria-hidden="true" className="h-px w-8 bg-green" />
-              </p>
-              <ProjectDetails project={jobTracker} />
+              <ProjectDetails index="01" project={jobTracker} />
               <ProjectLinks project={jobTracker} locale={activeLocale} />
             </div>
             {jobImage ? (
@@ -112,7 +120,7 @@ export function FeaturedWork() {
             ) : null}
           </article>
 
-          <article className="grid gap-10 py-14 sm:py-16 lg:grid-cols-[minmax(0,1.35fr)_minmax(17rem,0.72fr)] lg:items-center lg:gap-14">
+          <article className="grid gap-10 py-12 sm:py-14 lg:grid-cols-[minmax(0,1.35fr)_minmax(17rem,0.72fr)] lg:items-center lg:gap-14">
             {thesisImage ? (
               <figure className="lg:order-1">
                 <div className="overflow-hidden border border-line bg-surface">
@@ -134,22 +142,36 @@ export function FeaturedWork() {
               </figure>
             ) : null}
             <div className="lg:order-2">
-              <p className="mb-8 flex items-center gap-3 font-mono text-xs font-semibold text-green-readable">
-                02 <span aria-hidden="true" className="h-px w-8 bg-green" />
-              </p>
-              <ProjectDetails project={thesis} />
+              <ProjectDetails index="02" project={thesis} />
               <ProjectLinks project={thesis} locale={activeLocale} />
             </div>
           </article>
 
-          <article className="grid gap-8 pt-14 sm:grid-cols-[5rem_1fr] sm:pt-16 lg:grid-cols-[8rem_1fr_auto] lg:items-center">
-            <p className="flex items-center gap-3 self-start font-mono text-xs font-semibold text-green-readable">
-              03 <span aria-hidden="true" className="h-px w-8 bg-green" />
-            </p>
-            <ProjectDetails project={portfolio} />
-            <div className="sm:col-start-2 lg:col-start-auto">
+          <article className="grid gap-10 pt-12 sm:pt-14 lg:grid-cols-[minmax(17rem,0.72fr)_minmax(0,1.45fr)] lg:items-center lg:gap-14">
+            <div>
+              <ProjectDetails index="03" project={portfolio} />
               <ProjectLinks project={portfolio} locale={activeLocale} />
             </div>
+            {portfolioImage ? (
+              <figure>
+                <div className="overflow-hidden border border-line bg-page">
+                  <img
+                    alt={t(portfolioImage.altKey)}
+                    className="h-auto w-full"
+                    decoding="async"
+                    height={portfolioImage.height}
+                    loading={portfolioImage.loading}
+                    src={portfolioImage.src}
+                    width={portfolioImage.width}
+                  />
+                </div>
+                {portfolioImage.captionKey ? (
+                  <figcaption className="mt-3 text-xs leading-5 text-muted">
+                    {t(portfolioImage.captionKey)}
+                  </figcaption>
+                ) : null}
+              </figure>
+            ) : null}
           </article>
         </div>
 

@@ -14,7 +14,7 @@ export function HomeHero() {
 
   return (
     <section className="mx-auto max-w-6xl px-6 pb-24 pt-20 sm:pb-28 sm:pt-24 lg:px-10 lg:pb-32 lg:pt-28">
-      <div className="grid gap-12 lg:grid-cols-[minmax(0,4fr)_minmax(15rem,1.4fr)] lg:items-end">
+      <div className="grid gap-12 lg:grid-cols-[minmax(0,1.45fr)_minmax(18rem,0.55fr)] lg:items-start lg:gap-16">
         <div className="max-w-4xl">
           <h1 className="text-[clamp(2.75rem,7vw,5.75rem)] font-semibold leading-[0.98] tracking-[-0.055em] text-balance">
             {t('pages.home.hero.title')}
@@ -39,28 +39,41 @@ export function HomeHero() {
           </div>
         </div>
 
-        <div className="border-l border-line pl-5 lg:pb-2">
-          <p className="text-sm leading-6 text-muted">
-            {t('pages.home.hero.location')}
-          </p>
-          <ul className="mt-5 space-y-2.5 text-sm">
-            {profileLinks
-              .filter((link) => visibleProfileLinks.has(link.id))
-              .map((link) => (
-                <li key={link.id}>
-                  <a
-                    className="focus-ring inline-flex items-center gap-2 font-medium underline decoration-line underline-offset-4 transition-colors hover:decoration-action"
-                    href={link.href}
-                    rel={link.kind === 'email' ? undefined : 'noreferrer'}
-                    target={link.kind === 'email' ? undefined : '_blank'}
-                  >
-                    <ProfileLinkIcon id={link.id} />
-                    {t(`content.links.${link.id}`)}
-                  </a>
-                </li>
-              ))}
-          </ul>
-        </div>
+        <aside>
+          <figure className="overflow-hidden border border-line bg-surface-soft">
+            <img
+              alt={t('pages.home.hero.portraitAlt')}
+              className="aspect-[4/5] h-auto w-full object-cover object-[50%_32%]"
+              decoding="async"
+              fetchPriority="high"
+              height="1351"
+              src="/images/profile/ivo-camacho-portrait.webp"
+              width="900"
+            />
+          </figure>
+          <div className="mt-5 border-l border-green pl-5">
+            <p className="text-sm leading-6 text-muted">
+              {t('pages.home.hero.location')}
+            </p>
+            <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-2.5 text-sm lg:flex-col lg:items-start">
+              {profileLinks
+                .filter((link) => visibleProfileLinks.has(link.id))
+                .map((link) => (
+                  <li key={link.id}>
+                    <a
+                      className="focus-ring inline-flex items-center gap-2 font-medium underline decoration-line underline-offset-4 transition-colors hover:decoration-action"
+                      href={link.href}
+                      rel={link.kind === 'email' ? undefined : 'noreferrer'}
+                      target={link.kind === 'email' ? undefined : '_blank'}
+                    >
+                      <ProfileLinkIcon id={link.id} />
+                      {t(`content.links.${link.id}`)}
+                    </a>
+                  </li>
+                ))}
+            </ul>
+          </div>
+        </aside>
       </div>
     </section>
   )

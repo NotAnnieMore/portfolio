@@ -10,12 +10,22 @@ export function ContactSection() {
   const activeLocale = isSupportedLocale(locale) ? locale : 'en'
 
   return (
-    <section className="border-t border-line bg-contact py-20 text-ink sm:py-28 lg:py-32">
-      <div className="mx-auto max-w-6xl px-6 lg:px-10">
+    <section className="relative overflow-hidden border-t border-line bg-contact py-20 text-ink sm:py-28 lg:py-32">
+      <img
+        alt=""
+        aria-hidden="true"
+        className="botanical-accent pointer-events-none absolute -bottom-14 -right-24 hidden w-[34rem] max-w-[44vw] select-none lg:block"
+        decoding="async"
+        height="600"
+        loading="lazy"
+        src="/images/decor/botanical-corner.webp"
+        width="900"
+      />
+      <div className="relative z-10 mx-auto max-w-6xl px-6 lg:px-10">
         <div>
           <SectionHeading index="05 / 05" title={t('pages.home.contact.label')} />
         </div>
-        <div className="mt-14 max-w-4xl sm:mt-20">
+        <div className="mt-14 max-w-3xl sm:mt-20">
           <h2 className="text-[clamp(2.5rem,6vw,5rem)] font-semibold leading-[1.02] tracking-[-0.05em] text-balance">
             {t('pages.home.contact.title')}
           </h2>

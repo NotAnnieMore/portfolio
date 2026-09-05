@@ -144,7 +144,8 @@ export const en = {
       metaDescription:
         'Software developer working across web applications, data, and applied machine learning.',
       hero: {
-        portraitAlt: 'Portrait of Ivo Camacho',
+        illustrationAlt:
+          'Editorial illustration of a laptop, notebook, coffee mug, and leafy plant',
         name: 'Ivo Camacho',
         title:
           'Software developer across web applications, data, and applied machine learning.',

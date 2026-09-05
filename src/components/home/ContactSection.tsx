@@ -14,11 +14,11 @@ export function ContactSection() {
       <img
         alt=""
         aria-hidden="true"
-        className="botanical-accent pointer-events-none absolute -bottom-14 -right-24 hidden w-[34rem] max-w-[44vw] select-none lg:block"
+        className="botanical-accent pointer-events-none absolute bottom-2 right-2 hidden w-[36rem] max-w-[40vw] select-none lg:block"
         decoding="async"
         height="600"
         loading="lazy"
-        src="/images/decor/botanical-corner.webp"
+        src="/images/decor/botanical-corner-v2.webp"
         width="900"
       />
       <div className="relative z-10 mx-auto max-w-6xl px-6 lg:px-10">

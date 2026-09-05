@@ -144,7 +144,8 @@ export const ptPT = {
       metaDescription:
         'Programador de software com trabalho em aplicações web, dados e Machine Learning aplicado.',
       hero: {
-        portraitAlt: 'Retrato de Ivo Camacho',
+        illustrationAlt:
+          'Ilustração editorial de um portátil, caderno, caneca e planta',
         name: 'Ivo Camacho',
         title:
           'Programador de software com trabalho em aplicações web, dados e Machine Learning aplicado.',

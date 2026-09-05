@@ -40,15 +40,15 @@ export function HomeHero() {
         </div>
 
         <aside>
-          <figure className="overflow-hidden border border-line bg-surface-soft">
+          <figure className="overflow-hidden border border-line bg-surface-soft px-4 py-6 sm:px-6">
             <img
-              alt={t('pages.home.hero.portraitAlt')}
-              className="aspect-[4/5] h-auto w-full object-cover object-[50%_32%]"
+              alt={t('pages.home.hero.illustrationAlt')}
+              className="aspect-[4/5] h-auto w-full object-contain"
               decoding="async"
               fetchPriority="high"
-              height="1351"
-              src="/images/profile/ivo-camacho-portrait.webp"
-              width="900"
+              height="1200"
+              src="/images/decor/hero-workspace.webp"
+              width="800"
             />
           </figure>
           <div className="mt-5 border-l border-green pl-5">

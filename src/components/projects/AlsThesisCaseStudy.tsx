@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router'
 
 import { isSupportedLocale } from '../../i18n/locales'
 import type { Project } from '../../types/content'
+import { ProjectHighlights } from './ProjectHighlights'
 
 const safeguardKeys = [
   'separation',
@@ -10,6 +11,7 @@ const safeguardKeys = [
   'evaluation',
   'interpretation',
 ] as const
+const highlightKeys = ['studies', 'classifiers', 'sensitivity'] as const
 
 interface AlsThesisCaseStudyProps {
   project: Project
@@ -76,6 +78,10 @@ export function AlsThesisCaseStudy({ project }: AlsThesisCaseStudyProps) {
             </div>
           ))}
         </dl>
+        <ProjectHighlights
+          keys={highlightKeys}
+          translationKey="pages.project.alsThesis.highlights"
+        />
       </header>
 
       {pipeline ? (

@@ -3,9 +3,11 @@ import { Link, useParams } from 'react-router'
 
 import { isSupportedLocale } from '../../i18n/locales'
 import type { Project } from '../../types/content'
+import { ProjectHighlights } from './ProjectHighlights'
 
 const principleKeys = ['hierarchy', 'evidence', 'restraint', 'responsive'] as const
 const detailKeys = ['language', 'theme', 'accessibility', 'delivery'] as const
+const highlightKeys = ['languages', 'caseStudies', 'backend'] as const
 
 interface PortfolioCaseStudyProps {
   project: Project
@@ -60,6 +62,10 @@ export function PortfolioCaseStudy({ project }: PortfolioCaseStudyProps) {
             </div>
           ))}
         </dl>
+        <ProjectHighlights
+          keys={highlightKeys}
+          translationKey="pages.project.portfolio.highlights"
+        />
       </header>
 
       {desktop ? (

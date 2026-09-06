@@ -145,6 +145,7 @@ export const ptPT = {
       hero: {
         illustrationAlt:
           'Ilustração editorial de um portátil, caderno, caneca e planta',
+        annotation: 'Criar. Aprender. Melhorar.',
         name: 'Ivo Camacho',
         title:
           'Programador de software com trabalho em aplicações web, dados e Machine Learning aplicado.',
@@ -187,6 +188,7 @@ export const ptPT = {
     projects: {
       title: 'Projetos',
       eyebrow: 'Projetos em detalhe',
+      annotation: 'Do problema ao produto.',
       description:
         'Uma seleção focada de desenvolvimento de produto e investigação aplicada, apresentada através do problema, das decisões e do sistema resultante.',
       selectedTitle: 'Três projetos, três contextos',
@@ -226,6 +228,14 @@ export const ptPT = {
           stack: {
             label: 'Stack principal',
             value: 'Next.js 16 · Supabase · PostgreSQL',
+          },
+        },
+        highlights: {
+          languages: { value: '2', label: 'idiomas de interface' },
+          workflows: { value: '4', label: 'fluxos principais integrados' },
+          protection: {
+            value: 'RLS',
+            label: 'isolamento testado por utilizador',
           },
         },
         context: {
@@ -336,6 +346,14 @@ export const ptPT = {
           },
           status: { label: 'Estado', value: 'Tese em desenvolvimento' },
         },
+        highlights: {
+          studies: { value: '2', label: 'estudos ligados' },
+          classifiers: { value: '7', label: 'classificadores avaliados' },
+          sensitivity: {
+            value: '85,7%',
+            label: 'sensibilidade no hold-out do Estudo II',
+          },
+        },
         problem: {
           title: 'Prognóstico não é apenas um problema de classificação',
           body:
@@ -437,6 +455,11 @@ export const ptPT = {
           format: { label: 'Formato', value: 'Website estático bilingue' },
           stack: { label: 'Stack principal', value: 'React · TypeScript · Vite' },
         },
+        highlights: {
+          languages: { value: '2', label: 'idiomas na mesma interface' },
+          caseStudies: { value: '3', label: 'casos de estudo detalhados' },
+          backend: { value: '0', label: 'dependências de backend' },
+        },
         purpose: {
           title: 'Um portefólio deve explicar o trabalho, não repetir o GitHub',
           body:
@@ -525,6 +548,7 @@ export const ptPT = {
     about: {
       title: 'Sobre',
       eyebrow: 'Perfil e experiência',
+      annotation: 'Aprender, construir, evoluir.',
       introduction:
         'Programador de software com trabalho em aplicações web, dados relacionais e Machine Learning aplicado, e experiência que inclui também ensino de programação, fluxos móveis e resolução de problemas técnicos.',
       location: 'Em Portugal · Trabalho em português e inglês',
@@ -577,6 +601,7 @@ export const ptPT = {
     cv: {
       title: 'Curriculum Vitae',
       eyebrow: 'Documentos profissionais',
+      annotation: 'Experiência em contexto.',
       introduction:
         'Escolhe a versão em português ou inglês. Ambos os documentos podem ser abertos no browser ou descarregados como PDF original.',
       documents: {

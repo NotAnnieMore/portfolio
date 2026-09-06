@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router'
 
 import { isSupportedLocale } from '../../i18n/locales'
 import type { Project } from '../../types/content'
+import { ProjectHighlights } from './ProjectHighlights'
 
 const capabilityKeys = ['workflow', 'interviews', 'agenda', 'experience'] as const
 const decisionKeys = ['security', 'import', 'filters', 'localisation'] as const
@@ -13,6 +14,7 @@ const architectureNodes = [
   { key: 'identity', Icon: ShieldCheck },
   { key: 'data', Icon: Database },
 ] as const
+const highlightKeys = ['languages', 'workflows', 'protection'] as const
 
 interface JobApplicationTrackerCaseStudyProps {
   project: Project
@@ -82,6 +84,10 @@ export function JobApplicationTrackerCaseStudy({
             </div>
           ))}
         </dl>
+        <ProjectHighlights
+          keys={highlightKeys}
+          translationKey="pages.project.jobTracker.highlights"
+        />
       </header>
 
       {dashboard ? (

@@ -32,6 +32,7 @@ export function CvPage() {
   return (
     <article>
       <EditorialPageHero
+        annotation={t('pages.cv.annotation')}
         description={t('pages.cv.introduction')}
         eyebrow={t('pages.cv.eyebrow')}
         imageHeight={1350}

@@ -104,6 +104,13 @@ button {
   line-height: 1.25rem;
 }
 
+.editorial-note {
+  font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transform: rotate(-3deg);
+}
+
 .scroll-reveal {
   opacity: 0;
   transform: translateY(1.5rem);

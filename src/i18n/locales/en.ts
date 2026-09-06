@@ -145,6 +145,7 @@ export const en = {
       hero: {
         illustrationAlt:
           'Editorial illustration of a laptop, notebook, coffee mug, and leafy plant',
+        annotation: 'Build. Learn. Improve.',
         name: 'Ivo Camacho',
         title:
           'Software developer across web applications, data, and applied machine learning.',
@@ -186,6 +187,7 @@ export const en = {
     projects: {
       title: 'Projects',
       eyebrow: 'Project index',
+      annotation: 'From problem to product.',
       description:
         'A focused selection of product development and applied research, presented through the problem, the decisions, and the resulting system.',
       selectedTitle: 'Three projects, three contexts',
@@ -225,6 +227,14 @@ export const en = {
           stack: {
             label: 'Core stack',
             value: 'Next.js 16 · Supabase · PostgreSQL',
+          },
+        },
+        highlights: {
+          languages: { value: '2', label: 'interface languages' },
+          workflows: { value: '4', label: 'integrated core workflows' },
+          protection: {
+            value: 'RLS',
+            label: 'tested per-user isolation',
           },
         },
         context: {
@@ -335,6 +345,14 @@ export const en = {
           },
           status: { label: 'Status', value: 'Thesis in progress' },
         },
+        highlights: {
+          studies: { value: '2', label: 'connected studies' },
+          classifiers: { value: '7', label: 'classifiers evaluated' },
+          sensitivity: {
+            value: '85.7%',
+            label: 'Study II held-out sensitivity',
+          },
+        },
         problem: {
           title: 'Prognosis is not just a classification problem',
           body:
@@ -436,6 +454,11 @@ export const en = {
           format: { label: 'Format', value: 'Static bilingual website' },
           stack: { label: 'Core stack', value: 'React · TypeScript · Vite' },
         },
+        highlights: {
+          languages: { value: '2', label: 'languages in one interface' },
+          caseStudies: { value: '3', label: 'detailed case studies' },
+          backend: { value: '0', label: 'backend dependencies' },
+        },
         purpose: {
           title: 'A portfolio should explain the work, not repeat GitHub',
           body:
@@ -524,6 +547,7 @@ export const en = {
     about: {
       title: 'About',
       eyebrow: 'Profile and experience',
+      annotation: 'Learn, build, evolve.',
       introduction:
         'Software developer working across web applications, relational data, and applied Machine Learning, with experience that also includes programming education, mobile workflows, and technical problem-solving.',
       location: 'Based in Portugal · Working in English and Portuguese',
@@ -576,6 +600,7 @@ export const en = {
     cv: {
       title: 'Curriculum Vitae',
       eyebrow: 'Professional documents',
+      annotation: 'Experience in context.',
       introduction:
         'Choose the Portuguese or English version. Both documents can be opened in the browser or downloaded as the original PDF.',
       documents: {

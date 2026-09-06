@@ -21,6 +21,7 @@ export function AboutPage() {
   return (
     <article>
       <EditorialPageHero
+        annotation={t('pages.about.annotation')}
         description={t('pages.about.introduction')}
         eyebrow={t('pages.about.eyebrow')}
         imageHeight={1080}

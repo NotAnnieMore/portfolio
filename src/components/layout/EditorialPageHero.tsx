@@ -1,4 +1,5 @@
 interface EditorialPageHeroProps {
+  annotation: string
   description: string
   eyebrow: string
   imageHeight: number
@@ -8,6 +9,7 @@ interface EditorialPageHeroProps {
 }
 
 export function EditorialPageHero({
+  annotation,
   description,
   eyebrow,
   imageHeight,
@@ -46,6 +48,9 @@ export function EditorialPageHero({
             src={imageSrc}
             width={imageWidth}
           />
+          <figcaption className="editorial-note absolute bottom-3 right-3 z-20 max-w-40 text-lg leading-6 text-ink sm:bottom-5 sm:right-6 lg:-right-1 lg:bottom-7">
+            {annotation}
+          </figcaption>
         </figure>
       </div>
     </header>

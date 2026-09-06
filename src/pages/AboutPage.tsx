@@ -22,8 +22,8 @@ export function AboutPage() {
     <article>
       <EditorialPageHero
         annotation={t('pages.about.annotation')}
+        annotationPlacement="upper-right"
         description={t('pages.about.introduction')}
-        eyebrow={t('pages.about.eyebrow')}
         imageHeight={1080}
         imageSrc="/images/page-heroes/about.webp"
         imageWidth={900}

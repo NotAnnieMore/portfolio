@@ -34,7 +34,6 @@ export function CvPage() {
       <EditorialPageHero
         annotation={t('pages.cv.annotation')}
         description={t('pages.cv.introduction')}
-        eyebrow={t('pages.cv.eyebrow')}
         imageHeight={1350}
         imageSrc="/images/page-heroes/cv.webp"
         imageWidth={900}

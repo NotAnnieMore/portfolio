@@ -19,7 +19,6 @@ export function ProjectsPage() {
       <EditorialPageHero
         annotation={t('pages.projects.annotation')}
         description={t('pages.projects.description')}
-        eyebrow={t('pages.projects.eyebrow')}
         imageHeight={1080}
         imageSrc="/images/page-heroes/projects.webp"
         imageWidth={900}

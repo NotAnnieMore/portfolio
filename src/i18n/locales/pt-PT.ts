@@ -50,23 +50,23 @@ export const ptPT = {
           'Pipeline experimental de Machine Learning desde a definição da coorte até à avaliação e explicabilidade dos modelos',
         imageCaption:
           'Pipeline experimental que abrange definição da coorte, seleção de modelos, avaliação hold-out e interpretabilidade com SHAP.',
-        precisionRecallImageAlt:
-          'Curvas Precision–Recall de sete modelos no conjunto de teste da progressão funcional aos seis meses',
-        precisionRecallImageCaption:
-          'Curvas Precision–Recall hold-out do Estudo I. A linha tracejada representa a prevalência de 0,30 da classe de progressão rápida.',
-        studyOneShapImageAlt:
-          'Gráfico SHAP beeswarm que mostra a influência das variáveis iniciais nas previsões de progressão funcional do XGBoost',
-        studyOneShapImageCaption:
-          'Visão SHAP global do Estudo I. O ALSFRS-R inicial teve o maior contributo global; medidas respiratórias e idade também surgiram de forma recorrente.',
-        studyTwoShapImageAlt:
-          'Importância das variáveis e distribuições dos valores SHAP do modelo LightGBM de sobrevivência com sobreamostragem aleatória',
-        studyTwoShapImageCaption:
-          'No Estudo II, o atraso no diagnóstico e os declives dos itens ALSFRS-R destacaram-se nas explicações do LightGBM. São associações preditivas, não efeitos causais.',
+        rankingSensitivityImageAlt:
+          'Comparação entre ROC-AUC de validação cruzada e sensibilidade no teste para sete classificadores de sobrevivência',
+        rankingSensitivityImageCaption:
+          'No Estudo II, uma ROC-AUC elevada não garantiu deteção útil no limiar predefinido: o MLP obteve 0,915 em validação cruzada, mas apenas 0,029 de sensibilidade no teste.',
+        studyOneImportanceImageAlt:
+          'Importância global das variáveis do XGBoost para progressão funcional aos seis meses',
+        studyOneImportanceImageCaption:
+          'No Estudo I, o ALSFRS-R inicial apresentou a maior atribuição global, seguido da FVC. Estas relações descrevem o comportamento do modelo, não causas clínicas.',
+        studyTwoDistributionsImageAlt:
+          'Distribuições do atraso no diagnóstico e do declive da marcha por grupo de sobrevivência',
+        studyTwoDistributionsImageCaption:
+          'No Estudo II, os grupos diferiram sobretudo no atraso do diagnóstico e no declive da marcha. As diferenças apoiam a explicação das previsões, sem estabelecer causalidade.',
       },
       professionalPortfolio: {
         title: 'Portefólio Profissional',
         summary:
-          'Um portefólio estático, bilingue e acessível, concebido para apresentar trabalho selecionado através de contexto, decisões e casos de estudo.',
+          'Um portefólio estático, bilingue e acessível, concebido para apresentar projetos reais através de contexto, decisões e casos de estudo.',
         desktopImageAlt:
           'Página inicial do portefólio em inglês e modo claro num ecrã de computador',
         desktopImageCaption:
@@ -141,17 +141,17 @@ export const ptPT = {
     home: {
       metaTitle: 'Ivo Camacho — Portefólio',
       metaDescription:
-        'Programador de software com trabalho em aplicações web, dados e Machine Learning aplicado.',
+        'Programador de software em aplicações web, dados e Machine Learning aplicado.',
       hero: {
         illustrationAlt:
           'Ilustração editorial de um portátil, caderno, caneca e planta',
         annotation: 'Criar. Aprender. Melhorar.',
         name: 'Ivo Camacho',
         title:
-          'Programador de software com trabalho em aplicações web, dados e Machine Learning aplicado.',
+          'Programador de software em aplicações web, dados e Machine Learning aplicado.',
         introduction:
           'Trabalho com TypeScript, React, Python e dados relacionais em projetos pessoais, académicos e profissionais. Estou atualmente a concluir uma tese de Mestrado sobre Machine Learning explicável e reprodutível aplicado ao prognóstico da ALS.',
-        location: 'Em Portugal · Trabalho em português e inglês',
+        location: 'Em Portugal · Trabalho em Português e Inglês',
       },
       actions: {
         viewProjects: 'Ver projetos',
@@ -160,12 +160,12 @@ export const ptPT = {
         readCaseStudy: 'Ler caso de estudo',
       },
       featured: {
-        title: 'Trabalho selecionado',
+        title: 'Projetos',
         description:
           'Três projetos que representam desenvolvimento de produto, investigação aplicada e as decisões por detrás deste portefólio.',
       },
       experience: {
-        title: 'Experiência selecionada',
+        title: 'Experiência',
         description:
           'Trabalho prático em ensino de programação, desenvolvimento web, aplicações operacionais e suporte técnico.',
       },
@@ -187,7 +187,6 @@ export const ptPT = {
     },
     projects: {
       title: 'Projetos',
-      eyebrow: 'Projetos em detalhe',
       annotation: 'Do problema ao produto.',
       description:
         'Uma seleção focada de desenvolvimento de produto e investigação aplicada, apresentada através do problema, das decisões e do sistema resultante.',
@@ -196,7 +195,7 @@ export const ptPT = {
       currentProjectNote:
         'Este portefólio é também um registo em evolução do trabalho por detrás dele.',
       metaTitle: 'Projetos — Ivo Camacho',
-      metaDescription: 'Projetos selecionados e casos de estudo técnicos de Ivo Camacho.',
+      metaDescription: 'Projetos e casos de estudo técnicos de Ivo Camacho.',
     },
     project: {
       eyebrow: 'Caso de estudo',
@@ -339,19 +338,19 @@ export const ptPT = {
             label: 'Papel',
             value: 'Desenho da investigação, implementação, análise e escrita',
           },
-          period: { label: 'Período', value: '2025 — atual' },
+          period: { label: 'Período', value: '2025 — 2026' },
           dataset: {
             label: 'Dataset',
-            value: 'PRO-ACT · 23 ensaios clínicos de ALS',
+            value: 'PRO-ACT · 16 tabelas clínicas',
           },
-          status: { label: 'Estado', value: 'Tese em desenvolvimento' },
+          status: { label: 'Estado', value: 'Defesa de mestrado · 2026' },
         },
         highlights: {
           studies: { value: '2', label: 'estudos ligados' },
-          classifiers: { value: '7', label: 'classificadores avaliados' },
+          classifiers: { value: '70', label: 'configurações no Estudo II' },
           sensitivity: {
-            value: '85,7%',
-            label: 'sensibilidade no hold-out do Estudo II',
+            value: '301',
+            label: 'participantes no teste selado do Estudo II',
           },
         },
         problem: {
@@ -359,7 +358,7 @@ export const ptPT = {
           body:
             'A esclerose lateral amiotrófica progride de forma muito diferente entre pessoas. Um fluxo de prognóstico útil tem, por isso, de lidar com registos longitudinais, poucos casos da classe minoritária, horizontes clínicos distintos e as consequências de falsos negativos e falsos positivos.',
           bodyTwo:
-            'A tese usa registos longitudinais de 23 ensaios clínicos da base PRO-ACT. Em vez de reduzir o trabalho a um único modelo, estuda dois resultados diferentes e trata o desenho da validação, o desequilíbrio de classes, os limiares de decisão e a explicabilidade como partes da própria modelação.',
+            'A tese usa dados da base PRO-ACT, organizada a partir de 16 tabelas clínicas. Em vez de reduzir o trabalho a um único modelo, estuda dois resultados diferentes e trata o desenho da validação, o desequilíbrio de classes, os limiares de decisão e a explicabilidade como partes da própria modelação.',
         },
         studies: {
           title: 'Dois resultados, uma questão metodológica',
@@ -367,7 +366,7 @@ export const ptPT = {
             label: 'Estudo I · Pipeline original',
             title: 'Progressão funcional aos três e seis meses',
             body:
-              'Sete classificadores usam informação clínica inicial para distinguir progressão rápida e lenta do ALSFRS-R. Grupos de variáveis, ponderação de classes, horizonte de previsão e explicações globais e individuais são avaliados em conjunto.',
+              'Uma coorte de 1 392 participantes e 35 variáveis iniciais é usada para distinguir progressão rápida e lenta do ALSFRS-R. Sete classificadores são avaliados aos três e aos seis meses.',
             detail:
               'O limiar que define progressão rápida é estimado dentro de cada fold de treino, evitando que informação dos participantes de validação entre na construção do target.',
           },
@@ -375,7 +374,7 @@ export const ptPT = {
             label: 'Estudo II · Replicação e extensão',
             title: 'Prognóstico de sobrevivência até 24 meses',
             body:
-              'Uma replicação parcial de trabalho publicado com BalancedBagging é alargada com sete classificadores, dez estratégias para desequilíbrio, otimização Bayesiana, teste hold-out, análise de thresholds, estimativas de incerteza e SHAP.',
+              'Uma coorte de 1 502 participantes, incluindo 174 Short Survivors, suporta a replicação e extensão. O estudo compara sete classificadores e dez estratégias para desequilíbrio, totalizando 70 configurações antes da avaliação final.',
             detail:
               'O estudo testa se uma ROC-AUC elevada também se traduz numa deteção adequada da classe minoritária Short Survivor.',
           },
@@ -406,7 +405,7 @@ export const ptPT = {
           },
         },
         results: {
-          title: 'Resultados com os trade-offs visíveis',
+          title: 'Uma boa ordenação não garante uma boa decisão',
           introduction:
             'Os resultados sustentam o valor do pipeline, mas também mostram por que razão uma única métrica não basta para uma afirmação de prognóstico.',
           functional: {
@@ -414,23 +413,22 @@ export const ptPT = {
             metric: '0,456',
             metricLabel: 'PR-AUC · XGBoost · n = 279',
             body:
-              'No threshold de 0,21, derivado no desenvolvimento, o modelo atingiu 85,7% de recall e 35,1% de precisão. A escolha privilegiou sensibilidade, mas também produziu muitos falsos positivos — um compromisso que deve permanecer explícito.',
+              'No limiar de 0,21, derivado no desenvolvimento, o modelo detetou 72 dos 84 participantes com progressão rápida: 85,7% de sensibilidade e 35,1% de precisão. O ganho de sensibilidade produziu 133 falsos positivos.',
           },
           survival: {
             label: 'Estudo II · Teste hold-out',
-            metric: '0,923',
-            metricLabel: 'ROC-AUC · LightGBM + ROS · n = 301',
+            metric: '0,918',
+            metricLabel: 'ROC-AUC · MLP sem modificação · n = 301',
             body:
-              'O modelo atingiu 85,7% de sensibilidade e 83,1% de especificidade, com intervalo ROC-AUC de 95% entre 0,868 e 0,966. Outra configuração apresentou intervalos sobrepostos, pelo que a evidência não demonstra superioridade clara.',
+              'No limiar predefinido, o modelo detetou apenas 1 dos 35 Short Survivors. Um limiar de 0,078, escolhido com previsões out-of-fold, elevou a sensibilidade para 77,1% e manteve 88,3% de especificidade, detetando 27 dos 35 casos.',
           },
           caution:
-            'Um modelo neuronal deixou um aviso particularmente útil: uma boa capacidade de ordenação no threshold predefinido detetou apenas 1 dos 35 Short Survivors. A escolha do threshold faz parte do modelo, não é um acabamento.',
+            'O Estudo II expôs uma diferença decisiva entre ranking e deteção. Uma ROC-AUC forte pode coexistir com uma sensibilidade quase nula quando o limiar não corresponde ao objetivo clínico.',
         },
         evidence: {
           title: 'Do desempenho agregado ao comportamento do modelo',
           introduction:
             'A análise passa da discriminação hold-out para as variáveis que moldam as previsões. As figuras são resultados dos pipelines experimentais reais, não gráficos de marketing recriados.',
-          studyTwoLabel: 'Estudo II · Camada de explicação',
         },
         outcome: {
           title: 'O contributo é metodológico, não uma promessa de utilização clínica',
@@ -445,7 +443,7 @@ export const ptPT = {
           'Caso de estudo do portefólio profissional bilingue, acessível e responsivo de Ivo Camacho, desenvolvido com React, TypeScript, Vite e i18next.',
         eyebrow: 'Caso de estudo do portefólio · Este website',
         introduction:
-          'Um website deliberadamente contido que transforma trabalho selecionado, experiência e evidência técnica numa narrativa profissional clara — sem imitar um dashboard ou um template genérico de programador.',
+          'Um website deliberadamente contido que transforma projetos, experiência e evidência técnica numa narrativa profissional clara — sem imitar um dashboard ou um template genérico de programador.',
         facts: {
           role: {
             label: 'Papel',
@@ -465,7 +463,7 @@ export const ptPT = {
           body:
             'O objetivo era permitir que um recrutador ou leitor técnico compreendesse, em poucos minutos, em que áreas trabalho, o que construí e como tomo decisões. Um repositório já mostra ficheiros e commits; este site acrescenta contexto, compromissos e resultados.',
           bodyTwo:
-            'Daí resulta uma estrutura principal reduzida — Início, Projetos, Sobre e CV — e três projetos selecionados apresentados em profundidade. A prioridade do conteúdo segue o valor profissional, não a quantidade ou a data dos repositórios.',
+            'Daí resulta uma estrutura principal reduzida — Início, Projetos, Sobre e CV — e três projetos apresentados em profundidade. A prioridade do conteúdo segue o valor profissional, não a quantidade ou a data dos repositórios.',
         },
         principles: {
           title: 'Um sistema editorial, não uma estética de template',
@@ -547,13 +545,12 @@ export const ptPT = {
     },
     about: {
       title: 'Sobre',
-      eyebrow: 'Perfil e experiência',
       annotation: 'Aprender, construir, evoluir.',
       introduction:
-        'Programador de software com trabalho em aplicações web, dados relacionais e Machine Learning aplicado, e experiência que inclui também ensino de programação, fluxos móveis e resolução de problemas técnicos.',
-      location: 'Em Portugal · Trabalho em português e inglês',
+        'Programador de software com experiência em aplicações web, dados relacionais e Machine Learning aplicado, incluindo também ensino de programação, fluxos móveis e resolução de problemas técnicos.',
+      location: 'Em Portugal · Trabalho em Português e Inglês',
       focus: {
-        title: 'Trabalho entre camadas técnicas ligadas',
+        title: 'Áreas técnicas complementares',
         introduction:
           'O meu trabalho mais forte acontece onde decisões de interface, estruturas de dados e restrições práticas se encontram. Sinto-me confortável entre o detalhe da implementação e o propósito mais amplo de um sistema.',
         product: {
@@ -590,7 +587,7 @@ export const ptPT = {
       closing: {
         title: 'Os projetos mostram o detalhe por detrás do perfil.',
         body:
-          'Para arquitetura, compromissos, resultados de investigação e interfaces funcionais, os casos de estudo selecionados são o melhor ponto para continuar. O CV apresenta a versão cronológica compacta.',
+          'Para arquitetura, compromissos, resultados de investigação e interfaces funcionais, os casos de estudo são o melhor ponto para continuar. O CV apresenta a versão cronológica compacta.',
         projects: 'Explorar projetos',
         cv: 'Ver CV',
       },
@@ -600,7 +597,6 @@ export const ptPT = {
     },
     cv: {
       title: 'Curriculum Vitae',
-      eyebrow: 'Documentos profissionais',
       annotation: 'Experiência em contexto.',
       introduction:
         'Escolhe a versão em português ou inglês. Ambos os documentos podem ser abertos no browser ou descarregados como PDF original.',

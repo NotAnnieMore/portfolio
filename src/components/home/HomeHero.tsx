@@ -52,7 +52,7 @@ export function HomeHero() {
               src="/images/decor/hero-workspace.webp"
               width="800"
             />
-            <figcaption className="editorial-note absolute bottom-4 right-2 z-20 max-w-40 text-lg leading-6 text-ink sm:bottom-6 sm:right-4 lg:-right-2 lg:bottom-8">
+            <figcaption className="editorial-note absolute bottom-0 right-2 z-20 max-w-40 text-lg leading-6 text-ink sm:bottom-0 sm:right-4 lg:-bottom-4 lg:-right-2">
               {t('pages.home.hero.annotation')}
             </figcaption>
           </figure>

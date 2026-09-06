@@ -50,23 +50,23 @@ export const en = {
           'Experimental machine learning pipeline from cohort definition to model assessment and explainability',
         imageCaption:
           'Experimental pipeline covering cohort definition, model selection, held-out evaluation, and SHAP interpretability.',
-        precisionRecallImageAlt:
-          'Precision–recall curves for seven models on the six-month functional progression test set',
-        precisionRecallImageCaption:
-          'Held-out Precision–Recall curves for Study I. The dashed line marks the rapid-progression prevalence baseline of 0.30.',
-        studyOneShapImageAlt:
-          'SHAP beeswarm showing how baseline variables influenced the XGBoost functional progression predictions',
-        studyOneShapImageCaption:
-          'Study I global SHAP view. Baseline ALSFRS-R had the largest overall contribution, with respiratory measurements and age also recurring.',
-        studyTwoShapImageAlt:
-          'Feature importance and SHAP value distributions for the LightGBM survival model with random oversampling',
-        studyTwoShapImageCaption:
-          'In Study II, diagnostic delay and ALSFRS-R item slopes were prominent in the LightGBM explanations. These are predictive associations, not causal effects.',
+        rankingSensitivityImageAlt:
+          'Comparison of cross-validation ROC-AUC and held-out sensitivity for seven survival classifiers',
+        rankingSensitivityImageCaption:
+          'In Study II, strong ROC-AUC did not guarantee useful detection at the default threshold: the MLP reached 0.915 in cross-validation but only 0.029 test sensitivity.',
+        studyOneImportanceImageAlt:
+          'Global XGBoost feature importance for six-month functional progression',
+        studyOneImportanceImageCaption:
+          'In Study I, baseline ALSFRS-R had the largest global attribution, followed by FVC. These relationships describe model behaviour, not clinical causes.',
+        studyTwoDistributionsImageAlt:
+          'Distributions of diagnostic delay and walking slope by survival group',
+        studyTwoDistributionsImageCaption:
+          'In Study II, the groups differed most clearly in diagnostic delay and walking slope. These differences help explain predictions without establishing causality.',
       },
       professionalPortfolio: {
         title: 'Professional Portfolio',
         summary:
-          'A bilingual and accessible static portfolio designed to present selected work through context, decisions, and case studies.',
+          'A bilingual and accessible static portfolio designed to present real projects through context, decisions, and case studies.',
         desktopImageAlt:
           'English portfolio home page in light mode on a desktop viewport',
         desktopImageCaption:
@@ -141,17 +141,17 @@ export const en = {
     home: {
       metaTitle: 'Ivo Camacho — Portfolio',
       metaDescription:
-        'Software developer working across web applications, data, and applied machine learning.',
+        'Software developer focused on web applications, data, and applied machine learning.',
       hero: {
         illustrationAlt:
           'Editorial illustration of a laptop, notebook, coffee mug, and leafy plant',
         annotation: 'Build. Learn. Improve.',
         name: 'Ivo Camacho',
         title:
-          'Software developer across web applications, data, and applied machine learning.',
+          'Software developer focused on web applications, data, and applied machine learning.',
         introduction:
           'I work with TypeScript, React, Python, and relational data across personal, academic, and professional projects. I am currently completing a Master’s thesis on explainable and reproducible Machine Learning for ALS prognosis.',
-        location: 'Based in Portugal · Working in English and Portuguese',
+        location: 'Based in Portugal · Working in Portuguese and English',
       },
       actions: {
         viewProjects: 'View projects',
@@ -160,12 +160,12 @@ export const en = {
         readCaseStudy: 'Read case study',
       },
       featured: {
-        title: 'Selected work',
+        title: 'Projects',
         description:
           'Three projects that represent product development, applied research, and the decisions behind this portfolio.',
       },
       experience: {
-        title: 'Selected experience',
+        title: 'Experience',
         description:
           'Practical work across programming education, web development, operational applications, and technical support.',
       },
@@ -186,7 +186,6 @@ export const en = {
     },
     projects: {
       title: 'Projects',
-      eyebrow: 'Project index',
       annotation: 'From problem to product.',
       description:
         'A focused selection of product development and applied research, presented through the problem, the decisions, and the resulting system.',
@@ -195,7 +194,7 @@ export const en = {
       currentProjectNote:
         'This portfolio is itself an evolving record of the work behind it.',
       metaTitle: 'Projects — Ivo Camacho',
-      metaDescription: 'Selected projects and technical case studies by Ivo Camacho.',
+      metaDescription: 'Projects and technical case studies by Ivo Camacho.',
     },
     project: {
       eyebrow: 'Project case study',
@@ -338,19 +337,19 @@ export const en = {
             label: 'Role',
             value: 'Research design, implementation, analysis, and writing',
           },
-          period: { label: 'Period', value: '2025 — present' },
+          period: { label: 'Period', value: '2025 — 2026' },
           dataset: {
             label: 'Dataset',
-            value: 'PRO-ACT · 23 ALS clinical trials',
+            value: 'PRO-ACT · 16 clinical tables',
           },
-          status: { label: 'Status', value: 'Thesis in progress' },
+          status: { label: 'Status', value: 'Master’s defence · 2026' },
         },
         highlights: {
           studies: { value: '2', label: 'connected studies' },
-          classifiers: { value: '7', label: 'classifiers evaluated' },
+          classifiers: { value: '70', label: 'Study II configurations' },
           sensitivity: {
-            value: '85.7%',
-            label: 'Study II held-out sensitivity',
+            value: '301',
+            label: 'participants in the sealed Study II test set',
           },
         },
         problem: {
@@ -358,7 +357,7 @@ export const en = {
           body:
             'Amyotrophic lateral sclerosis progresses very differently between people. A useful prognosis workflow must therefore handle longitudinal records, limited minority cases, changing clinical horizons, and the consequences of false negatives and false positives.',
           bodyTwo:
-            'The thesis uses longitudinal records from 23 clinical trials in the PRO-ACT database. Instead of collapsing the work into one model, it examines two distinct outcomes and treats validation design, class imbalance, decision thresholds, and explainability as part of the modelling itself.',
+            'The thesis uses data from the PRO-ACT database, organised across 16 clinical tables. Instead of collapsing the work into one model, it examines two distinct outcomes and treats validation design, class imbalance, decision thresholds, and explainability as part of the modelling itself.',
         },
         studies: {
           title: 'Two outcomes, one methodological question',
@@ -366,7 +365,7 @@ export const en = {
             label: 'Study I · Original pipeline',
             title: 'Functional progression at three and six months',
             body:
-              'Seven classifiers use baseline clinical information to distinguish rapid from slow ALSFRS-R progression. Feature groups, class weighting, prediction horizon, global explanations, and individual explanations are evaluated together.',
+              'A cohort of 1,392 participants and 35 baseline features is used to distinguish rapid from slow ALSFRS-R progression. Seven classifiers are evaluated at three- and six-month horizons.',
             detail:
               'The rapid-progression target is estimated inside each training fold, avoiding information from validation participants leaking into target construction.',
           },
@@ -374,7 +373,7 @@ export const en = {
             label: 'Study II · Replication and extension',
             title: 'Survival prognosis within 24 months',
             body:
-              'A partial replication of published BalancedBagging work is extended with seven classifiers, ten imbalance-handling strategies, Bayesian optimisation, held-out testing, threshold analysis, uncertainty estimates, and SHAP.',
+              'A cohort of 1,502 participants, including 174 Short Survivors, supports the replication and extension. The study compares seven classifiers and ten imbalance strategies, producing 70 configurations before final assessment.',
             detail:
               'The study tests whether strong ROC-AUC ranking also translates into adequate detection of the smaller Short Survivor class.',
           },
@@ -405,7 +404,7 @@ export const en = {
           },
         },
         results: {
-          title: 'Results with the trade-offs left visible',
+          title: 'Good ranking does not guarantee a good decision',
           introduction:
             'The results support the workflow’s value, but they also show why no single metric is enough for a prognosis claim.',
           functional: {
@@ -413,23 +412,22 @@ export const en = {
             metric: '0.456',
             metricLabel: 'PR-AUC · XGBoost · n = 279',
             body:
-              'At the development-derived threshold of 0.21, the model reached 85.7% recall and 35.1% precision. This prioritised sensitivity, but also produced many false positives — a trade-off that must remain explicit.',
+              'At the development-derived threshold of 0.21, the model detected 72 of 84 rapid progressors: 85.7% sensitivity and 35.1% precision. The increase in sensitivity produced 133 false positives.',
           },
           survival: {
             label: 'Study II · Held-out test',
-            metric: '0.923',
-            metricLabel: 'ROC-AUC · LightGBM + ROS · n = 301',
+            metric: '0.918',
+            metricLabel: 'ROC-AUC · Unmodified MLP · n = 301',
             body:
-              'The model reached 85.7% sensitivity and 83.1% specificity, with a 95% ROC-AUC interval of 0.868–0.966. Another configuration had overlapping intervals, so the evidence does not establish clear superiority.',
+              'At the default threshold, the model detected only 1 of 35 Short Survivors. A 0.078 threshold chosen from out-of-fold predictions raised sensitivity to 77.1% while retaining 88.3% specificity, detecting 27 of 35 cases.',
           },
           caution:
-            'A neural model provided a particularly useful warning: strong ranking performance at the default threshold still detected only 1 of 35 Short Survivors. Threshold choice is part of the model, not a finishing detail.',
+            'Study II exposed a decisive difference between ranking and detection. Strong ROC-AUC can coexist with almost no sensitivity when the threshold does not match the clinical objective.',
         },
         evidence: {
           title: 'From aggregate performance to model behaviour',
           introduction:
             'The analysis moves from held-out discrimination to the variables shaping predictions. The figures are outputs from the actual experimental pipelines, not recreated marketing graphics.',
-          studyTwoLabel: 'Study II · Explanation layer',
         },
         outcome: {
           title: 'The contribution is methodological, not a deployment claim',
@@ -444,7 +442,7 @@ export const en = {
           'Case study of Ivo Camacho’s bilingual, accessible, and responsive professional portfolio built with React, TypeScript, Vite, and i18next.',
         eyebrow: 'Portfolio case study · This website',
         introduction:
-          'A deliberately restrained website that turns selected work, experience, and technical evidence into a clear professional narrative — without imitating a dashboard or a generic developer template.',
+          'A deliberately restrained website that turns projects, experience, and technical evidence into a clear professional narrative — without imitating a dashboard or a generic developer template.',
         facts: {
           role: {
             label: 'Role',
@@ -464,7 +462,7 @@ export const en = {
           body:
             'The brief was to help a recruiter or technical reader understand, within a few minutes, what I work on, what I have built, and how I approach decisions. A repository already shows files and commits; this site adds context, trade-offs, and outcomes.',
           bodyTwo:
-            'That led to a small top-level structure — Home, Projects, About, and CV — and three selected projects presented in depth. Content priority follows professional value rather than repository count or creation date.',
+            'That led to a small top-level structure — Home, Projects, About, and CV — and three projects presented in depth. Content priority follows professional value rather than repository count or creation date.',
         },
         principles: {
           title: 'An editorial system, not a template aesthetic',
@@ -546,13 +544,12 @@ export const en = {
     },
     about: {
       title: 'About',
-      eyebrow: 'Profile and experience',
       annotation: 'Learn, build, evolve.',
       introduction:
-        'Software developer working across web applications, relational data, and applied Machine Learning, with experience that also includes programming education, mobile workflows, and technical problem-solving.',
-      location: 'Based in Portugal · Working in English and Portuguese',
+        'Software developer experienced in web applications, relational data, and applied Machine Learning, with additional work in programming education, mobile workflows, and technical problem-solving.',
+      location: 'Based in Portugal · Working in Portuguese and English',
       focus: {
-        title: 'Working across connected technical layers',
+        title: 'Complementary technical areas',
         introduction:
           'My strongest work sits where interface decisions, data structures, and practical constraints meet. I am comfortable moving between implementation detail and the wider purpose of a system.',
         product: {
@@ -589,7 +586,7 @@ export const en = {
       closing: {
         title: 'The projects show the detail behind the profile.',
         body:
-          'For architecture, trade-offs, research results, and working interfaces, the selected case studies are the best place to continue. The CV provides the compact chronological version.',
+          'For architecture, trade-offs, research results, and working interfaces, the case studies are the best place to continue. The CV provides the compact chronological version.',
         projects: 'Explore projects',
         cv: 'View CV',
       },
@@ -599,7 +596,6 @@ export const en = {
     },
     cv: {
       title: 'Curriculum Vitae',
-      eyebrow: 'Professional documents',
       annotation: 'Experience in context.',
       introduction:
         'Choose the Portuguese or English version. Both documents can be opened in the browser or downloaded as the original PDF.',

@@ -21,7 +21,12 @@ export function AlsThesisCaseStudy({ project }: AlsThesisCaseStudyProps) {
   const { t } = useTranslation()
   const { locale } = useParams()
   const activeLocale = isSupportedLocale(locale) ? locale : 'en'
-  const [pipeline, precisionRecall, studyOneShap, studyTwoShap] = project.media
+  const [
+    pipeline,
+    rankingSensitivity,
+    studyOneImportance,
+    studyTwoDistributions,
+  ] = project.media
   const [mainRepository, replicationRepository] = project.links
 
   return (
@@ -245,7 +250,11 @@ export function AlsThesisCaseStudy({ project }: AlsThesisCaseStudyProps) {
         </div>
 
         <div className="mt-16 space-y-16 sm:space-y-24">
-          {[precisionRecall, studyOneShap].map((image) =>
+          {[
+            rankingSensitivity,
+            studyOneImportance,
+            studyTwoDistributions,
+          ].map((image) =>
             image ? (
               <figure key={image.src}>
                 <div className="overflow-hidden border border-line bg-surface">
@@ -267,30 +276,6 @@ export function AlsThesisCaseStudy({ project }: AlsThesisCaseStudyProps) {
               </figure>
             ) : null,
           )}
-
-          {studyTwoShap ? (
-            <figure className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(18rem,0.45fr)] lg:items-center lg:gap-16">
-              <div className="overflow-hidden border border-line bg-surface">
-                <img
-                  alt={t(studyTwoShap.altKey)}
-                  className="h-auto w-full"
-                  decoding="async"
-                  height={studyTwoShap.height}
-                  loading={studyTwoShap.loading}
-                  src={studyTwoShap.src}
-                  width={studyTwoShap.width}
-                />
-              </div>
-              <figcaption>
-                <p className="font-mono text-xs tracking-[0.16em] text-green-readable">
-                  {t('pages.project.alsThesis.evidence.studyTwoLabel')}
-                </p>
-                <p className="mt-5 text-2xl font-semibold leading-tight tracking-[-0.025em] sm:text-3xl">
-                  {t(studyTwoShap.captionKey ?? '')}
-                </p>
-              </figcaption>
-            </figure>
-          ) : null}
         </div>
       </section>
 

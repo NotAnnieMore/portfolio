@@ -1,7 +1,7 @@
 interface EditorialPageHeroProps {
   annotation: string
+  annotationPlacement?: 'lower' | 'upper-right'
   description: string
-  eyebrow: string
   imageHeight: number
   imageSrc: string
   imageWidth: number
@@ -10,8 +10,8 @@ interface EditorialPageHeroProps {
 
 export function EditorialPageHero({
   annotation,
+  annotationPlacement = 'lower',
   description,
-  eyebrow,
   imageHeight,
   imageSrc,
   imageWidth,
@@ -21,13 +21,7 @@ export function EditorialPageHero({
     <header className="mx-auto max-w-6xl px-6 py-20 sm:py-24 lg:px-10 lg:py-28">
       <div className="grid gap-12 lg:grid-cols-[minmax(0,1.18fr)_minmax(20rem,0.82fr)] lg:items-center lg:gap-10">
         <div>
-          <div className="flex items-center gap-3">
-            <span aria-hidden="true" className="h-px w-8 bg-green" />
-            <p className="text-sm font-semibold text-green-readable">
-              {eyebrow}
-            </p>
-          </div>
-          <h1 className="mt-7 max-w-4xl text-[clamp(3.5rem,8vw,6.5rem)] font-semibold leading-[0.94] tracking-[-0.06em] text-balance">
+          <h1 className="max-w-4xl text-[clamp(3.5rem,8vw,6.5rem)] font-semibold leading-[0.94] tracking-[-0.06em] text-balance">
             {title}
           </h1>
           <p className="mt-8 max-w-3xl text-xl leading-9 text-muted sm:text-2xl sm:leading-10">
@@ -48,7 +42,13 @@ export function EditorialPageHero({
             src={imageSrc}
             width={imageWidth}
           />
-          <figcaption className="editorial-note absolute bottom-3 right-3 z-20 max-w-40 text-lg leading-6 text-ink sm:bottom-5 sm:right-6 lg:-right-1 lg:bottom-7">
+          <figcaption
+            className={`editorial-note absolute right-3 z-20 max-w-40 text-lg leading-6 text-ink sm:right-6 ${
+              annotationPlacement === 'upper-right'
+                ? 'bottom-20 sm:bottom-28 lg:-right-28 lg:bottom-44'
+                : 'bottom-0 sm:bottom-0 lg:-right-1 lg:-bottom-5'
+            }`}
+          >
             {annotation}
           </figcaption>
         </figure>

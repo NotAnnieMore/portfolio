@@ -1,11 +1,10 @@
 import { useTranslation } from 'react-i18next'
 import { Link, useParams } from 'react-router'
 
+import { EditorialPageHero } from '../components/layout/EditorialPageHero'
 import { education } from '../data/education'
 import { experience } from '../data/experience'
-import { profileLinks } from '../data/links'
 import { skillGroups } from '../data/skills'
-import { ProfileLinkIcon } from '../components/ui/ProfileLinkIcon'
 import { SkillGroupIcon } from '../components/ui/SkillGroupIcon'
 import { isSupportedLocale } from '../i18n/locales'
 import { formatDateRange } from '../utils/formatDateRange'
@@ -21,38 +20,14 @@ export function AboutPage() {
 
   return (
     <article>
-      <header className="mx-auto max-w-6xl px-6 py-20 sm:py-28 lg:px-10 lg:py-36">
-        <p className="text-sm font-medium text-green-readable">
-          {t('pages.about.eyebrow')}
-        </p>
-        <div className="mt-7 grid gap-12 lg:grid-cols-[minmax(0,1fr)_15rem] lg:items-end lg:gap-20">
-          <div>
-            <h1 className="max-w-4xl text-[clamp(3.5rem,9vw,7rem)] font-semibold leading-[0.92] tracking-[-0.065em] text-balance">
-              {t('pages.about.title')}
-            </h1>
-            <p className="mt-8 max-w-3xl text-xl leading-9 text-muted sm:text-2xl sm:leading-10">
-              {t('pages.about.introduction')}
-            </p>
-          </div>
-          <aside className="border-l border-line pl-5 text-sm leading-6 text-muted">
-            <p>{t('pages.about.location')}</p>
-            <div className="mt-5 flex flex-col items-start gap-2 font-semibold text-ink">
-              {profileLinks.slice(0, 3).map((link) => (
-                <a
-                  className="focus-ring inline-flex items-center gap-2 border-b border-line transition-colors hover:border-action"
-                  href={link.href}
-                  key={link.id}
-                  rel={link.kind === 'email' ? undefined : 'noreferrer'}
-                  target={link.kind === 'email' ? undefined : '_blank'}
-                >
-                  <ProfileLinkIcon id={link.id} />
-                  {t(`content.links.${link.id}`)}
-                </a>
-              ))}
-            </div>
-          </aside>
-        </div>
-      </header>
+      <EditorialPageHero
+        description={t('pages.about.introduction')}
+        eyebrow={t('pages.about.eyebrow')}
+        imageHeight={1080}
+        imageSrc="/images/page-heroes/about.webp"
+        imageWidth={900}
+        title={t('pages.about.title')}
+      />
 
       <section className="bg-surface py-24 sm:py-32 lg:py-40">
         <div className="mx-auto max-w-6xl px-6 lg:px-10">

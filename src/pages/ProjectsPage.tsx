@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Link, useParams } from 'react-router'
 
+import { EditorialPageHero } from '../components/layout/EditorialPageHero'
 import { getOrderedProjects } from '../data/projects'
 import { isSupportedLocale } from '../i18n/locales'
 import { usePageMeta } from '../utils/usePageMeta'
@@ -15,22 +16,14 @@ export function ProjectsPage() {
 
   return (
     <>
-      <header className="mx-auto max-w-6xl border-b border-line px-6 py-20 sm:py-24 lg:px-10 lg:py-28">
-        <div className="flex items-center gap-3">
-          <span aria-hidden="true" className="h-px w-8 bg-green" />
-          <p className="text-sm font-semibold text-green-readable">
-            {t('pages.projects.eyebrow')}
-          </p>
-        </div>
-        <div className="mt-7 grid gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(16rem,0.6fr)] lg:items-start">
-          <h1 className="max-w-4xl text-[clamp(3rem,7vw,5.75rem)] font-semibold leading-[0.98] tracking-[-0.055em] text-balance">
-            {t('pages.projects.title')}
-          </h1>
-          <p className="max-w-xl text-lg leading-8 text-muted">
-            {t('pages.projects.description')}
-          </p>
-        </div>
-      </header>
+      <EditorialPageHero
+        description={t('pages.projects.description')}
+        eyebrow={t('pages.projects.eyebrow')}
+        imageHeight={1080}
+        imageSrc="/images/page-heroes/projects.webp"
+        imageWidth={900}
+        title={t('pages.projects.title')}
+      />
 
       <section className="bg-surface py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-6xl px-6 lg:px-10">

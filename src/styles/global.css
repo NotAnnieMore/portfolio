@@ -145,6 +145,18 @@ button {
   opacity: 0.14;
 }
 
+.experience-watermark {
+  filter: grayscale(1);
+  mix-blend-mode: multiply;
+  opacity: 0.045;
+}
+
+:root[data-theme='dark'] .experience-watermark {
+  filter: grayscale(0.65);
+  mix-blend-mode: soft-light;
+  opacity: 0.08;
+}
+
 .focus-ring:focus-visible,
 a:focus-visible,
 button:focus-visible {

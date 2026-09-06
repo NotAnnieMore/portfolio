@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router'
 
+import { EditorialPageHero } from '../components/layout/EditorialPageHero'
 import { isSupportedLocale } from '../i18n/locales'
 import { usePageMeta } from '../utils/usePageMeta'
 
@@ -30,17 +31,14 @@ export function CvPage() {
 
   return (
     <article>
-      <header className="mx-auto max-w-6xl px-6 pb-20 pt-20 sm:pb-28 sm:pt-28 lg:px-10 lg:pb-36 lg:pt-36">
-        <p className="text-sm font-medium text-green-readable">
-          {t('pages.cv.eyebrow')}
-        </p>
-        <h1 className="mt-7 max-w-4xl text-[clamp(3.5rem,9vw,7rem)] font-semibold leading-[0.92] tracking-[-0.065em] text-balance">
-          {t('pages.cv.title')}
-        </h1>
-        <p className="mt-8 max-w-3xl text-xl leading-9 text-muted sm:text-2xl sm:leading-10">
-          {t('pages.cv.introduction')}
-        </p>
-      </header>
+      <EditorialPageHero
+        description={t('pages.cv.introduction')}
+        eyebrow={t('pages.cv.eyebrow')}
+        imageHeight={1350}
+        imageSrc="/images/page-heroes/cv.webp"
+        imageWidth={900}
+        title={t('pages.cv.title')}
+      />
 
       <section className="bg-surface py-24 sm:py-32 lg:py-40">
         <div className="mx-auto max-w-6xl px-6 lg:px-10">

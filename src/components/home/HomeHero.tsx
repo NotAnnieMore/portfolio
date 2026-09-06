@@ -1,11 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Link, useParams } from 'react-router'
 
-import { profileLinks } from '../../data/links'
 import { isSupportedLocale } from '../../i18n/locales'
-import { ProfileLinkIcon } from '../ui/ProfileLinkIcon'
-
-const heroProfileLinks = new Set(['linkedin', 'github'])
 
 export function HomeHero() {
   const { t } = useTranslation()
@@ -38,27 +34,10 @@ export function HomeHero() {
             </Link>
           </div>
 
-          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 border-l border-green pl-5">
+          <div className="mt-8 border-l border-green pl-5">
             <p className="text-sm leading-6 text-muted">
               {t('pages.home.hero.location')}
             </p>
-            <ul className="flex flex-wrap items-center gap-x-5 gap-y-2.5 text-sm">
-              {profileLinks
-                .filter((link) => heroProfileLinks.has(link.id))
-                .map((link) => (
-                  <li key={link.id}>
-                    <a
-                      className="focus-ring inline-flex items-center gap-2 font-medium underline decoration-line underline-offset-4 transition-colors hover:decoration-action"
-                      href={link.href}
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      <ProfileLinkIcon id={link.id} />
-                      {t(`content.links.${link.id}`)}
-                    </a>
-                  </li>
-                ))}
-            </ul>
           </div>
         </div>
 
@@ -66,7 +45,7 @@ export function HomeHero() {
           <figure className="relative min-h-[27rem] overflow-hidden sm:min-h-[32rem] lg:min-h-[36rem] lg:overflow-visible">
             <img
               alt={t('pages.home.hero.illustrationAlt')}
-              className="absolute -bottom-10 left-1/2 z-10 h-[116%] w-auto max-w-none -translate-x-1/2 object-contain sm:-bottom-12 sm:h-[120%] lg:-bottom-16 lg:h-[124%]"
+              className="absolute -bottom-10 left-1/2 z-10 h-[116%] w-auto max-w-none -translate-x-1/2 object-contain sm:-bottom-12 sm:h-[120%] lg:-bottom-16 lg:left-[56%] lg:h-[124%] xl:left-[60%]"
               decoding="async"
               fetchPriority="high"
               height="1200"

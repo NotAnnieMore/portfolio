@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { NavLink, Outlet, useParams } from 'react-router'
 
+import { profileLinks } from '../../data/links'
 import { LanguageToggle } from '../ui/LanguageToggle'
+import { ProfileLinkIcon } from '../ui/ProfileLinkIcon'
 import { ThemeToggle } from '../ui/ThemeToggle'
 import { BackToTop } from '../ui/BackToTop'
 import { isSupportedLocale } from '../../i18n/locales'
@@ -73,6 +75,16 @@ export function SiteLayout() {
                   </NavLink>
                 </li>
               ))}
+              <li>
+                <a
+                  className="focus-ring text-sm font-semibold text-action-readable transition-colors hover:text-action-hover"
+                  href="https://jobs.ivocamacho.com"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Job Tracker <span aria-hidden="true">↗</span>
+                </a>
+              </li>
             </ul>
           </nav>
 
@@ -90,16 +102,23 @@ export function SiteLayout() {
       <BackToTop />
 
       <footer className="border-t border-line">
-        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-8 text-sm text-muted sm:flex-row sm:items-center sm:justify-between lg:px-10">
+        <div className="mx-auto flex max-w-6xl flex-col gap-5 px-6 py-8 text-sm text-muted sm:flex-row sm:items-center sm:justify-between lg:px-10">
           <p>{t('footer.note', { year: new Date().getFullYear() })}</p>
-          <a
-            className="focus-ring transition-colors hover:text-ink"
-            href="https://github.com/NotAnnieMore"
-            rel="noreferrer"
-            target="_blank"
-          >
-            GitHub
-          </a>
+          <ul className="flex flex-wrap items-center gap-x-5 gap-y-3">
+            {profileLinks.slice(0, 3).map((link) => (
+              <li key={link.id}>
+                <a
+                  className="focus-ring inline-flex items-center gap-2 transition-colors hover:text-ink"
+                  href={link.href}
+                  rel={link.kind === 'email' ? undefined : 'noreferrer'}
+                  target={link.kind === 'email' ? undefined : '_blank'}
+                >
+                  <ProfileLinkIcon id={link.id} />
+                  {t(`content.links.${link.id}`)}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </footer>
     </div>

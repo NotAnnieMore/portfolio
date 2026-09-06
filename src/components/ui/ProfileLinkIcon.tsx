@@ -1,7 +1,6 @@
-import { BriefcaseBusiness, GitBranch, Mail } from 'lucide-react'
+import { BriefcaseBusiness, GitBranch } from 'lucide-react'
 
 const icons = {
-  email: Mail,
   github: GitBranch,
   linkedin: BriefcaseBusiness,
 } as const

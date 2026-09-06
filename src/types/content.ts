@@ -2,7 +2,6 @@ export type ContentLinkKind =
   | 'live'
   | 'github'
   | 'document'
-  | 'email'
   | 'linkedin'
   | 'external'
 

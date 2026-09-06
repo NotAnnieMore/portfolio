@@ -130,7 +130,6 @@ export const ptPT = {
     links: {
       live: 'Aplicação',
       github: 'GitHub',
-      email: 'Email',
       linkedin: 'LinkedIn',
       mainRepository: 'Repositório principal',
       replicationRepository: 'Repositório de replicação',
@@ -158,7 +157,6 @@ export const ptPT = {
         viewAllProjects: 'Ver todos os projetos',
         viewCv: 'Ver CV',
         readCaseStudy: 'Ler caso de estudo',
-        emailMe: 'Enviar email',
       },
       featured: {
         title: 'Trabalho selecionado',
@@ -183,7 +181,7 @@ export const ptPT = {
         title:
           'Disponível para conversar sobre software, dados e oportunidades técnicas.',
         description:
-          'O email é a forma mais direta de entrar em contacto. Também podes consultar o meu CV ou encontrar no GitHub o código dos projetos apresentados.',
+          'Podes entrar em contacto através do LinkedIn, consultar o meu CV ou encontrar no GitHub o código dos projetos apresentados.',
       },
     },
     projects: {
@@ -274,7 +272,7 @@ export const ptPT = {
           },
           identity: {
             title: 'Supabase Auth',
-            body: 'Sessões PKCE, cookies SSR, confirmação de email e claims no servidor.',
+            body: 'Sessões PKCE, cookies SSR, confirmação de conta e claims no servidor.',
           },
           data: {
             title: 'PostgreSQL + RLS',

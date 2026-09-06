@@ -130,7 +130,6 @@ export const en = {
     links: {
       live: 'Live application',
       github: 'GitHub',
-      email: 'Email',
       linkedin: 'LinkedIn',
       mainRepository: 'Main repository',
       replicationRepository: 'Replication repository',
@@ -158,7 +157,6 @@ export const en = {
         viewAllProjects: 'View all projects',
         viewCv: 'View CV',
         readCaseStudy: 'Read case study',
-        emailMe: 'Send an email',
       },
       featured: {
         title: 'Selected work',
@@ -182,7 +180,7 @@ export const en = {
         label: 'Contact',
         title: 'Open to conversations about software, data, and technical roles.',
         description:
-          'Email is the most direct way to reach me. You can also review my CV or find the source code for my work on GitHub.',
+          'You can reach me through LinkedIn, review my CV, or find the source code for the featured projects on GitHub.',
       },
     },
     projects: {
@@ -273,7 +271,7 @@ export const en = {
           },
           identity: {
             title: 'Supabase Auth',
-            body: 'PKCE sessions, SSR cookies, email confirmation, and server-side claims.',
+            body: 'PKCE sessions, SSR cookies, account confirmation, and server-side claims.',
           },
           data: {
             title: 'PostgreSQL + RLS',

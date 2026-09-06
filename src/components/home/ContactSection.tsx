@@ -1,8 +1,11 @@
 import { useTranslation } from 'react-i18next'
 import { Link, useParams } from 'react-router'
 
+import { profileLinks } from '../../data/links'
 import { isSupportedLocale } from '../../i18n/locales'
 import { SectionHeading } from './SectionHeading'
+
+const linkedInLink = profileLinks.find((link) => link.id === 'linkedin')
 
 export function ContactSection() {
   const { t } = useTranslation()
@@ -33,12 +36,16 @@ export function ContactSection() {
             {t('pages.home.contact.description')}
           </p>
           <div className="mt-10 flex flex-wrap gap-x-8 gap-y-5 text-sm font-semibold">
-            <a
-              className="focus-ring border-b border-action pb-1 transition-colors hover:border-action-hover"
-              href="mailto:ivocamachomail@gmail.com"
-            >
-              {t('pages.home.actions.emailMe')}
-            </a>
+            {linkedInLink ? (
+              <a
+                className="focus-ring border-b border-action pb-1 text-action-readable transition-colors hover:border-action-hover"
+                href={linkedInLink.href}
+                rel="noreferrer"
+                target="_blank"
+              >
+                {t('content.links.linkedin')} <span aria-hidden="true">↗</span>
+              </a>
+            ) : null}
             <Link
               className="focus-ring border-b border-line-strong pb-1 transition-colors hover:border-action"
               to={`/${activeLocale}/cv`}

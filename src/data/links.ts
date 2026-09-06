@@ -2,11 +2,6 @@ import type { ProfileLink } from '../types/content'
 
 export const profileLinks: readonly ProfileLink[] = [
   {
-    id: 'email',
-    kind: 'email',
-    href: 'mailto:ivocamachomail@gmail.com',
-  },
-  {
     id: 'linkedin',
     kind: 'linkedin',
     href: 'https://www.linkedin.com/in/ivocamacho99',

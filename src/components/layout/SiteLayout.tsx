@@ -9,6 +9,8 @@ import { ThemeToggle } from '../ui/ThemeToggle'
 import { BackToTop } from '../ui/BackToTop'
 import { isSupportedLocale } from '../../i18n/locales'
 
+const footerProfileLinks = new Set(['linkedin', 'github'])
+
 export function SiteLayout() {
   const { t } = useTranslation()
   const { locale } = useParams()
@@ -105,19 +107,21 @@ export function SiteLayout() {
         <div className="mx-auto flex max-w-6xl flex-col gap-5 px-6 py-8 text-sm text-muted sm:flex-row sm:items-center sm:justify-between lg:px-10">
           <p>{t('footer.note', { year: new Date().getFullYear() })}</p>
           <ul className="flex flex-wrap items-center gap-x-5 gap-y-3">
-            {profileLinks.slice(0, 3).map((link) => (
-              <li key={link.id}>
-                <a
-                  className="focus-ring inline-flex items-center gap-2 transition-colors hover:text-ink"
-                  href={link.href}
-                  rel={link.kind === 'email' ? undefined : 'noreferrer'}
-                  target={link.kind === 'email' ? undefined : '_blank'}
-                >
-                  <ProfileLinkIcon id={link.id} />
-                  {t(`content.links.${link.id}`)}
-                </a>
-              </li>
-            ))}
+            {profileLinks
+              .filter((link) => footerProfileLinks.has(link.id))
+              .map((link) => (
+                <li key={link.id}>
+                  <a
+                    className="focus-ring inline-flex items-center gap-2 transition-colors hover:text-ink"
+                    href={link.href}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <ProfileLinkIcon id={link.id} />
+                    {t(`content.links.${link.id}`)}
+                  </a>
+                </li>
+              ))}
           </ul>
         </div>
       </footer>

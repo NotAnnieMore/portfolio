@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router'
 
 import { EditorialPageHero } from '../components/layout/EditorialPageHero'
+import { EditorialSectionIntro } from '../components/layout/EditorialSectionIntro'
 import { isSupportedLocale } from '../i18n/locales'
 import { usePageMeta } from '../utils/usePageMeta'
 
@@ -42,19 +43,15 @@ export function CvPage() {
 
       <section className="bg-surface py-24 sm:py-32 lg:py-40">
         <div className="mx-auto max-w-6xl px-6 lg:px-10">
-          <div className="grid gap-10 border-t border-line pt-5 lg:grid-cols-[12rem_minmax(0,1fr)]">
-            <p className="font-mono text-xs tracking-[0.16em] text-green-readable">
-              01 / 01
-            </p>
-            <div>
-              <h2 className="text-3xl font-semibold tracking-[-0.035em] sm:text-5xl">
-                {t('pages.cv.documents.title')}
-              </h2>
-              <p className="mt-6 max-w-3xl text-lg leading-8 text-muted">
-                {t('pages.cv.documents.introduction')}
-              </p>
+          <EditorialSectionIntro
+            count="02 / 02"
+            description={t('pages.cv.documents.introduction')}
+            eyebrow={t('pages.cv.documents.eyebrow')}
+            note={t('pages.cv.documents.note')}
+            title={t('pages.cv.documents.title')}
+          />
 
-              <div className="mt-14 grid gap-10 md:grid-cols-2 md:gap-12">
+          <div className="mt-14 grid gap-10 md:grid-cols-2 md:gap-12">
                 {orderedDocuments.map((document) => (
                   <article className="flex flex-col border-t border-line pt-6" key={document.locale}>
                     <div className="flex items-start justify-between gap-6 md:min-h-32">
@@ -119,8 +116,6 @@ export function CvPage() {
                     </div>
                   </article>
                 ))}
-              </div>
-            </div>
           </div>
         </div>
       </section>

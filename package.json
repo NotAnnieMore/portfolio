@@ -1,5 +1,6 @@
 {
   "name": "portfolio",
+  "description": "Bilingual professional portfolio for Ivo Camacho, built with React, TypeScript, and Vite.",
   "private": true,
   "version": "0.0.0",
   "type": "module",

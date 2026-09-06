@@ -2,6 +2,7 @@ import {
   BrainCircuit,
   Braces,
   Database,
+  LifeBuoy,
   PanelsTopLeft,
   Wrench,
 } from 'lucide-react'
@@ -10,6 +11,7 @@ const icons = {
   'applied-machine-learning': BrainCircuit,
   'data-and-backend': Database,
   'microsoft-low-code': PanelsTopLeft,
+  'quality-and-support': LifeBuoy,
   'tools-and-delivery': Wrench,
   'web-development': Braces,
 } as const

@@ -6,7 +6,7 @@ export const ptPT = {
   navigation: {
     primary: 'Navegação principal',
     projects: 'Projetos',
-    about: 'Sobre',
+    about: 'Sobre Mim',
     cv: 'CV',
   },
   language: {
@@ -66,15 +66,15 @@ export const ptPT = {
       professionalPortfolio: {
         title: 'Portefólio Profissional',
         summary:
-          'Um portefólio estático, bilingue e acessível, concebido para apresentar projetos reais através de contexto, decisões e casos de estudo.',
+          'Um portefólio bilingue, responsivo e acessível, concebido para apresentar projetos reais através de contexto, decisões e casos de estudo detalhados.',
         desktopImageAlt:
           'Página inicial do portefólio em inglês e modo claro num ecrã de computador',
         desktopImageCaption:
-          'A página inicial em desktop usa tipografia, espaço e uma paleta contida para estabelecer hierarquia sem efeitos decorativos.',
+          'A página inicial atual combina hierarquia editorial, uma ilustração botânica transparente e acessos diretos ao trabalho.',
         mobileImageAlt:
-          'Página de projetos em português e modo escuro num ecrã móvel estreito',
+          'Página de projetos em português e modo claro num ecrã móvel estreito',
         mobileImageCaption:
-          'O layout mobile altera o espaçamento e a hierarquia da navegação, em vez de apenas comprimir a composição de desktop.',
+          'Num ecrã estreito, navegação, tipografia, espaçamento e a ilustração completa formam uma composição mobile própria, em vez de comprimirem a versão desktop.',
       },
     },
     projectCategories: {
@@ -126,6 +126,13 @@ export const ptPT = {
       appliedMachineLearning: 'Machine Learning aplicado',
       microsoftLowCode: 'Microsoft e low-code',
       toolsAndDelivery: 'Ferramentas e publicação',
+      qualityAndSupport: 'Qualidade e suporte técnico',
+    },
+    skills: {
+      debugging: 'Debugging',
+      testingAndValidation: 'Testes e validação',
+      technicalDocumentation: 'Documentação técnica',
+      technicalSupport: 'Suporte técnico',
     },
     links: {
       live: 'Aplicação',
@@ -190,7 +197,16 @@ export const ptPT = {
       annotation: 'Do problema ao produto.',
       description:
         'Uma seleção focada de desenvolvimento de produto e investigação aplicada, apresentada através do problema, das decisões e do sistema resultante.',
+      featuredLabel: 'Projetos em destaque',
       selectedTitle: 'Três projetos, três contextos',
+      featuredIntroduction:
+        'Problemas diferentes, contextos diferentes e a mesma curiosidade: construir soluções úteis na interseção entre tecnologia, pessoas e impacto.',
+      featuredNote: 'Projetos reais\nContextos reais\nAprendizagem contínua',
+      imageNotes: {
+        tracker: 'Organizar. Acompanhar. Avançar.',
+        thesis: 'Dos dados à compreensão.',
+        portfolio: 'Construir, testar, evoluir.',
+      },
       viewProject: 'Ver projeto',
       currentProjectNote:
         'Este portefólio é também um registo em evolução do trabalho por detrás dele.',
@@ -451,12 +467,12 @@ export const ptPT = {
           },
           year: { label: 'Ano', value: '2026' },
           format: { label: 'Formato', value: 'Website estático bilingue' },
-          stack: { label: 'Stack principal', value: 'React · TypeScript · Vite' },
+          stack: { label: 'Stack principal', value: 'React 19 · TypeScript · Vite · Tailwind CSS' },
         },
         highlights: {
           languages: { value: '2', label: 'idiomas na mesma interface' },
           caseStudies: { value: '3', label: 'casos de estudo detalhados' },
-          backend: { value: '0', label: 'dependências de backend' },
+          technicalAreas: { value: '6', label: 'áreas técnicas sustentadas por evidência' },
         },
         purpose: {
           title: 'Um portefólio deve explicar o trabalho, não repetir o GitHub',
@@ -475,7 +491,7 @@ export const ptPT = {
           evidence: {
             title: 'O trabalho real é o material visual',
             body:
-              'Capturas do produto, figuras da investigação, tecnologias verificadas e decisões concretas substituem janelas de código decorativas ou afirmações sem suporte.',
+              'Capturas atuais dos produtos, figuras da investigação, tecnologias verificadas e decisões concretas sustentam a evidência; as ilustrações editoriais botânicas dão proximidade ao sistema sem fingirem ser resultado do produto.',
           },
           restraint: {
             title: 'Os neutros permanecem dominantes',
@@ -485,7 +501,7 @@ export const ptPT = {
           responsive: {
             title: 'Mobile tem o seu próprio ritmo',
             body:
-              'Navegação, espaçamento, tipografia, escala das imagens e ordem do conteúdo adaptam-se a ecrãs estreitos, em vez de tratar mobile como desktop comprimido.',
+              'Navegação, espaçamento, tipografia, escala das imagens e ordem do conteúdo adaptam-se a ecrãs estreitos. As anotações decorativas desaparecem quando competem com o conteúdo, enquanto as ilustrações permanecem completas e legíveis.',
           },
         },
         architecture: {
@@ -502,7 +518,7 @@ export const ptPT = {
           },
           interface: {
             title: 'Interface partilhada',
-            body: 'Componentes React aplicam layouts editoriais, tokens de cor semânticos e interações acessíveis.',
+            body: 'Cabeçalhos de secção React partilhados aplicam a hierarquia editorial de forma consistente em Início, Projetos, Sobre Mim e CV, com tokens de cor semânticos e interações acessíveis.',
           },
           deployment: {
             title: 'Build estático de produção',
@@ -528,6 +544,11 @@ export const ptPT = {
             body:
               'Landmarks semânticos, link para saltar conteúdo, foco visível, alternativas descritivas, respeito por movimento reduzido, header persistente e controlo de topo com gestão de foco cobrem necessidades comuns de teclado e leitura.',
           },
+          seo: {
+            title: 'Cada rota tem metadata própria',
+            body:
+              'Títulos e descrições localizados juntam-se a URLs canónicos, alternativas hreflang, imagens Open Graph e Twitter, dados estruturados, regras de robots e um sitemap bilingue completo.',
+          },
           delivery: {
             title: 'Atualizações rotineiras mantêm-se simples',
             body:
@@ -537,19 +558,21 @@ export const ptPT = {
         outcome: {
           title: 'Um portefólio que pode crescer sem perder o seu ponto de vista',
           body:
-            'O sistema atual apresenta três tipos de trabalho com ritmos de case study distintos, mantendo navegação, idiomas, temas e estrutura de conteúdo consistentes em todo o site.',
+            'O sistema atual apresenta três tipos de trabalho com ritmos de caso de estudo distintos, mantendo navegação, cabeçalhos editoriais, idiomas, temas, movimento e estrutura de conteúdo consistentes em todo o site.',
           bodyTwo:
             'A sua principal restrição também é útil: novo conteúdo tem de justificar o lugar através de contexto e evidência verificados. Isso mantém as atualizações futuras focadas e evita transformar o portefólio num catálogo indiscriminado de repositórios.',
         },
       },
     },
     about: {
-      title: 'Sobre',
+      title: 'Sobre Mim',
       annotation: 'Aprender, construir, evoluir.',
       introduction:
         'Programador de software com experiência em aplicações web, dados relacionais e Machine Learning aplicado, incluindo também ensino de programação, fluxos móveis e resolução de problemas técnicos.',
       location: 'Em Portugal · Trabalho em Português e Inglês',
       focus: {
+        eyebrow: 'Perfil técnico',
+        note: 'Produto\nDados\nInvestigação aplicada',
         title: 'Áreas técnicas complementares',
         introduction:
           'O meu trabalho mais forte acontece onde decisões de interface, estruturas de dados e restrições práticas se encontram. Sinto-me confortável entre o detalhe da implementação e o propósito mais amplo de um sistema.',
@@ -570,16 +593,22 @@ export const ptPT = {
         },
       },
       experience: {
+        eyebrow: 'Percurso profissional',
+        note: 'Ensino\nProduto\nOperações',
         title: 'Experiência profissional',
         introduction:
           'Experiência em ensino de programação, desenvolvimento web, aplicações móveis operacionais, migração de dados e produção multimédia numa fase anterior.',
       },
       skills: {
+        eyebrow: 'Ferramentas e contexto',
+        note: 'Web\nDados\nMachine Learning',
         title: 'Áreas técnicas',
         introduction:
           'As tecnologias estão agrupadas pelas situações em que as usei em projetos ou trabalho profissional — não por percentagens arbitrárias de domínio.',
       },
       education: {
+        eyebrow: 'Formação',
+        note: 'Multimédia\nInformática\nEngenharia',
         title: 'Educação e formação',
         introduction:
           'Um percurso desde a formação em multimédia e sistemas de informação até Informática, Engenharia Informática e um Mestrado em Informática Aplicada.',
@@ -590,8 +619,15 @@ export const ptPT = {
           'Para arquitetura, compromissos, resultados de investigação e interfaces funcionais, os casos de estudo são o melhor ponto para continuar. O CV apresenta a versão cronológica compacta.',
         projects: 'Explorar projetos',
         cv: 'Ver CV',
+        impact: {
+          label: 'Do código ao impacto',
+          title: 'Projetos que transformam conhecimento em soluções reais.',
+          projects: { value: '03', label: 'casos de estudo em detalhe' },
+          areas: { value: '03', label: 'áreas centrais de atuação' },
+          languages: { value: '02', label: 'idiomas em todo o website' },
+        },
       },
-      metaTitle: 'Sobre — Ivo Camacho',
+      metaTitle: 'Sobre Mim — Ivo Camacho',
       metaDescription:
         'Perfil profissional, experiência, áreas técnicas e formação do programador de software Ivo Camacho.',
     },
@@ -601,6 +637,8 @@ export const ptPT = {
       introduction:
         'Escolhe a versão em português ou inglês. Ambos os documentos podem ser abertos no browser ou descarregados como PDF original.',
       documents: {
+        eyebrow: 'Documentos profissionais',
+        note: 'Português\nEnglish\nPDF original',
         title: 'Dois idiomas, o mesmo percurso profissional',
         introduction:
           'A versão correspondente ao idioma do website surge primeiro. Cada PDF tem duas páginas A4 e abre de forma independente do portefólio.',

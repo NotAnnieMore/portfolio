@@ -16,10 +16,10 @@ export function SkillsSection() {
           title={t('pages.home.skills.title')}
         />
 
-        <div className="mt-14 grid border-y border-line sm:mt-16 sm:grid-cols-2 lg:grid-cols-5 lg:divide-x lg:divide-line">
+        <div className="mt-14 grid border-l border-t border-line sm:mt-16 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
           {skillGroups.map((group) => (
             <div
-              className="relative overflow-hidden border-b border-line px-5 py-8 last:border-b-0 sm:px-6 sm:py-9 lg:border-b-0 lg:px-6"
+              className="relative overflow-hidden border-b border-r border-line px-5 py-8 sm:px-6 sm:py-9 lg:px-6"
               key={group.id}
             >
               <span aria-hidden="true" className="surface-texture-layer" />
@@ -31,7 +31,11 @@ export function SkillsSection() {
                   </h3>
                 </div>
                 <p className="mt-4 max-w-lg text-sm leading-7 text-muted">
-                  {group.skills.map((skill) => skill.name).join(' · ')}
+                  {group.skills
+                    .map((skill) =>
+                      skill.labelKey ? t(skill.labelKey) : skill.name,
+                    )
+                    .join(' · ')}
                 </p>
               </div>
             </div>

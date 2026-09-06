@@ -1,8 +1,12 @@
 {
   "name": "Ivo Camacho — Portfolio",
   "short_name": "Ivo Camacho",
+  "description": "Bilingual portfolio of software developer Ivo Camacho, focused on web applications, data, and applied machine learning.",
   "start_url": "/",
+  "scope": "/",
+  "lang": "en",
   "display": "standalone",
+  "categories": ["business", "productivity"],
   "background_color": "#F7F6F1",
   "theme_color": "#F7F6F1",
   "icons": [

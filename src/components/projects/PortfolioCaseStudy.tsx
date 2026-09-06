@@ -6,8 +6,14 @@ import type { Project } from '../../types/content'
 import { ProjectHighlights } from './ProjectHighlights'
 
 const principleKeys = ['hierarchy', 'evidence', 'restraint', 'responsive'] as const
-const detailKeys = ['language', 'theme', 'accessibility', 'delivery'] as const
-const highlightKeys = ['languages', 'caseStudies', 'backend'] as const
+const detailKeys = [
+  'language',
+  'theme',
+  'accessibility',
+  'seo',
+  'delivery',
+] as const
+const highlightKeys = ['languages', 'caseStudies', 'technicalAreas'] as const
 
 interface PortfolioCaseStudyProps {
   project: Project

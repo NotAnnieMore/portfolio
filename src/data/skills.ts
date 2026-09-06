@@ -106,4 +106,41 @@ export const skillGroups: readonly SkillGroup[] = [
       },
     ],
   },
+  {
+    id: 'quality-and-support',
+    labelKey: 'content.skillGroups.qualityAndSupport',
+    skills: [
+      {
+        name: 'Debugging',
+        labelKey: 'content.skills.debugging',
+        evidenceProjectIds: [
+          'job-application-tracker',
+          'als-thesis',
+          'professional-portfolio',
+        ],
+      },
+      {
+        name: 'Testing & validation',
+        labelKey: 'content.skills.testingAndValidation',
+        evidenceProjectIds: [
+          'job-application-tracker',
+          'als-thesis',
+          'professional-portfolio',
+        ],
+      },
+      {
+        name: 'Technical documentation',
+        labelKey: 'content.skills.technicalDocumentation',
+        evidenceProjectIds: ['als-thesis', 'professional-portfolio'],
+      },
+      {
+        name: 'Technical support',
+        labelKey: 'content.skills.technicalSupport',
+        evidenceExperienceIds: [
+          'teaching-assistant',
+          'mobile-application-developer-intern',
+        ],
+      },
+    ],
+  },
 ]

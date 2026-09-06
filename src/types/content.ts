@@ -56,6 +56,7 @@ export interface Education {
 
 export interface Skill {
   readonly name: string
+  readonly labelKey?: string
   readonly evidenceProjectIds?: readonly string[]
   readonly evidenceExperienceIds?: readonly string[]
 }

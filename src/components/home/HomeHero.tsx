@@ -9,7 +9,7 @@ export function HomeHero() {
   const activeLocale = isSupportedLocale(locale) ? locale : 'en'
 
   return (
-    <section className="mx-auto max-w-6xl px-6 pb-24 pt-20 sm:pb-28 sm:pt-24 lg:px-10 lg:pb-32 lg:pt-28">
+    <section className="mx-auto max-w-6xl px-6 pb-6 pt-20 sm:pb-8 sm:pt-24 lg:px-10 lg:pb-32 lg:pt-28">
       <div className="grid gap-12 lg:grid-cols-[minmax(0,1.22fr)_minmax(22rem,0.78fr)] lg:items-start lg:gap-10">
         <div className="max-w-4xl">
           <h1 className="text-[clamp(2.75rem,7vw,5.75rem)] font-semibold leading-[0.98] tracking-[-0.055em] text-balance">
@@ -42,17 +42,17 @@ export function HomeHero() {
         </div>
 
         <aside className="lg:-mr-10 xl:-mr-20">
-          <figure className="relative min-h-[27rem] overflow-hidden sm:min-h-[32rem] lg:min-h-[36rem] lg:overflow-visible">
+          <figure className="relative min-h-[31rem] overflow-hidden sm:min-h-[34rem] lg:min-h-[36rem] lg:overflow-visible">
             <img
               alt={t('pages.home.hero.illustrationAlt')}
-              className="absolute -bottom-10 left-1/2 z-10 h-[116%] w-auto max-w-none -translate-x-1/2 object-contain sm:-bottom-12 sm:h-[120%] lg:-bottom-16 lg:left-[56%] lg:h-[124%] xl:left-[60%]"
+              className="absolute bottom-0 left-1/2 z-10 h-full w-auto max-w-none -translate-x-1/2 object-contain lg:-bottom-16 lg:left-[56%] lg:h-[124%] xl:left-[60%]"
               decoding="async"
               fetchPriority="high"
               height="1200"
               src="/images/decor/hero-workspace.webp"
               width="800"
             />
-            <figcaption className="editorial-note absolute bottom-0 right-2 z-20 max-w-40 text-lg leading-6 text-ink sm:bottom-0 sm:right-4 lg:-bottom-4 lg:-right-2">
+            <figcaption className="editorial-note absolute -bottom-10 -right-2 z-20 hidden max-w-40 text-lg leading-6 text-ink min-[1400px]:block">
               {t('pages.home.hero.annotation')}
             </figcaption>
           </figure>

@@ -6,7 +6,7 @@ export const en = {
   navigation: {
     primary: 'Primary navigation',
     projects: 'Projects',
-    about: 'About',
+    about: 'About Me',
     cv: 'CV',
   },
   language: {
@@ -66,15 +66,15 @@ export const en = {
       professionalPortfolio: {
         title: 'Professional Portfolio',
         summary:
-          'A bilingual and accessible static portfolio designed to present real projects through context, decisions, and case studies.',
+          'A bilingual, responsive, and accessible portfolio that presents real projects through context, decisions, and detailed case studies.',
         desktopImageAlt:
           'English portfolio home page in light mode on a desktop viewport',
         desktopImageCaption:
-          'The desktop home page uses typography, spacing, and a restrained palette to establish hierarchy without decorative effects.',
+          'The current desktop home page combines an editorial hierarchy, a transparent botanical illustration, and direct routes into the work.',
         mobileImageAlt:
-          'Portuguese projects page in dark mode on a narrow mobile viewport',
+          'Portuguese projects page in light mode on a narrow mobile viewport',
         mobileImageCaption:
-          'The mobile layout changes its spacing and navigation hierarchy instead of simply compressing the desktop composition.',
+          'On a narrow viewport, navigation, type, spacing, and the complete illustration form a deliberate mobile composition instead of a compressed desktop page.',
       },
     },
     projectCategories: {
@@ -126,6 +126,13 @@ export const en = {
       appliedMachineLearning: 'Applied machine learning',
       microsoftLowCode: 'Microsoft and low-code',
       toolsAndDelivery: 'Tools and delivery',
+      qualityAndSupport: 'Quality and technical support',
+    },
+    skills: {
+      debugging: 'Debugging',
+      testingAndValidation: 'Testing and validation',
+      technicalDocumentation: 'Technical documentation',
+      technicalSupport: 'Technical support',
     },
     links: {
       live: 'Live application',
@@ -189,7 +196,16 @@ export const en = {
       annotation: 'From problem to product.',
       description:
         'A focused selection of product development and applied research, presented through the problem, the decisions, and the resulting system.',
+      featuredLabel: 'Featured projects',
       selectedTitle: 'Three projects, three contexts',
+      featuredIntroduction:
+        'Different problems, different settings, and the same curiosity: building useful solutions at the intersection of technology, people, and impact.',
+      featuredNote: 'Real projects\nReal contexts\nContinuous learning',
+      imageNotes: {
+        tracker: 'Organise. Track. Move forward.',
+        thesis: 'From data to understanding.',
+        portfolio: 'Build, test, evolve.',
+      },
       viewProject: 'View project',
       currentProjectNote:
         'This portfolio is itself an evolving record of the work behind it.',
@@ -450,12 +466,12 @@ export const en = {
           },
           year: { label: 'Year', value: '2026' },
           format: { label: 'Format', value: 'Static bilingual website' },
-          stack: { label: 'Core stack', value: 'React · TypeScript · Vite' },
+          stack: { label: 'Core stack', value: 'React 19 · TypeScript · Vite · Tailwind CSS' },
         },
         highlights: {
           languages: { value: '2', label: 'languages in one interface' },
           caseStudies: { value: '3', label: 'detailed case studies' },
-          backend: { value: '0', label: 'backend dependencies' },
+          technicalAreas: { value: '6', label: 'evidence-backed technical areas' },
         },
         purpose: {
           title: 'A portfolio should explain the work, not repeat GitHub',
@@ -474,7 +490,7 @@ export const en = {
           evidence: {
             title: 'Real work is the visual material',
             body:
-              'Product screenshots, research figures, verified technologies, and concrete decisions replace decorative code windows or unsupported claims.',
+              'Current product screenshots, research figures, verified technologies, and concrete decisions carry the evidence; botanical editorial illustrations give the system warmth without pretending to be product output.',
           },
           restraint: {
             title: 'Neutrals remain dominant',
@@ -484,7 +500,7 @@ export const en = {
           responsive: {
             title: 'Mobile has its own rhythm',
             body:
-              'Navigation, spacing, typography, image scale, and content order adapt at narrow widths rather than treating mobile as a squeezed desktop.',
+              'Navigation, spacing, typography, image scale, and content order adapt at narrow widths. Decorative annotations are removed when they compete with the content, while the illustrations remain complete and legible.',
           },
         },
         architecture: {
@@ -501,7 +517,7 @@ export const en = {
           },
           interface: {
             title: 'Shared interface',
-            body: 'React components apply the editorial layouts, semantic colour tokens, and accessible interactions.',
+            body: 'Shared React section headers apply the editorial hierarchy consistently across Home, Projects, About, and CV, using semantic colour tokens and accessible interactions.',
           },
           deployment: {
             title: 'Static production build',
@@ -527,6 +543,11 @@ export const en = {
             body:
               'Semantic landmarks, a skip link, visible focus states, descriptive alternatives, reduced-motion support, a persistent header, and a focus-aware back-to-top control cover common keyboard and reading needs.',
           },
+          seo: {
+            title: 'Every route carries its own metadata',
+            body:
+              'Localized titles and descriptions are paired with canonical URLs, hreflang alternates, Open Graph and Twitter images, structured data, robots rules, and a complete bilingual sitemap.',
+          },
           delivery: {
             title: 'Routine updates stay simple',
             body:
@@ -536,19 +557,21 @@ export const en = {
         outcome: {
           title: 'A portfolio that can grow without losing its point of view',
           body:
-            'The current system presents three different kinds of work with distinct case-study rhythms while keeping navigation, language, themes, and content structure consistent across the site.',
+            'The current system presents three different kinds of work with distinct case-study rhythms while keeping navigation, editorial section headers, language, themes, motion, and content structure consistent across the site.',
           bodyTwo:
             'Its main constraint is also useful: new content must earn its place through verified context and evidence. That keeps future updates focused and prevents the portfolio from becoming an unfiltered catalogue of repositories.',
         },
       },
     },
     about: {
-      title: 'About',
+      title: 'About Me',
       annotation: 'Learn, build, evolve.',
       introduction:
         'Software developer experienced in web applications, relational data, and applied Machine Learning, with additional work in programming education, mobile workflows, and technical problem-solving.',
       location: 'Based in Portugal · Working in Portuguese and English',
       focus: {
+        eyebrow: 'Technical profile',
+        note: 'Product\nData\nApplied research',
         title: 'Complementary technical areas',
         introduction:
           'My strongest work sits where interface decisions, data structures, and practical constraints meet. I am comfortable moving between implementation detail and the wider purpose of a system.',
@@ -569,16 +592,22 @@ export const en = {
         },
       },
       experience: {
+        eyebrow: 'Professional path',
+        note: 'Teaching\nProduct\nOperations',
         title: 'Professional experience',
         introduction:
           'Experience spanning programming education, web development, operational mobile applications, data migration, and earlier multimedia production.',
       },
       skills: {
+        eyebrow: 'Tools and context',
+        note: 'Web\nData\nMachine Learning',
         title: 'Technical areas',
         introduction:
           'Technologies are grouped by where I have used them in projects or professional work — not by arbitrary proficiency percentages.',
       },
       education: {
+        eyebrow: 'Education',
+        note: 'Multimedia\nInformatics\nEngineering',
         title: 'Education and training',
         introduction:
           'A progression from multimedia and information-systems training to Informatics, Computer Engineering, and a Master’s in Applied Informatics.',
@@ -589,8 +618,15 @@ export const en = {
           'For architecture, trade-offs, research results, and working interfaces, the case studies are the best place to continue. The CV provides the compact chronological version.',
         projects: 'Explore projects',
         cv: 'View CV',
+        impact: {
+          label: 'From code to impact',
+          title: 'Projects that turn knowledge into practical solutions.',
+          projects: { value: '03', label: 'detailed case studies' },
+          areas: { value: '03', label: 'core areas of work' },
+          languages: { value: '02', label: 'languages across the website' },
+        },
       },
-      metaTitle: 'About — Ivo Camacho',
+      metaTitle: 'About Me — Ivo Camacho',
       metaDescription:
         'Professional profile, experience, technical areas, and education of software developer Ivo Camacho.',
     },
@@ -600,6 +636,8 @@ export const en = {
       introduction:
         'Choose the Portuguese or English version. Both documents can be opened in the browser or downloaded as the original PDF.',
       documents: {
+        eyebrow: 'Professional documents',
+        note: 'Português\nEnglish\nOriginal PDF',
         title: 'Two languages, the same professional record',
         introduction:
           'The version matching the website language appears first. Each PDF contains two A4 pages and opens independently from the portfolio.',

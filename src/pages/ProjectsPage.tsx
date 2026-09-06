@@ -2,9 +2,55 @@ import { useTranslation } from 'react-i18next'
 import { Link, useParams } from 'react-router'
 
 import { EditorialPageHero } from '../components/layout/EditorialPageHero'
+import { EditorialSectionIntro } from '../components/layout/EditorialSectionIntro'
 import { getOrderedProjects } from '../data/projects'
 import { isSupportedLocale } from '../i18n/locales'
 import { usePageMeta } from '../utils/usePageMeta'
+
+const projectNoteKeys: Record<string, string> = {
+  'job-application-tracker': 'pages.projects.imageNotes.tracker',
+  'als-thesis': 'pages.projects.imageNotes.thesis',
+  'professional-portfolio': 'pages.projects.imageNotes.portfolio',
+}
+
+function ProjectCornerMarks() {
+  return (
+    <svg
+      aria-hidden="true"
+      className="absolute -right-5 -top-7 hidden h-11 w-11 overflow-visible text-green sm:block"
+      fill="none"
+      viewBox="0 0 44 44"
+    >
+      <path d="M10 25 18 5" stroke="currentColor" strokeLinecap="round" />
+      <path d="m18 29 13-7" stroke="currentColor" strokeLinecap="round" />
+      <path d="m20 35 14-1" stroke="currentColor" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+function ProjectAnnotationArrow({ mirrored }: { mirrored: boolean }) {
+  return (
+    <svg
+      aria-hidden="true"
+      className={`block h-8 w-14 shrink-0 overflow-visible text-green ${
+        mirrored ? '-scale-x-100' : ''
+      }`}
+      fill="none"
+      viewBox="0 0 56 34"
+    >
+      <path
+        d="M2 30C25 31 43 23 49 7"
+        stroke="currentColor"
+        strokeLinecap="round"
+      />
+      <path
+        d="m49 7-7 4m7-4 1 8"
+        stroke="currentColor"
+        strokeLinecap="round"
+      />
+    </svg>
+  )
+}
 
 export function ProjectsPage() {
   const { t } = useTranslation()
@@ -25,20 +71,25 @@ export function ProjectsPage() {
         title={t('pages.projects.title')}
       />
 
-      <section className="bg-surface py-16 sm:py-20 lg:py-24">
+      <section
+        className="scroll-mt-20 bg-surface py-16 sm:py-20 lg:py-24"
+        id="featured-projects"
+      >
         <div className="mx-auto max-w-6xl px-6 lg:px-10">
-          <div className="flex items-baseline justify-between gap-6 border-t border-line pt-5">
-            <h2 className="text-2xl font-semibold tracking-[-0.025em]">
-              {t('pages.projects.selectedTitle')}
-            </h2>
-            <p className="font-mono text-xs tracking-[0.16em] text-green-readable">
-              {String(projects.length).padStart(2, '0')}
-            </p>
-          </div>
+          <EditorialSectionIntro
+            count={`${String(projects.length).padStart(2, '0')} / 03`}
+            description={t('pages.projects.featuredIntroduction')}
+            eyebrow={t('pages.projects.featuredLabel')}
+            note={t('pages.projects.featuredNote')}
+            title={t('pages.projects.selectedTitle')}
+          />
 
-          <div className="mt-12 sm:mt-14">
+          <div className="mt-16 sm:mt-20">
             {projects.map((project, index) => {
               const image = project.media[0]
+              const imageNoteKey =
+                projectNoteKeys[project.id] ??
+                'pages.projects.imageNotes.portfolio'
 
               return (
                 <article
@@ -103,17 +154,46 @@ export function ProjectsPage() {
                   </div>
 
                   {image ? (
-                    <figure className="sm:col-start-2 lg:col-start-3 lg:row-start-1">
-                      <div className="overflow-hidden border border-line bg-page">
-                        <img
-                          alt={t(image.altKey)}
-                          className="h-auto w-full"
-                          decoding="async"
-                          height={image.height}
-                          loading={index === 0 ? 'eager' : image.loading}
-                          src={image.src}
-                          width={image.width}
-                        />
+                    <figure className="relative self-start sm:col-start-2 lg:col-start-3 lg:row-start-1 min-[1081px]:pb-14">
+                      <div
+                        className={`relative p-3 sm:p-5 ${
+                          index === 1 ? 'bg-action-soft' : 'bg-green-soft'
+                        }`}
+                      >
+                        {index !== 1 ? <ProjectCornerMarks /> : null}
+
+                        <div className="overflow-hidden border border-line-strong bg-page">
+                          <img
+                            alt={t(image.altKey)}
+                            className="h-auto w-full"
+                            decoding="async"
+                            height={image.height}
+                            loading={index === 0 ? 'eager' : image.loading}
+                            src={image.src}
+                            width={image.width}
+                          />
+                        </div>
+                      </div>
+
+                      <div
+                        aria-hidden="true"
+                        className="absolute inset-x-0 bottom-0 hidden items-center justify-center gap-1 min-[1081px]:flex"
+                      >
+                        {index === 1 ? (
+                          <>
+                            <ProjectAnnotationArrow mirrored />
+                            <p className="editorial-note max-w-44 text-left text-sm leading-5 text-muted">
+                              {t(imageNoteKey)}
+                            </p>
+                          </>
+                        ) : (
+                          <>
+                            <p className="editorial-note max-w-44 text-right text-sm leading-5 text-muted">
+                              {t(imageNoteKey)}
+                            </p>
+                            <ProjectAnnotationArrow mirrored={false} />
+                          </>
+                        )}
                       </div>
                     </figure>
                   ) : (

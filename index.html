@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ivo Camacho" />
+    <meta name="application-name" content="Ivo Camacho — Portfolio" />
+    <meta name="color-scheme" content="light dark" />
     <meta
       name="description"
       content="Software developer focused on web applications, data, and applied machine learning."
@@ -17,6 +20,7 @@
     />
     <meta property="og:url" content="https://ivocamacho.com/" />
     <meta property="og:image" content="https://ivocamacho.com/og/home-en.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Ivo Camacho — software developer portfolio" />
@@ -33,6 +37,41 @@
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="canonical" href="https://ivocamacho.com/" />
     <title>Ivo Camacho</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://ivocamacho.com/#person",
+            "name": "Ivo Camacho",
+            "url": "https://ivocamacho.com/",
+            "image": "https://ivocamacho.com/logo-icon-512.png",
+            "jobTitle": "Software Developer",
+            "sameAs": [
+              "https://www.linkedin.com/in/ivocamacho99",
+              "https://github.com/NotAnnieMore"
+            ],
+            "knowsAbout": [
+              "Web development",
+              "React",
+              "TypeScript",
+              "Relational databases",
+              "Applied machine learning",
+              "Explainable AI"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ivocamacho.com/#website",
+            "url": "https://ivocamacho.com/",
+            "name": "Ivo Camacho — Portfolio",
+            "inLanguage": ["en", "pt-PT"],
+            "publisher": { "@id": "https://ivocamacho.com/#person" }
+          }
+        ]
+      }
+    </script>
     <script>
       ;(() => {
         try {
